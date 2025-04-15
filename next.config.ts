@@ -5,13 +5,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
-module.exports = {
-  env: {
-    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
-  },
-};
-
-module.exports = {
-  reactStrictMode: true,
-};
