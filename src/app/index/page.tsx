@@ -1,5 +1,9 @@
+import dynamic from "next/dynamic";
 import React, { Suspense } from "react";
-import SSCIndex from "../components/SSCIndex";
+
+const SSCIndex = dynamic(() => import("../components/SSCIndex"), {
+  ssr: false,
+});
 
 export default function Index2Page() {
   return (
