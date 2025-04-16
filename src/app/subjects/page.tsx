@@ -14,7 +14,7 @@ const SubjectsPage: React.FC = () => {
     // If subject is English or GK, route to index with type query
     if (lowerCase === "english" || lowerCase === "gk") {
       // router.push(`/index?type=${lowerCase}`);
-      router.push(`/index2?type=${subject.toLowerCase()}`);
+      router.push(`/index?type=${subject.toLowerCase()}`);
     } else {
       // For other subjects, you can route to their specific pages
       router.push(`/subject/${lowerCase}`);
