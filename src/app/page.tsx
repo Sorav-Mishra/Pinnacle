@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative bg-blue-600 text-white h-[400px] w-full flex items-center justify-center px-6 mt-16">
+      <div className="relative bg-blue-600 text-white h-[400px] w-full flex items-center justify-center px-6">
         <div className="max-w-3xl text-center">
           <h1 className="text-3xl md:text-5xl font-bold">
             SSC Exam Practice Questions
