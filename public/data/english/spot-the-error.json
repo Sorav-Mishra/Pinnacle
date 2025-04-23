@@ -116,8 +116,10 @@
     "exam": "SSC Stenographer 11/12/2024 (Afternoon",
     "question": "Raghu  did  not  get  the  job  /  because  he  did  not  have  / experience enough for the post.",
     "options": {
-      "A": "because he did not have    (b) No error",
-      "C": "Raghu did not get the job   (d) experience enough for the post"
+      "A": "because he did not have",
+      "B": "No error",
+      "C": "Raghu did not get the job",
+      "D": "experience enough for the post"
     },
     "correct_option": "D",
     "solution": {
@@ -592,10 +594,8 @@
   {
     "id": 38,
     "exam": "SSC MTS 13/11/2024 (Evening",
-    "question": "",
+    "question": "(1) We  knocked  across/(2)  early  on  Saturday/(3)  to  enjoy/(4) the beautiful weather.",
     "options": {
-      "1": "We  knocked  across  (2)  early  on  Saturday  (3)  to  enjoy",
-      "4": "the beautiful weather.",
       "A": "the beautiful weather.",
       "B": "to enjoy",
       "C": "early on Saturday",
@@ -658,7 +658,7 @@
   {
     "id": 42,
     "exam": "SSC CGL 09/09/2024 (1st Shift",
-    "question": "Mr.  Abhilash  and  his  family  /  have  received  /  no informations / about the incident. SSC CGL 09/09/2024 (1st Shift)",
+    "question": "Mr  Abhilash  and  his  family  /  have  received  /  no informations / about the incident. SSC CGL 09/09/2024 (1st Shift)",
     "options": {
       "A": "have received",
       "B": "no informations",
@@ -868,11 +868,14 @@
     "exam": "SSC CGL 11/09/2024 (3rd Shift",
     "question": "They secret / decided / to leave / the town. SSC CGL 11/09/2024 (3rd Shift)",
     "options": {
-      "A": "They secret      (b) decided       (c) the town      (d) to leave"
+      "A": "They secret",
+      "B": "decided",
+      "C": "the town",
+      "D": "to leave"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. They secret      (b) decided       (c) the town      (d) to leave",
+      "correct_answer": "A. They secret",
       "explanation": "They secret The given sentence needs an adverb ‘secretly’ to modify the verb ‘decided’, not the noun ‘secret’. Hence, ‘They secretly’ is the most appropriate answer."
     }
   },
@@ -881,7 +884,10 @@
     "exam": "SSC CGL 12/09/2024 (1st Shift",
     "question": "He ran quick to catch the bus. SSC CGL 12/09/2024 (1st Shift)",
     "options": {
-      "A": "quiet            (b) rapid              (c) insipid             (d) quickly"
+      "A": "quiet",
+      "B": "rapid",
+      "C": "insipid",
+      "D": "quickly"
     },
     "correct_option": "D",
     "solution": {
@@ -892,7 +898,7 @@
   {
     "id": 57,
     "exam": "SSC CGL 12/09/2024 (1st Shift",
-    "question": "Mrs.  Sreelakshmi’s  /  musical  intelligence  /  is  superior  than / Mrs. Suma’s. SSC CGL 12/09/2024 (1st Shift)",
+    "question": "Mrs  Sreelakshmi’s  /  musical  intelligence  /  is  superior  than / Mrs Suma’s. SSC CGL 12/09/2024 (1st Shift)",
     "options": {
       "A": "Mrs. Suma’s.",
       "B": "musical intelligence",
@@ -1035,7 +1041,7 @@
   },
   {
     "id": 66,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 13/09/2024 (2nd Shift",
     "question": "Parts  of  the  given  sentence  have  been  underlined.  Identify the part that has an error. Select 'No error' if there is no error. Although  the  team  had  trained  diligently  for  months  ,  they  had still overwhelmed  by the opponent's unexpected tactics.",
     "options": {
       "A": "No error",
@@ -1051,7 +1057,7 @@
   },
   {
     "id": 67,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 13/09/2024 (2nd Shift",
     "question": "Due  to  the  pandemic,  /  the  prices  of  /  medicines  increased / every day since / last December.",
     "options": {
       "A": "every day since",
@@ -1118,7 +1124,10 @@
     "exam": "SSC CGL 17/09/2024 (3rd Shift",
     "question": "Brr, the city view from the Eiffel Tower is  amazing ! SSC CGL 17/09/2024 (3rd Shift)",
     "options": {
-      "A": "amazing                (b) from              (c) view             (d) Brr"
+      "A": "amazing",
+      "B": "from ",
+      "C": "view ",
+      "D": "Brr"
     },
     "correct_option": "D",
     "solution": {
@@ -1133,7 +1142,8 @@
     "options": {
       "A": "they ran fastly",
       "B": "Having known that",
-      "C": "the train was already on the platform    (d) to catch it"
+      "C": "the train was already on the platform",
+      "D": "to catch it"
     },
     "correct_option": "A",
     "solution": {
@@ -1164,11 +1174,12 @@
     "options": {
       "A": "that he preached",
       "B": "No error",
-      "C": "he lived by the same principals    (d) People admired him, for"
+      "C": "he lived by the same principals",
+      "D": "People admired him, for"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. he lived by the same principals    (d) People admired him, for",
+      "correct_answer": "C. he lived by the same principals",
       "explanation": "he lived by the same principals ‘Principals’ must be replaced with ‘principles’ as the given sentence talks about a kind of belief or idea that guides you. Hence, ‘he lived by the same principles’ is the most appropriate answer."
     }
   },
@@ -1193,7 +1204,10 @@
     "exam": "SSC CGL 18/09/2024 (3rd Shift",
     "question": "He never talks / for anybody. / He is alone  / all day. SSC CGL 18/09/2024 (3rd Shift)",
     "options": {
-      "A": "He is alone    (b) for anybody   (c) He never talks   (d) all day"
+      "A": "He is alone",
+      "B": "for anybody",
+      "C": "He never talks",
+      "D": "all day"
     },
     "correct_option": "B",
     "solution": {
@@ -1222,7 +1236,8 @@
     "exam": "SSC CGL 19/09/2024 (1st Shift",
     "question": "We  took  dinner  in  a  Chinese  restaurant  and  were  amazed to see the interior of a restaurant. SSC CGL 19/09/2024 (1st Shift)",
     "options": {
-      "A": "and were amazed to see           (b) the interior of a restaurant",
+      "A": "and were amazed to see",
+      "B": "the interior of a restaurant",
       "C": "We took dinner",
       "D": "in a Chinese restaurant"
     },
@@ -1235,9 +1250,12 @@
   {
     "id": 79,
     "exam": "SSC CGL 19/09/2024 (2nd Shift",
-    "question": "Mr. Ali’s shop / is further to / the hospital. SSC CGL 19/09/2024 (2nd Shift)",
+    "question": "Mr Ali’s shop / is further to / the hospital. SSC CGL 19/09/2024 (2nd Shift)",
     "options": {
-      "A": "is further to  (b) No error  (c) Mr. Ali’s shop  (d) the hospital."
+      "A": "is further to",
+      "B": "No error",
+      "C": "Mr Ali’s shop",
+      "D": "the hospital"
     },
     "correct_option": "A",
     "solution": {
@@ -1298,7 +1316,10 @@
     "exam": "SSC CGL 23/09/2024 (1st Shift",
     "question": "Ourselves should not boast of one’s knowledge. SSC CGL 23/09/2024 (1st Shift)",
     "options": {
-      "A": "one’s            (b) boast            (c) Ourselves       (d) knowledge"
+      "A": "one’s",
+      "B": "boast",
+      "C": "Ourselves",
+      "D": "knowledge"
     },
     "correct_option": "C",
     "solution": {
@@ -1341,9 +1362,12 @@
   {
     "id": 86,
     "exam": "SSC CGL 23/09/2024 (3rd Shift",
-    "question": "Mr. Suman / asked me / to pack / my luggages. SSC CGL 23/09/2024 (3rd Shift)",
+    "question": "Mr Suman / asked me / to pack / my luggages. SSC CGL 23/09/2024 (3rd Shift)",
     "options": {
-      "A": "asked me     (b) my luggages.     (c) to pack      (d) Mr. Suman"
+      "A": "asked me     (b)      (c)     (d) ",
+      "B": "my luggages.",
+      "C": "to pack  ",
+      "D": "Mr Suman"
     },
     "correct_option": "B",
     "solution": {
@@ -1514,15 +1538,16 @@
   {
     "id": 97,
     "exam": "SSC CGL 25/09/2024 (3rd Shift",
-    "question": "Please  go  and  meet  the  chairperson.  /  She  will  be  /  away for the / few next days. SSC CGL 25/09/2024 (3rd Shift)",
+    "question": "Please  go  and  meet  the  chairperson  /  She  will  be  /  away for the / few next days. SSC CGL 25/09/2024 (3rd Shift)",
     "options": {
       "A": "She will be",
       "B": "away for the",
-      "C": "few next days.            (d) Please go and meet the chairperson."
+      "C": "few next days",
+      "D": " Please go and meet the chairperson"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. few next days.            (d) Please go and meet the chairperson.",
+      "correct_answer": "C. few next days.",
       "explanation": "few next days. The order of adjectives is wrong in this phrase. The correct order would be ‘next few days’. Hence, 'next few days' is the most appropriate answer."
     }
   },
@@ -1547,7 +1572,10 @@
     "exam": "SSC CGL 26/09/2024 (2nd Shift",
     "question": "This is the book whom I wanted to buy. SSC CGL 26/09/2024 (2nd Shift)",
     "options": {
-      "A": "the book   (b) wanted to buy.    (c) whom I    (d) This is"
+      "A": "the book",
+      "B": "wanted to buy",
+      "C": "whom I",
+      "D": "This is"
     },
     "correct_option": "C",
     "solution": {
@@ -1560,7 +1588,10 @@
     "exam": "SSC CGL 26/09/2024 (2nd Shift",
     "question": "My colleague always works latest than me. SSC CGL 26/09/2024 (2nd Shift)",
     "options": {
-      "A": "My colleague   (b) latest   (c) always works    (d) than me"
+      "A": "My colleague",
+      "B": "latest",
+      "C": "always works",
+      "D": "than me"
     },
     "correct_option": "B",
     "solution": {
@@ -1573,7 +1604,10 @@
     "exam": "SSC CGL 26/09/2024 (3rd Shift",
     "question": "He was / bad injured / in the / last match. SSC CGL 26/09/2024 (3rd Shift)",
     "options": {
-      "A": "last match.     (b) in the       (c) bad injured      (d) He was"
+      "A": "last match",
+      "B": "in the",
+      "C": "bad injured",
+      "D": "He was"
     },
     "correct_option": "C",
     "solution": {
@@ -1664,7 +1698,7 @@
   {
     "id": 107,
     "exam": "SSC CHSL 01/07/2024 (3rd Shift",
-    "question": "The  following  sentence  has  an  error  in  its  tense.  Identify the error and select the correct sentence from the options. If  you  had  apprised  me  about  your  problem  earlier,  I  would  have allow you to go. SSC CHSL 01/07/2024 (3rd Shift)",
+    "question": "The  following  sentence  has  an  error  in  its  tense;  Identify the error and select the correct sentence from the options; If  you  had  apprised  me  about  your  problem  earlier,  I  would  have allow you to go. SSC CHSL 01/07/2024 (3rd Shift)",
     "options": {
       "A": "If you apprised me about your problem earlier, I would have",
       "B": "If you can apprise me about your  problem earlier, I would",
@@ -1680,7 +1714,7 @@
   {
     "id": 108,
     "exam": "SSC CHSL 01/07/2024 (3rd Shift",
-    "question": "There  is  an  error  in  the  given  sentence.  From  the  options given,  identify  the  sentence  that  corrects  the  error  to  make  it  a grammatically accurate sentence. Harmit is not innocent such as Uday. SSC CHSL 01/07/2024 (3rd Shift)",
+    "question": "From  the  options given,  identify  the  sentence  that  corrects  the  error  to  make  it  a grammatically accurate sentence; Harmit is not innocent such as Uday. SSC CHSL 01/07/2024 (3rd Shift)",
     "options": {
       "A": "Harmit is not as innocent as Uday.",
       "B": "Harmit is not as innocent more than Uday.",
@@ -1698,7 +1732,10 @@
     "exam": "SSC CHSL 01/07/2024 (4th Shift",
     "question": "When it / come to football, / my brother is  / an addict. SSC CHSL 01/07/2024 (4th Shift)",
     "options": {
-      "A": "When it  (b) come to football,  (c) my brother  is  (d) an addict."
+      "A": "When it",
+      "B": "come to football",
+      "C": "my brother  is",
+      "D": "an addict"
     },
     "correct_option": "B",
     "solution": {
@@ -1711,7 +1748,10 @@
     "exam": "SSC CHSL 01/07/2024 (4th Shift",
     "question": "Throw of / the old shoes; / nobody will wear  / them now. SSC CHSL 01/07/2024 (4th Shift)",
     "options": {
-      "A": "nobody will wear (b) Throw of (c) them now (d) the old shoes"
+      "A": "nobody will wear",
+      "B": "Throw of",
+      "C": "them now",
+      "D": "the old shoes"
     },
     "correct_option": "B",
     "solution": {
@@ -1788,19 +1828,21 @@
     "exam": "SSC CHSL 03/07/2024 (1st Shift",
     "question": "His  mother’s  transfer  from  a  small  town  to  Delhi  brought up a huge change in his schooling. SSC CHSL 03/07/2024 (1st Shift)",
     "options": {
-      "A": "brought up a huge change           (b) in his schooling.",
-      "C": "from a small town to Delhi           (d) His mother’s transfer"
+      "A": "brought up a huge change",
+      "B": "in his schooling",
+      "C": "from a small town to Delhi",
+      "D": "His mother’s transfer"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. brought up a huge change           (b) in his schooling.",
+      "correct_answer": "A. brought up a huge change",
       "explanation": "brought up a huge change ‘Brought up’ must be replaced with ‘brought about’. The phrasal verb ‘brought about’ is the past form of ‘bring about’, which means to cause something to happen. The given sentence talks about the huge change that happened due to his mother’s transfer. Hence, ‘brought about a huge change’ is the most appropriate answer."
     }
   },
   {
     "id": 116,
     "exam": "SSC CHSL 03/07/2024 (1st Shift",
-    "question": "Mrs. Meera and family / received his letter  / a week ago SSC CHSL 03/07/2024 (1st Shift)",
+    "question": "Mrs Meera and family / received his letter  / a week ago. SSC CHSL 03/07/2024 (1st Shift)",
     "options": {
       "A": "a week ago",
       "B": "No error",
@@ -1816,7 +1858,7 @@
   {
     "id": 117,
     "exam": "SSC CHSL 03/07/2024 (1st Shift",
-    "question": "Identify  the  error  in  the  given  sentence  and  select  the correct sentence from the given options. Petriﬁed  wood  is  type  of  fossilised  wood  that  exhibits  the original details of the wood SSC CHSL 03/07/2024 (1st Shift)",
+    "question": "Identify  the  error  in  the  given  sentence  and  select  the correct sentence from the given options; Petriﬁed  wood  is  type  of  fossilised  wood  that  exhibits  the original details of the wood. SSC CHSL 03/07/2024 (1st Shift)",
     "options": {
       "A": "The petriﬁed wood is the type of fossilised wood that exhibits",
       "B": "A petriﬁed wood is type of fossilised wood that exhibits an",
@@ -1832,9 +1874,8 @@
   {
     "id": 118,
     "exam": "SSC CHSL 03/07/2024 (2nd Shift",
-    "question": "",
+    "question": "(1) When  Christy/(2)  grew  out,/(3)  he  turned  out/(4)  to  be",
     "options": {
-      "1": "When  Christy  (2)  grew  out,  (3)  he  turned  out  (4)  to  be",
       "A": "3",
       "B": "4",
       "C": "1",
@@ -1851,7 +1892,10 @@
     "exam": "SSC CHSL 03/07/2024 (2nd Shift",
     "question": "The meeting / will taking / place next / Wednesday. SSC CHSL 03/07/2024 (2nd Shift)",
     "options": {
-      "A": "place next  (b) will taking  (c) Wednesday.  (d) The meeting"
+      "A": "place next",
+      "B": "will taking",
+      "C": "Wednesday.",
+      "D": "The meeting"
     },
     "correct_option": "B",
     "solution": {
@@ -1912,7 +1956,10 @@
     "exam": "SSC CHSL 03/07/2024 (3rd Shift",
     "question": "The class / teacher was / wounded in / a leg. SSC CHSL 03/07/2024 (3rd Shift)",
     "options": {
-      "A": "The class      (b) wounded in      (c) teacher was     (d) a leg."
+      "A": "The class",
+      "B": "wounded in",
+      "C": "teacher was",
+      "D": "a leg."
     },
     "correct_option": "D",
     "solution": {
@@ -1955,7 +2002,7 @@
   {
     "id": 126,
     "exam": "SSC CHSL 04/07/2024 (1st Shift",
-    "question": "My  students  are  /  waiting  for  /  their  ﬂights  /  at  the  gate no. 6. SSC CHSL 04/07/2024 (1st Shift)",
+    "question": "My  students  are  /  waiting  for  /  their  ﬂights  /  at  the  gate no 6. SSC CHSL 04/07/2024 (1st Shift)",
     "options": {
       "A": "at the gate no. 6.",
       "B": "their ﬂights",
@@ -1974,7 +2021,9 @@
     "question": "Parts  of  the  following  sentence  have  been  underlined  and given as options. Select the option that contains an error. She  will being  studying  for her  exams tomorrow  . SSC CHSL 04/07/2024 (1st Shift)",
     "options": {
       "A": "studying",
-      "B": "exams         (c) tomorrow      (d) will being"
+      "B": "exams",
+      "C": "tomorrow",
+      "D": "will being"
     },
     "correct_option": "D",
     "solution": {
@@ -1985,7 +2034,7 @@
   {
     "id": 128,
     "exam": "SSC CHSL 04/07/2024 (2nd Shift",
-    "question": "The  following  sentence  has  been  split  into  four segments.  Identify  the  segment  that  contains  an  INCORRECT preposition. I  am  writing  to  invite  you  /  to  give  a  presentation  /  for  our  Jobs and Careers Conference / for engineering graduates. SSC CHSL 04/07/2024 (2nd Shift)",
+    "question": "The  following  sentence  has  been  split  into  four segments  Identify  the  segment  that  contains  an  INCORRECT preposition; I  am  writing  to  invite  you  /  to  give  a  presentation  /  for  our  Jobs and Careers Conference / for engineering graduates. SSC CHSL 04/07/2024 (2nd Shift)",
     "options": {
       "A": "for engineering graduates",
       "B": "I am writing to invite you",
@@ -2099,7 +2148,10 @@
     "exam": "SSC CHSL 05/07/2024 (1st Shift",
     "question": "Emily is a American living in Paris for her  work. SSC CHSL 05/07/2024 (1st Shift)",
     "options": {
-      "A": "for her work  (b) a American   (c) living in Paris    (d) Emily is"
+      "A": "for her work",
+      "B": "a American",
+      "C": "living in Paris",
+      "D": "Emily is"
     },
     "correct_option": "B",
     "solution": {
@@ -2112,24 +2164,30 @@
     "exam": "SSC CHSL 05/07/2024 (1st Shift",
     "question": "This is / a doll / and there is / a umbrella. SSC CHSL 05/07/2024 (1st Shift)",
     "options": {
-      "A": "a umbrella.         (b) This is       (c) and there is      (d) a doll"
+      "A": "a umbrella",
+      "B": "This is",
+      "C": "and there is",
+      "D": "a doll"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. a umbrella.         (b) This is       (c) and there is      (d) a doll",
+      "correct_answer": "A. a umbrella.",
       "explanation": "a umbrella Article ‘A’ is used before the words starting from a consonant sound - (a conversation, a story). Whereas, the article ‘An’ is used before the words starting from a vowel sound(an imminent danger, an apple). Hence, ‘an umbrella’ is the most appropriate answer."
     }
   },
   {
     "id": 137,
     "exam": "SSC CHSL 05/07/2024 (1st Shift",
-    "question": "Select  the  most  appropriate  option  that  can  substitute the underlined word in the given sentence. Even  in  cold  weather,  the  reliable  car  always  started  on  the  ﬁrst try. SSC CHSL 05/07/2024 (1st Shift)",
+    "question": "Select  the  most  appropriate  option  that  can  substitute the underlined word in the given sentence; Even  in  cold  weather,  the  (reliable)  car  always  started  on  the  ﬁrst try. SSC CHSL 05/07/2024 (1st Shift)",
     "options": {
-      "A": "dependable          (b) inaccurate        (c) erratic         (d) ﬂaky"
+      "A": "dependable",
+      "B": "inaccurate",
+      "C": "erratic",
+      "D": "ﬂaky"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. dependable          (b) inaccurate        (c) erratic         (d) ﬂaky",
+      "correct_answer": "A. dependable",
       "explanation": "Reliable- dependable."
     }
   },
@@ -2216,14 +2274,16 @@
   {
     "id": 143,
     "exam": "SSC CHSL 08/07/2024 (1st Shift",
-    "question": "Mrs. Arunima / speaks / Telugu well. SSC CHSL 08/07/2024 (1st Shift)",
+    "question": "Mrs Arunima / speaks / Telugu well. SSC CHSL 08/07/2024 (1st Shift)",
     "options": {
-      "A": "Telugu well      (b) speaks",
-      "C": "No error    (d) Mrs. Arunima"
+      "A": "Telugu well",
+      "B": "speaks",
+      "C": "No error",
+      "D": "Mrs Arunima"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. No error    (d) Mrs. Arunima",
+      "correct_answer": "C. No error",
       "explanation": "No error The given sentence is grammatically correct."
     }
   },
@@ -2294,13 +2354,16 @@
   {
     "id": 148,
     "exam": "SSC CHSL 08/07/2024 (3rd Shift",
-    "question": "A part / of an / apple is / rotten SSC CHSL 08/07/2024 (3rd Shift)",
+    "question": "A part / of an / apple is / rotten. SSC CHSL 08/07/2024 (3rd Shift)",
     "options": {
-      "A": "of an              (b) apple is               (c) rotten            (d) A part"
+      "A": "of an",
+      "B": "apple is",
+      "C": "rotten",
+      "D": "A part"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. of an              (b) apple is               (c) rotten            (d) A part",
+      "correct_answer": "A. of an",
       "explanation": "of an Article ‘an’ must be replaced with ‘the’ as we generally use the deﬁnite article ‘the’ before any speciﬁc or particular noun. The given sentence is talking about a particular apple. Hence, ‘of the’ is the most appropriate answer."
     }
   },
@@ -2371,7 +2434,7 @@
   {
     "id": 153,
     "exam": "SSC CHSL 09/07/2024 (2nd Shift",
-    "question": "Identify  the  error  in  the  given  sentence  and  select  the correct sentence from the given options. This  is  the  story  of  eight  round  planets,  the  few  rocks  in between, and some comets. SSC CHSL 09/07/2024 (2nd Shift)",
+    "question": "Identify  the  error  in  the  given  sentence  and  select  the correct sentence from the given options; This  is  the  story  of  eight  round  planets,  the  few  rocks  in between, and some comets. SSC CHSL 09/07/2024 (2nd Shift)",
     "options": {
       "A": "This is story of eight round planets, few rocks in between,",
       "B": "This is the story of eight round planets, few rocks in between,",
@@ -2419,7 +2482,7 @@
   {
     "id": 156,
     "exam": "SSC CHSL 09/07/2024 (3rd Shift",
-    "question": "The  given  sentence  is  divided  into  four  segments. Identify the segment that contains a spelling error. When  the  famous  businessman  /  faced  a  huge  loss  /  in  his business, / no one expressed simpathy. SSC CHSL 09/07/2024 (3rd Shift)",
+    "question": "The  given  sentence  is  divided  into  four  segments; Identify the segment that contains a spelling error; When  the  famous  businessman  /  faced  a  huge  loss  /  in  his business, / no one expressed simpathy. SSC CHSL 09/07/2024 (3rd Shift)",
     "options": {
       "A": "no one expressed simpathy",
       "B": "When the famous businessman",
@@ -2533,12 +2596,14 @@
     "exam": "SSC CHSL 10/07/2024 (2nd Shift",
     "question": "In  order  to  connect  /  these  themes  to  a  wider  /  historical context, Rahul go / beyond aesthetic analysis. SSC CHSL 10/07/2024 (2nd Shift)",
     "options": {
-      "A": "these themes to a wider       (b) historical context, Rahul go",
-      "C": "In order to connect                (d) beyond aesthetic analysis"
+      "A": "these themes to a wider",
+      "B": "historical context, Rahul go",
+      "C": "In order to connect",
+      "D": "beyond aesthetic analysis"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. ",
+      "correct_answer": "B. historical context, Rahul go ",
       "explanation": "historical context, Rahul go According to the “Subject-Verb Agreement Rule”, a singular subject always takes a singular verb and a plural subject always takes a plural verb. In the given sentence, ‘Rahul’ is a singular subject that will take ‘goes’ as a singular verb. Hence, ‘historical context, Rahul goes’ is the most appropriate answer."
     }
   },
@@ -2625,13 +2690,16 @@
   {
     "id": 169,
     "exam": "SSC CHSL 11/07/2024 (1st Shift",
-    "question": "Parts  of  the  following  sentence  have  been  underlined and given as options. Select the option that contains an error. Policeman  came  to  my  village  and  asked  about  a  person  who burgled  a house  last night. SSC CHSL 11/07/2024 (1st Shift)",
+    "question": "Parts  of  the  following  sentence  have  been  underlined and given as options; Select the option that contains an error; Policeman  came  to  my  village  and  asked  about  a  person  who burgled  a house  last night. SSC CHSL 11/07/2024 (1st Shift)",
     "options": {
-      "A": "policeman      (b) a house       (c) my village        (d) a person"
+      "A": "policeman",
+      "B": "a house",
+      "C": "my village",
+      "D": "a person"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. policeman      (b) a house       (c) my village        (d) a person",
+      "correct_answer": "A. policeman",
       "explanation": "policeman Article ‘a’ must be used before the noun ‘policeman’ as it is singular and begins with a consonant sound. Hence, ‘A policeman’ is the most appropriate answer."
     }
   },
@@ -2672,8 +2740,10 @@
     "exam": "SSC CHSL 11/07/2024 (3rd Shift",
     "question": "It  was  possible  to  achieve  anything,  /  if  one  has  the  grit and determination / to keep going. SSC CHSL 11/07/2024 (3rd Shift)",
     "options": {
-      "A": "to keep going.            (b) It was possible to achieve anything,",
-      "C": "No error                       (d) if one has the grit and determination"
+      "A": "to keep going",
+      "B": "It was possible to achieve anything",
+      "C": "No error",
+      "D": "if one has the grit and determination"
     },
     "correct_option": "B",
     "solution": {
@@ -2684,15 +2754,16 @@
   {
     "id": 173,
     "exam": "SSC CHSL 11/07/2024 (4th Shift",
-    "question": "The  manager  asked  /  the  cooking  team,  “Who  /  among you is to baked the / Christmas cake this year?” SSC CHSL 11/07/2024 (4th Shift)",
+    "question": "The  manager  asked  /  the  cooking  team,  “Who  /  among you is to baked the / Christmas cake this year?”. SSC CHSL 11/07/2024 (4th Shift)",
     "options": {
       "A": "The manager asked",
       "B": "Christmas cake this year?”",
-      "C": "among you is to baked the        (d) the cooking team, “Who"
+      "C": "among you is to baked the",
+      "D": "the cooking team, “Who"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. among you is to baked the        (d) the cooking team, “Who",
+      "correct_answer": "C. among you is to baked the",
       "explanation": "among you is to baked the ‘To + V 1 ’ is the grammatically correct structure. Hence, ‘among you is to bake (V 1 )’ is the most appropriate answer. SSC CPO 2024 Tier - 1"
     }
   },
@@ -2701,11 +2772,14 @@
     "exam": "SSC CPO 27/06/2024 (1st Shift",
     "question": "We were grateful for a book they gave us. SSC CPO 27/06/2024 (1st Shift)",
     "options": {
-      "A": "grateful for      (b) they gave us        (c) a book       (d) We were"
+      "A": "grateful for",
+      "B": "they gave us ",
+      "C": "a book",
+      "D": "We were"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. ",
+      "correct_answer": "C. a book ",
       "explanation": "a book ‘Book’ mentioned in the given sentence is speciﬁc and we generally use the deﬁnite article ‘the’ before speciﬁc or particular nouns. Hence, 'the book' is the most appropriate answer."
     }
   },
@@ -2762,19 +2836,21 @@
     "exam": "SSC CPO 27/06/2024 (1st Shift",
     "question": "When  he  resigned,  /  the  company  offered  him  /  a  huge sum of money but / he refused to agree to it. SSC CPO 27/06/2024 (1st Shift)",
     "options": {
-      "A": "the company offered him            (b) When he resigned,",
-      "C": "he refused to agree to it.              (d) a huge sum of money but"
+      "A": "the company offered him",
+      "B": "When he resigned",
+      "C": "he refused to agree to it.",
+      "D": "a huge sum of money but"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. he refused to agree to it.              (d) a huge sum of money but",
+      "correct_answer": "C. he refused to agree to it.",
       "explanation": "he refused to agree to it The use of the verb ‘agree’ after ‘refused’ is superﬂuous. ‘Refuse’ means to not agree to accept something. The phrase ‘to agree to it’ must be replaced with ‘offer’. Hence, ‘he refused the offer’ is the most appropriate answer."
     }
   },
   {
     "id": 179,
     "exam": "SSC CPO 27/06/2024 (2nd Shift",
-    "question": "The  following  sentence  has  been  divided  into  four segments.  Identify  the  segment  that  contains  an  adverbial usage error. Mrs.  Gomathi  was  /  that  tired  and  weak  /  that  she  could  / scarcely walk. SSC CPO 27/06/2024 (2nd Shift)",
+    "question": "The  following  sentence  has  been  divided  into  four segments;  Identify  the  segment  that  contains  an  adverbial usage error; Mrs  Gomathi  was  /  that  tired  and  weak  /  that  she  could  / scarcely walk. SSC CPO 27/06/2024 (2nd Shift)",
     "options": {
       "A": "Mrs. Gomathi was",
       "B": "that tired and weak",
@@ -2856,8 +2932,10 @@
     "exam": "SSC CPO 27/06/2024 (2nd Shift",
     "question": "It  is  a  cheap  reasonably  /  restaurant  in  this  part  of  the town / where you can eat / delicious food. SSC CPO 27/06/2024 (2nd Shift)",
     "options": {
-      "A": "where you can eat           (b) delicious food",
-      "C": "It is a cheap reasonably (d) restaurant in this part of the town"
+      "A": "where you can eat",
+      "B": "delicious food",
+      "C": "It is a cheap reasonably",
+      "D": "restaurant in this part of the town"
     },
     "correct_option": "C",
     "solution": {
@@ -2868,9 +2946,12 @@
   {
     "id": 185,
     "exam": "SSC CPO 27/06/2024 (3rd Shift",
-    "question": "Mr. Vinu / has never / slept in / a igloo. SSC CPO 27/06/2024 (3rd Shift)",
+    "question": "Mr Vinu / has never / slept in / a igloo. SSC CPO 27/06/2024 (3rd Shift)",
     "options": {
-      "A": "has never           (b) slept in           (c) Mr. Vinu        (d) a igloo"
+      "A": "has never",
+      "B": "slept in",
+      "C": "Mr. Vinu",
+      "D": "a igloo"
     },
     "correct_option": "D",
     "solution": {
@@ -2929,9 +3010,12 @@
   {
     "id": 189,
     "exam": "SSC CPO 27/06/2024 (3rd Shift",
-    "question": "Ms. Malathi is living lonely in an apartment. SSC CPO 27/06/2024 (3rd Shift)",
+    "question": "Ms Malathi is living lonely in an apartment. SSC CPO 27/06/2024 (3rd Shift)",
     "options": {
-      "A": "an apartment   (b) lonely in    (c) Ms. Malathi    (d) is living"
+      "A": "an apartment",
+      "B": "lonely in ",
+      "C": "Ms. Malathi",
+      "D": "is living"
     },
     "correct_option": "B",
     "solution": {
@@ -2944,22 +3028,26 @@
     "exam": "SSC CPO 28/06/2024 (1st Shift",
     "question": "By  the  time  I  reaching  /  the  metro  station,  /  the  train  had departed. SSC CPO 28/06/2024 (1st Shift)",
     "options": {
-      "A": "By the time I reaching                (b) the metro station",
+      "A": "By the time I reaching",
+      "B": "the metro station",
       "C": "the train had departed",
       "D": "no error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. By the time I reaching                (b) the metro station",
+      "correct_answer": "A. By the time I reaching",
       "explanation": "By the time I reaching If two actions happened in the past, 1st action is written in past perfect tense(had + V 3 ) and 2nd action is written in simple past tense(V 2 ). In the given sentence, reaching the metro station is the 2nd action. Hence, ‘By the time I reached(V 2 )’ is the most appropriate answer."
     }
   },
   {
     "id": 191,
     "exam": "SSC CPO 28/06/2024 (1st Shift",
-    "question": "Mr. Thomas / is going / to buy / horse. SSC CPO 28/06/2024 (1st Shift) www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error",
+    "question": "Mr Thomas / is going / to buy / horse. SSC CPO 28/06/2024 (1st Shift)",
     "options": {
-      "A": "to buy       (b) Mr. Thomas          (c) is going        (d) horse"
+      "A": "to buy",
+      "B": "Mr. Thomas ",
+      "C": "is going",
+      "D": "horse"
     },
     "correct_option": "D",
     "solution": {
@@ -2972,11 +3060,14 @@
     "exam": "SSC CPO 28/06/2024 (1st Shift",
     "question": "My father is comparatively better today. SSC CPO 28/06/2024 (1st Shift)",
     "options": {
-      "A": "comparatively better     (b) today.       (c) My father      (d) is"
+      "A": "comparatively better",
+      "B": "today",
+      "C": "My father",
+      "D": "is"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. comparatively better     (b) today.       (c) My father      (d) is",
+      "correct_answer": "A. comparatively better",
       "explanation": "comparatively better ‘Better’ is the comparative degree of ‘good’. The use of ‘comparatively’ with ‘better’ is superﬂuous, so it will be removed. Hence, ‘better’ is the most appropriate answer."
     }
   },
@@ -3003,7 +3094,8 @@
     "options": {
       "A": "I am looking for the",
       "B": "up in the Himalayas",
-      "C": "Last night I dreamed that        (d) abominable snowman high"
+      "C": "Last night I dreamed that",
+      "D": "abominable snowman high"
     },
     "correct_option": "A",
     "solution": {
@@ -3018,11 +3110,12 @@
     "options": {
       "A": "I will make sure",
       "B": "No error",
-      "C": "When my father will come       (d) I discuss the possibilities"
+      "C": "When my father will come",
+      "D": "I discuss the possibilities"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. When my father will come       (d) I discuss the possibilities",
+      "correct_answer": "C. When my father will come",
       "explanation": "When my father will come ‘When’ is used to introduce a time clause, which is not written in the future tense. Rather, simple present tense is used to indicate the time of the main event. Hence, ‘When my father comes’ is the most appropriate answer."
     }
   },
@@ -3047,7 +3140,10 @@
     "exam": "SSC CPO 28/06/2024 (2nd Shift",
     "question": "Select the incorrect form of the verb. SSC CPO 28/06/2024 (2nd Shift)",
     "options": {
-      "A": "stricken          (b) strucken            (c) strike          (d) struck"
+      "A": "stricken",
+      "B": "strucken",
+      "C": "strike",
+      "D": "struck"
     },
     "correct_option": "B",
     "solution": {
@@ -3058,7 +3154,7 @@
   {
     "id": 198,
     "exam": "SSC CPO 28/06/2024 (2nd Shift",
-    "question": "Identify  the  error  in  the  verb  form  in  the  following sentence  and  choose  the  correct  sentence  from  the  given options (Present Tense). The  committee  work  diligently  to  ensure  fair  and  unbiased decision. SSC CPO 28/06/2024 (2nd Shift)",
+    "question": "Identify  the  error  in  the  verb  form  in  the  following sentence  and  choose  the  correct  sentence  from  the  given options (Present Tense); The  committee  work  diligently  to  ensure  fair  and  unbiased decision. SSC CPO 28/06/2024 (2nd Shift)",
     "options": {
       "A": "The committee is work diligently to ensure fair and unbiased",
       "B": "The committee worked diligently to ensure fair and unbiased",
@@ -3106,20 +3202,23 @@
   {
     "id": 201,
     "exam": "SSC CPO 28/06/2024 (3rd Shift",
-    "question": "The  following  sentence  has  been  divided  into  four segments.  Identify  the  segment  that  contains  an  adverbial usage error. Mr. Sukesh and / his family / ate the / food greedy. SSC CPO 28/06/2024 (3rd Shift)",
+    "question": "The  following  sentence  has  been  divided  into  four segments.  Identify  the  segment  that  contains  an  adverbial usage error; Mr Sukesh and / his family / ate the / food greedy. SSC CPO 28/06/2024 (3rd Shift)",
     "options": {
-      "A": "his family     (b) food greedy.    (c) ate the   (d) Mr. Sukesh and"
+      "A": "his family",
+      "B": "food greedy",
+      "C": "ate the",
+      "D": "Mr. Sukesh and"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. ",
+      "correct_answer": "B. ate the",
       "explanation": "food greedy The given sentence needs an adverb ‘greedily’ to modify the verb ‘ate’, not the adjective ‘greedy’. Hence, ‘food greedily’ is the most appropriate answer."
     }
   },
   {
     "id": 202,
     "exam": "SSC CPO 28/06/2024 (3rd Shift",
-    "question": "Ramesh  licked  (A)  /  honey  and  (B)  /  said  that  (C)  /  it tasted sweetly. (D) SSC CPO 28/06/2024 (3rd Shift)",
+    "question": "Ramesh  licked  (A)  /  honey  and  (B)  /  said  that  (C)  /  it tasted sweetly  (D).  SSC CPO 28/06/2024 (3rd Shift)",
     "options": {
       "A": "C",
       "B": "B",
@@ -3135,13 +3234,16 @@
   {
     "id": 203,
     "exam": "SSC CPO 29/06/2024 (1st Shift",
-    "question": "Mrs. Rani / works for / a international / school. SSC CPO 29/06/2024 (1st Shift)",
+    "question": "Mrs Rani / works for / a international / school. SSC CPO 29/06/2024 (1st Shift)",
     "options": {
-      "A": "school        (b) Mrs. Rani       (c) works for     (d) a international"
+      "A": "school",
+      "B": "Mrs. Rani ",
+      "C": "works for",
+      "D": "a international"
     },
     "correct_option": "D",
     "solution": {
-      "correct_answer": "D. ",
+      "correct_answer": "D. a international",
       "explanation": "a international Article ‘an’ is used before the words beginning with a vowel sound (an apple, an umbrella, an American). Similarly, in the given sentence, the word ‘international’ begins with a vowel sound. Hence, ‘an international’ is the most appropriate answer."
     }
   },
@@ -3214,7 +3316,8 @@
     "exam": "SSC CPO 29/06/2024 (2nd Shift",
     "question": "There  are  four  tributaries  of  Ganga  and  it  is  ranked  as  the ﬁfth most polluted river of the world. SSC CPO 29/06/2024 (2nd Shift)",
     "options": {
-      "A": "most polluted river of the world.  (b) of Ganga and it",
+      "A": "most polluted river of the world",
+      "B": "of Ganga and it",
       "C": "is ranked as the ﬁfth",
       "D": "There are four tributaries"
     },
@@ -3259,7 +3362,7 @@
   {
     "id": 211,
     "exam": "SSC CPO 29/06/2024 (2nd Shift",
-    "question": "Had you been / working regularly, / you had  completed / www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error the project yesterday. SSC CPO 29/06/2024 (2nd Shift)",
+    "question": "Had you been / working regularly, / you had  completed / the project yesterday. SSC CPO 29/06/2024 (2nd Shift)",
     "options": {
       "A": "the project yesterday",
       "B": "working regularly",
@@ -3291,7 +3394,7 @@
   {
     "id": 213,
     "exam": "SSC CPO 29/06/2024 (3rd Shift",
-    "question": "For the past / three years, / my uncle is /away  from home SSC CPO 29/06/2024 (3rd Shift)",
+    "question": "For the past / three years, / my uncle is /away  from home. SSC CPO 29/06/2024 (3rd Shift)",
     "options": {
       "A": "three years,",
       "B": "away from home.",
@@ -3307,9 +3410,12 @@
   {
     "id": 214,
     "exam": "SSC CPO 29/06/2024 (3rd Shift",
-    "question": "Mr. Raghav / brushes his / teeth four / times  the day SSC CPO 29/06/2024 (3rd Shift)",
+    "question": "Mr Raghav / brushes his / teeth four / times  the day SSC CPO 29/06/2024 (3rd Shift)",
     "options": {
-      "A": "Mr. Raghav   (b) brushes his   (c) teeth four   (d) times the day"
+      "A": "Mr. Raghav",
+      "B": "brushes his",
+      "C": "teeth four",
+      "D": "times the day"
     },
     "correct_option": "D",
     "solution": {
@@ -3320,9 +3426,12 @@
   {
     "id": 215,
     "exam": "SSC CPO 29/06/2024 (3rd Shift",
-    "question": "Mr. Prabhakar was ﬁrst man to arrive at the  venue. SSC CPO 29/06/2024 (3rd Shift)",
+    "question": "Mr Prabhakar was ﬁrst man to arrive at the  venue. SSC CPO 29/06/2024 (3rd Shift)",
     "options": {
-      "A": "to arrive  (b) at the venue (c) was ﬁrst man  (d) Mr. Prabhakar"
+      "A": "to arrive",
+      "B": "at the venue",
+      "C": "was ﬁrst man",
+      "D": "Mr. Prabhakar"
     },
     "correct_option": "C",
     "solution": {

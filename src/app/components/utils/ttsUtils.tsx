@@ -94,7 +94,7 @@ export const useTTS = () => {
   // Return component rendering functions instead of the component itself
   const renderTtsSettingsPanel = () => (
     <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-4 animate-fade-in">
-      <h3 className="font-bold mb-2">Text-to-Speech Settings</h3>
+      <h3 className="font-bold mb-2">Text to speech</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label

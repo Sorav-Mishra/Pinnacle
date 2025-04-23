@@ -1,67 +1,296 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { useParams, useSearchParams } from "next/navigation";
-import classNames from "classnames";
-import { Question, ProgressStatus } from "./types";
-import { useTTS } from "./ttsUtils";
-import { ProgressCircle } from "./ProgressComponents";
+import { useParams, useSearchParams, useRouter } from "next/navigation";
+import { Question } from "./utils/types";
+import { useMcqState } from "./utils/McqState";
+import { useMcqNavigation } from "./utils/NavigationProps";
+import { useMcqSolution } from "./utils/useMcqSolution";
+import QuestionView from "./utils/QuestionViewProps";
+import SolutionView from "./utils/SolutionViewProps";
+import NavigationButtons from "./utils/NavigationButtons";
+import ProgressHeader from "./utils/ProgressHeaderProps";
+import { getSubtopicRange } from "./utils/subtopicRanges";
 
 const McqPractice = () => {
   const params = useParams();
   const searchParams = useSearchParams();
+  const router = useRouter();
   const chapter = params?.chapter as string;
+  const subtopic = searchParams?.get("subtopic") || "";
   const exam = searchParams?.get("exam") || "";
 
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [index, setIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [progress, setProgress] = useState<Record<number, ProgressStatus>>({});
-  const [attempted, setAttempted] = useState(0);
-  const [correct, setCorrect] = useState(0);
-  const [wrong, setWrong] = useState(0);
-  const [skipped, setSkipped] = useState(0);
+  const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showSummary, setShowSummary] = useState(false);
-  const [fetchingSolution, setFetchingSolution] = useState(false);
   const [trimmedQuestion, setTrimmedQuestion] = useState<string>("");
+  const [debugInfo, setDebugInfo] = useState<any>(null);
 
-  const progressRef = useRef<HTMLDivElement>(null);
-  const questionRef = useRef<HTMLDivElement>(null);
-  const mainContentRef = useRef<HTMLDivElement>(null);
-
-  // TTS integration
   const {
-    speak,
-    stopSpeech,
-    showTtsSettings,
-    toggleTtsSettings,
-    renderTtsSettingsPanel,
-  } = useTTS();
+    index,
+    progress,
+    attempted,
+    correct,
+    wrong,
+    skipped,
+    selectedOption,
+    showAnswer,
+    showSummary,
+    setIndex,
+    setProgress,
+    setAttempted,
+    setCorrect,
+    setWrong,
+    setSkipped,
+    setSelectedOption,
+    setShowAnswer,
+    toggleShowSummary,
+    resetAllProgress,
+  } = useMcqState();
+
+  const { navigate, handleOptionClick } = useMcqNavigation({
+    index,
+    questions,
+    progress,
+    showAnswer,
+    attempted,
+    correct,
+    wrong,
+    skipped,
+    setIndex,
+    setProgress,
+    setAttempted,
+    setCorrect,
+    setWrong,
+    setSkipped,
+    setSelectedOption,
+    setShowAnswer,
+  });
+
+  const { fetchingSolution, fetchSolution } = useMcqSolution(
+    questions,
+    setQuestions
+  );
+
+  const questionRef = useRef<HTMLDivElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
+
+  const extractQuestionNumber = (question: Question): number => {
+    // Strategy 1: Check for explicit questionNumber property
+    if ("questionNumber" in question && question.questionNumber) {
+      return Number(question.questionNumber);
+    }
+
+    // Strategy 2: Extract from ID if it contains a number
+    if ("id" in question && question.id !== undefined && question.id !== null) {
+      const match = String(question.id).match(/(\d+)/);
+      if (match) return parseInt(match[1], 10);
+    }
+
+    // Strategy 3: Check if question text starts with a number followed by dot or parenthesis
+    const startMatch = question.question.match(/^(\d+)[\.\)]/);
+    if (startMatch) return parseInt(startMatch[1], 10);
+
+    // Strategy 4: Look for a number at the beginning of the question even without a separator
+    const beginningMatch = question.question.match(/^(\d+)/);
+    if (beginningMatch) return parseInt(beginningMatch[1], 10);
+
+    // Strategy 5: Look for any number in the question as a last resort
+    const anyNumberMatch = question.question.match(/\b(\d+)\b/);
+    if (anyNumberMatch) return parseInt(anyNumberMatch[1], 10);
+
+    // Default if no number found
+    return 0;
+  };
+
+  useEffect(() => {
+    if (subtopic && allQuestions.length > 0) {
+      const range = getSubtopicRange(subtopic);
+
+      if (range) {
+        // console.log(
+        //   `Filtering for subtopic: ${subtopic}, range: ${range.start}-${range.end}`
+        // );
+
+        // Log a few sample questions with their extracted numbers for debugging
+        const sampleQuestions = allQuestions.slice(0, 10);
+        const sampleWithNumbers = sampleQuestions.map((q) => ({
+          question: q.question.substring(0, 50) + "...",
+          extractedNumber: extractQuestionNumber(q),
+        }));
+        // console.log(
+        //   "Sample questions with extracted numbers:",
+        //   sampleWithNumbers
+        // );
+
+        const filteredQuestions = allQuestions.filter((q) => {
+          const questionNumber = extractQuestionNumber(q);
+          return questionNumber >= range.start && questionNumber <= range.end;
+        });
+
+        // Log number ranges found in the data
+        const allNumbers = allQuestions.map((q) => extractQuestionNumber(q));
+        const minNumber = Math.min(...allNumbers);
+        const maxNumber = Math.max(...allNumbers);
+        // console.log(`Question number range in data: ${minNumber}-${maxNumber}`);
+
+        setDebugInfo({
+          subtopic,
+          range,
+          totalQuestions: allQuestions.length,
+          filteredCount: filteredQuestions.length,
+          sampleQuestionNumbers: filteredQuestions
+            .slice(0, 5)
+            .map(extractQuestionNumber),
+          numberRange: `${minNumber}-${maxNumber}`,
+        });
+
+        setQuestions(filteredQuestions);
+        setIndex(0);
+        resetAllProgress();
+      } else {
+        setDebugInfo({
+          subtopic,
+          range: null,
+          error: "No range configuration found for this subtopic",
+        });
+        // When no range is found, don't filter - show all questions
+        setQuestions(allQuestions);
+      }
+    } else if (allQuestions.length > 0) {
+      setQuestions(allQuestions);
+    }
+  }, [subtopic, allQuestions, setIndex, resetAllProgress]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/data/english/${chapter}.json`);
-        if (!response.ok) throw new Error(`Failed to load data for ${chapter}`);
-        const data = await response.json();
-        setQuestions(data);
 
-        const savedProgress = localStorage.getItem(`mcq-progress-${chapter}`);
+        let gkRes, englishRes, historyRes;
+
+        // Try fetching from GK folder
+        try {
+          gkRes = await fetch(`/data/GK/${chapter}.json`);
+        } catch (e) {
+          //console.log("Error fetching from GK folder:", e);
+        }
+
+        // Try fetching from English folder
+        try {
+          englishRes = await fetch(`/data/english/${chapter}.json`);
+        } catch (e) {
+          //console.log("Error fetching from English folder:", e);
+        }
+
+        // Add a new attempt for history-specific folder
+        try {
+          historyRes = await fetch(`/data/history/${chapter}.json`);
+        } catch (e) {
+          //console.log("Error fetching from history folder:", e);
+        }
+
+        // Try other possible locations
+        let directRes;
+        if (
+          (!gkRes || !gkRes.ok) &&
+          (!englishRes || !englishRes.ok) &&
+          (!historyRes || !historyRes.ok)
+        ) {
+          // Try without subfolder
+          try {
+            directRes = await fetch(`/data/${chapter}.json`);
+          } catch (e) {
+            // console.log("Error fetching directly from data folder:", e);
+          }
+        }
+
+        if (
+          (!gkRes || !gkRes.ok) &&
+          (!englishRes || !englishRes.ok) &&
+          (!historyRes || !historyRes.ok) &&
+          (!directRes || !directRes.ok)
+        ) {
+          throw new Error(`Failed to load data for ${chapter}`);
+        }
+
+        const gkData = gkRes && gkRes.ok ? await gkRes.json() : [];
+        const englishData =
+          englishRes && englishRes.ok ? await englishRes.json() : [];
+        const historyData =
+          historyRes && historyRes.ok ? await historyRes.json() : [];
+        const directData =
+          directRes && directRes.ok ? await directRes.json() : [];
+
+        const combinedData = [
+          ...gkData,
+          ...englishData,
+          ...historyData,
+          ...directData,
+        ];
+
+        if (combinedData.length === 0) {
+          throw new Error(`No questions found for ${chapter}`);
+        }
+
+        // console.log(`Loaded ${combinedData.length} questions for ${chapter}`);
+
+        // Process each question to ensure it has a question number
+        const processedData = combinedData.map((q, idx) => {
+          if (!("questionNumber" in q)) {
+            const extractedNumber = extractQuestionNumber(q);
+            return {
+              ...q,
+              questionNumber: extractedNumber || idx + 1,
+            };
+          }
+          return q;
+        });
+
+        // Log range of question numbers found
+        if (processedData.length > 0) {
+          const questionNumbers = processedData.map((q) =>
+            typeof q.questionNumber === "number"
+              ? q.questionNumber
+              : parseInt(String(q.questionNumber), 10)
+          );
+          const validNumbers = questionNumbers.filter((n) => !isNaN(n));
+          if (validNumbers.length > 0) {
+            // console.log(
+            //   `Question number range: ${Math.min(...validNumbers)} - ${Math.max(
+            //     ...validNumbers
+            //   )}`
+            // );
+          }
+        }
+
+        setAllQuestions(processedData);
+
+        if (!subtopic) {
+          setQuestions(processedData);
+        }
+
+        const storageKey = `mcq-progress-${chapter}${
+          subtopic ? "-" + subtopic : ""
+        }`;
+
+        const savedProgress = localStorage.getItem(storageKey);
+
         if (savedProgress) {
-          const { progress, attempted, correct, wrong, skipped, index } =
-            JSON.parse(savedProgress);
-          setProgress(progress);
-          setAttempted(attempted);
-          setCorrect(correct);
-          setWrong(wrong);
-          setSkipped(skipped || 0); // Handle legacy data without skipped count
-          setIndex(index);
+          try {
+            const parsedProgress = JSON.parse(savedProgress);
+            setProgress(parsedProgress.progress || {});
+            setAttempted(parsedProgress.attempted || 0);
+            setCorrect(parsedProgress.correct || 0);
+            setWrong(parsedProgress.wrong || 0);
+            setSkipped(parsedProgress.skipped || 0);
+            setIndex(parsedProgress.index || 0);
+          } catch (e) {
+            resetAllProgress();
+            console.log(e);
+          }
         }
       } catch (error) {
-        console.error(error);
         setError(
           `Failed to load questions. ${
             error instanceof Error ? error.message : ""
@@ -73,24 +302,45 @@ const McqPractice = () => {
     };
 
     fetchQuestions();
-  }, [chapter]);
+  }, [
+    chapter,
+    subtopic,
+    setProgress,
+    setAttempted,
+    setCorrect,
+    setWrong,
+    setSkipped,
+    setIndex,
+    resetAllProgress,
+  ]);
 
-  // Set trimmed question when question changes
   useEffect(() => {
     if (questions.length > 0 && questions[index]) {
       const fullQuestion = questions[index].question;
-      // Get the content before the first period (if it exists)
-      const trimmed = fullQuestion.includes(".")
-        ? fullQuestion.split(".")[0] + "."
-        : fullQuestion;
+      const dotIndex = fullQuestion.indexOf(".");
+      const questionMarkIndex = fullQuestion.indexOf("?");
+
+      const splitIndex = Math.min(
+        dotIndex !== -1 ? dotIndex : Infinity,
+        questionMarkIndex !== -1 ? questionMarkIndex : Infinity
+      );
+
+      const trimmed =
+        splitIndex !== Infinity
+          ? fullQuestion.slice(0, splitIndex + 1)
+          : fullQuestion;
+
       setTrimmedQuestion(trimmed);
     }
   }, [questions, index]);
 
   useEffect(() => {
     if (questions.length > 0) {
+      const storageKey = `mcq-progress-${chapter}${
+        subtopic ? "-" + subtopic : ""
+      }`;
       localStorage.setItem(
-        `mcq-progress-${chapter}`,
+        storageKey,
         JSON.stringify({ progress, attempted, correct, wrong, skipped, index })
       );
     }
@@ -102,6 +352,7 @@ const McqPractice = () => {
     skipped,
     index,
     chapter,
+    subtopic,
     questions.length,
   ]);
 
@@ -119,142 +370,18 @@ const McqPractice = () => {
         block: "start",
       });
     }
+  }, [index, showAnswer]);
 
-    // Stop any ongoing speech when navigating to a new question
-    stopSpeech();
-  }, [index, showAnswer, stopSpeech]);
-
-  const handleOptionClick = (key: string) => {
-    if (progress[index]) return;
-    setSelectedOption(key);
-    setShowAnswer(true);
-    setAttempted((prev) => prev + 1);
-
-    if (key === questions[index]?.correct_option) {
-      setCorrect((prev) => prev + 1);
-      setProgress((prev) => ({ ...prev, [index]: "correct" }));
-    } else {
-      setWrong((prev) => prev + 1);
-      setProgress((prev) => ({ ...prev, [index]: "wrong" }));
-    }
-
-    // Fetch solution if we don't already have it
-    if (!questions[index].solution) {
-      fetchSolution(index);
-    }
-  };
-
-  const fetchSolution = async (questionIndex: number) => {
-    try {
-      setFetchingSolution(true);
-      // Simulate API call to fetch solution
-      // In a real implementation, this would be an actual API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // For demo purposes, generate a mock solution
-      const mockSolution = {
-        explanation: `This is the explanation for question ${
-          questionIndex + 1
-        }. The correct answer is ${questions[
-          questionIndex
-        ].correct_option.toUpperCase()}.`,
-        incorrect_explanations: Object.keys(questions[questionIndex].options)
-          .filter((key) => key !== questions[questionIndex].correct_option)
-          .reduce(
-            (acc, key) => ({
-              ...acc,
-              [key]: `Option ${key.toUpperCase()} is incorrect because it contradicts core principles.`,
-            }),
-            {}
-          ),
-      };
-
-      // Update the question with the fetched solution
-      const updatedQuestions = [...questions];
-      updatedQuestions[questionIndex] = {
-        ...updatedQuestions[questionIndex],
-        solution: mockSolution,
-      };
-
-      setQuestions(updatedQuestions);
-    } catch (error) {
-      console.error("Failed to fetch solution:", error);
-    } finally {
-      setFetchingSolution(false);
-    }
-  };
-
-  const navigate = (dir: "prev" | "next", skip: boolean = false) => {
-    if (skip && !progress[index]) {
-      setSkipped((prev) => prev + 1);
-      setProgress((prev) => ({ ...prev, [index]: "skipped" }));
-    }
-
-    setSelectedOption(null);
-    setShowAnswer(false);
-    setIndex((prev) =>
-      dir === "next"
-        ? Math.min(prev + 1, questions.length - 1)
-        : Math.max(prev - 1, 0)
-    );
-  };
-
-  const resetProgress = () => {
-    if (
-      window.confirm(
-        "Are you sure you want to reset all progress? This cannot be undone."
-      )
-    ) {
-      setProgress({});
-      setAttempted(0);
-      setCorrect(0);
-      setWrong(0);
-      setSkipped(0);
-      setIndex(0);
-      setSelectedOption(null);
-      setShowAnswer(false);
-      setShowSummary(false);
-      localStorage.removeItem(`mcq-progress-${chapter}`);
-    }
-  };
-
-  const toggleSummary = () => setShowSummary(!showSummary);
-
-  const getCompletionPercentage = () =>
-    questions.length > 0
-      ? Math.round((Object.keys(progress).length / questions.length) * 100)
-      : 0;
-
-  const getAccuracyPercentage = () =>
-    attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
-
-  const getUnansweredCount = () =>
-    questions.length - Object.keys(progress).length;
-
-  // These functions are specific to this component's usage of TTS
-  const speakQuestion = () => {
-    if (!questions[index]) return;
-    speak(questions[index].question);
-  };
-
-  const speakOption = (key: string, text: string) => {
-    speak(`Option ${key.toUpperCase()}: ${text}`);
-  };
-
-  const speakSolution = () => {
-    if (!questions[index]?.solution) return;
-    speak(questions[index].solution.explanation);
-  };
-
-  if (loading)
+  if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
         <div className="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin mr-2"></div>
         <span>Loading questions...</span>
       </div>
     );
+  }
 
-  if (error)
+  if (error) {
     return (
       <div className="min-h-screen p-4 text-red-600 flex items-center justify-center">
         <div className="bg-red-50 p-4 rounded-lg max-w-md">
@@ -263,318 +390,151 @@ const McqPractice = () => {
         </div>
       </div>
     );
+  }
 
-  if (questions.length === 0)
+  if (questions.length === 0) {
     return (
-      <div className="min-h-screen p-4 flex items-center justify-center">
-        No questions available for this chapter.
+      <div className="min-h-screen p-4 flex flex-col items-center justify-center">
+        <div className="text-center mb-8">
+          <h3 className="font-bold text-lg mb-2">No Questions Found</h3>
+          <p>
+            No questions available for this chapter
+            {subtopic ? ` or subtopic (${subtopic})` : ""}.
+          </p>
+          <button
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            onClick={() => router.push(`/index2`)}
+          >
+            Return to Index
+          </button>
+        </div>
+
+        {debugInfo && (
+          <div className="bg-gray-100 p-4 rounded-lg max-w-lg text-sm">
+            <h3 className="font-bold mb-2">Debug Information</h3>
+            <p>Chapter: {chapter}</p>
+            <p>Subtopic: {debugInfo.subtopic}</p>
+            {debugInfo.range ? (
+              <>
+                <p>
+                  Range: {debugInfo.range.start} - {debugInfo.range.end}
+                </p>
+                <p>Total questions loaded: {debugInfo.totalQuestions}</p>
+                <p>Questions after filtering: {debugInfo.filteredCount}</p>
+                {debugInfo.numberRange && (
+                  <p>Question number range in data: {debugInfo.numberRange}</p>
+                )}
+                {debugInfo.sampleQuestionNumbers &&
+                  debugInfo.sampleQuestionNumbers.length > 0 && (
+                    <p>
+                      Sample question numbers:{" "}
+                      {debugInfo.sampleQuestionNumbers.join(", ")}
+                    </p>
+                  )}
+              </>
+            ) : (
+              <p className="text-red-500">
+                {debugInfo.error ||
+                  "No range configuration found for this subtopic"}
+              </p>
+            )}
+          </div>
+        )}
       </div>
     );
+  }
 
   const q = questions[index];
-  const completionPercentage = getCompletionPercentage();
+  const completionPercentage =
+    questions.length > 0
+      ? Math.round((Object.keys(progress).length / questions.length) * 100)
+      : 0;
   const currentExamName = q.exam || exam;
+  //const expectedCount = subtopic ? getSubtopicRange(subtopic)?.count : null;
 
   return (
-    <div
-      className="min-h-screen bg-white text-black w-full"
-      ref={mainContentRef}
-    >
+    <div className="min-h-screen bg-white text-black w-full">
       <div className="max-w-3xl mx-auto px-3 py-4 sm:p-6 md:p-8 font-sans text-base">
-        {/* Header section with chapter title */}
-        <div className="text-center mb-4">
-          <h2 className="text-xl sm:text-2xl font-bold">
-            MCQ Practice: {chapter}
+        <div className="text-center">
+          <h2 className="text-xl sm:text-2xl font-bold mt-12">
+            {chapter}
+            {subtopic && (
+              <span className="ml-2 text-blue-600">| {subtopic}</span>
+            )}
           </h2>
+          {/* <div className="text-sm text-gray-600 mt-1">
+            Showing {questions.length} questions
+            {subtopic &&
+              expectedCount &&
+              questions.length !== expectedCount &&
+              ` (Expected: ${expectedCount})`}
+            {!subtopic &&
+              allQuestions.length > 0 &&
+              ` of ${allQuestions.length} total`}
+          </div> */}
         </div>
 
-        {/* Horizontal scrolling circle indicators */}
-        <div
+        <ProgressHeader
           ref={progressRef}
-          className="flex overflow-x-auto gap-2 py-3 px-1 rounded-lg bg-gray-100 shadow-inner mb-6 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
-          style={{
-            scrollbarWidth: "thin",
-            scrollbarColor: "rgb(209 213 219) transparent",
+          questions={questions}
+          currentIndex={index}
+          progress={progress}
+          attempted={attempted}
+          correct={correct}
+          wrong={wrong}
+          skipped={skipped}
+          showSummary={showSummary}
+          completionPercentage={completionPercentage}
+          onResetProgress={resetAllProgress}
+          onToggleSummary={toggleShowSummary}
+          onNavigateToQuestion={(idx) => {
+            setSelectedOption(null);
+            setShowAnswer(false);
+            setIndex(idx);
           }}
-        >
-          {questions.map((_, i) => (
-            <div
-              key={i}
-              className={classNames(
-                "w-7 h-7 sm:w-10 sm:h-10 rounded-full flex-shrink-0 flex items-center justify-center text-xs sm:text-sm font-bold border-2 transition duration-200 cursor-pointer",
-                {
-                  "bg-green-500 text-white border-green-600":
-                    progress[i] === "correct",
-                  "bg-red-500 text-white border-red-600":
-                    progress[i] === "wrong",
-                  "bg-yellow-500 text-white border-yellow-600":
-                    progress[i] === "skipped",
-                  "bg-white text-gray-700 border-gray-300": !progress[i],
-                  "ring-2 ring-blue-500 scale-110 shadow-md": i === index,
-                }
-              )}
-              onClick={() => {
-                setSelectedOption(null);
-                setShowAnswer(false);
-                setIndex(i);
-              }}
-            >
-              {i + 1}
-            </div>
-          ))}
-        </div>
+        />
 
-        {/* Main content with left sidebar and right content area */}
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Left sidebar with progress circle and TTS settings */}
-          <div className="md:w-48 flex flex-col items-start">
-            {/* Progress Circle and Summary */}
-            <div className="flex flex-row w-full items-start gap-4">
-              {/* Progress Circle on the left */}
-              <div
-                className="cursor-pointer flex-shrink-0 z-10"
-                onClick={toggleSummary}
-                title="Click to toggle summary"
-              >
-                <ProgressCircle
-                  current={index + 1}
-                  total={questions.length}
-                  percentage={completionPercentage}
+          {q && (
+            <div className="flex-1">
+              <QuestionView
+                ref={questionRef}
+                question={q}
+                index={index}
+                trimmedQuestion={trimmedQuestion}
+                examName={currentExamName}
+                showAnswer={showAnswer}
+                selectedOption={selectedOption}
+                onOptionClick={(key) =>
+                  handleOptionClick(key, q.correct_option, () =>
+                    fetchSolution(index)
+                  )
+                }
+              />
+
+              {showAnswer && (
+                <SolutionView
+                  solution={q.solution}
+                  fetchingSolution={fetchingSolution}
+                  onFetchSolution={() => fetchSolution(index)}
                 />
-              </div>
-
-              {/* Summary panel */}
-              {showSummary && (
-                <div className="flex-1 p-4 bg-blue-50 border border-blue-200 rounded-lg z-20 animate-fade-in">
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-bold">Progress Summary</h3>
-                    <button
-                      onClick={resetProgress}
-                      className="px-3 py-1 bg-red-100 hover:bg-red-200 rounded text-xs font-medium"
-                    >
-                      Reset Progress
-                    </button>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm text-gray-600">Completion</p>
-                      <p className="font-semibold">
-                        {completionPercentage}% ({Object.keys(progress).length}/
-                        {questions.length})
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600">Accuracy</p>
-                      <p className="font-semibold">
-                        {getAccuracyPercentage()}% ({correct}/{attempted})
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600">Correct Answers</p>
-                      <p className="font-semibold text-green-600">{correct}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600">Wrong Answers</p>
-                      <p className="font-semibold text-red-600">{wrong}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600">Skipped Questions</p>
-                      <p className="font-semibold text-yellow-600">{skipped}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-600">Unanswered</p>
-                      <p className="font-semibold">{getUnansweredCount()}</p>
-                    </div>
-                  </div>
-                </div>
               )}
+
+              <NavigationButtons
+                index={index}
+                totalQuestions={questions.length}
+                showAnswer={showAnswer}
+                correctOption={q.correct_option}
+                onNavigate={navigate}
+                onShowAnswer={(key) =>
+                  handleOptionClick(key, q.correct_option, () =>
+                    fetchSolution(index)
+                  )
+                }
+                onToggleSummary={toggleShowSummary}
+              />
             </div>
-
-            {/* TTS settings button below the circle */}
-            <button
-              onClick={toggleTtsSettings}
-              className="mt-4 p-2 bg-blue-100 hover:bg-blue-200 rounded-lg w-36 md:w-48 flex items-center justify-center"
-            >
-              <span className="mr-2">🔊</span>
-              <span className="text-sm">TTS Settings</span>
-            </button>
-
-            {/* TTS Settings Panel */}
-            {showTtsSettings && (
-              <div className="mt-3 bg-gray-100 p-3 rounded-lg w-full md:w-48">
-                {renderTtsSettingsPanel()}
-              </div>
-            )}
-          </div>
-
-          {/* Right content area */}
-          <div className="flex-1">
-            {/* Question content */}
-            <div ref={questionRef} className="mb-4">
-              <div className="font-bold mb-4 text-[18px] sm:text-[18px] flex items-start">
-                <div className="flex-grow">
-                  <span>
-                    {index + 1}. {trimmedQuestion}
-                    {currentExamName && (
-                      <span
-                        className="text-gray-700 text-xs sm:text-xs ml-1"
-                        // style={{ display: "none" }}
-                      >
-                        ({currentExamName})
-                      </span>
-                    )}
-                  </span>
-                </div>
-                <button
-                  onClick={speakQuestion}
-                  className="ml-2 p-1 rounded-full hover:bg-blue-100 flex-shrink-0"
-                  aria-label="Listen to question"
-                  title="Listen to question"
-                >
-                  🔊
-                </button>
-              </div>
-              <div className="grid gap-3 mt-4">
-                {Object.entries(q.options).map(([key, value]) => (
-                  <div key={key} className="relative">
-                    <button
-                      disabled={showAnswer}
-                      onClick={() => handleOptionClick(key)}
-                      className={classNames(
-                        "w-full text-left px-3 sm:px-4 py-2 sm:py-3 rounded-lg border transition duration-200 shadow-sm text-1xl sm:text-1xl font-semibold pr-10",
-                        {
-                          "bg-green-100 border-green-600 text-green-800":
-                            showAnswer && key === q.correct_option,
-                          "bg-red-100 border-red-600 text-red-800":
-                            showAnswer &&
-                            key === selectedOption &&
-                            key !== q.correct_option,
-                          "hover:bg-blue-50 border-gray-300": !showAnswer,
-                        }
-                      )}
-                    >
-                      <span className="font-semibold">
-                        {key.toUpperCase()}.
-                      </span>{" "}
-                      {value}
-                    </button>
-                    {/* Speaker icon inside each option box, but right-aligned */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        speakOption(key, value);
-                      }}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-blue-100"
-                      aria-label={`Listen to option ${key}`}
-                      title={`Listen to option ${key}`}
-                    >
-                      🔊
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Solution section with TTS button */}
-            {showAnswer && (
-              <div className="p-3 sm:p-4 border rounded bg-yellow-50 text-[14px] sm:text-base font-semibold text-gray-700 mb-6 animate-fade-in">
-                {fetchingSolution ? (
-                  <div className="flex items-center justify-center p-4">
-                    <div className="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin mr-2"></div>
-                    <span>Fetching solution...</span>
-                  </div>
-                ) : q.solution ? (
-                  <>
-                    <div className="flex items-start justify-between mb-2">
-                      <p className="font-bold">Solution:</p>
-                      <button
-                        onClick={speakSolution}
-                        className="p-1 rounded-full hover:bg-blue-100"
-                        aria-label="Listen to solution"
-                        title="Listen to solution"
-                      >
-                        🔊
-                      </button>
-                    </div>
-                    <p className="mb-3">{q.solution.explanation}</p>
-                    {q.solution.incorrect_explanations && (
-                      <div>
-                        <p className="font-bold mb-1">
-                          Why other options are incorrect:
-                        </p>
-                        <ul className="list-disc pl-4 sm:pl-5">
-                          {Object.entries(
-                            q.solution.incorrect_explanations
-                          ).map(([key, exp]) => (
-                            <li key={key} className="mb-1">
-                              <strong>{key.toUpperCase()}:</strong> {exp}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <div className="text-center py-2">
-                    <button
-                      onClick={() => fetchSolution(index)}
-                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
-                    >
-                      Fetch Solution
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Navigation buttons */}
-            <div className="grid grid-cols-2 gap-2 mt-6">
-              <button
-                className="px-3 py-2 sm:px-4 sm:py-2 bg-gray-200 rounded hover:bg-gray-300 text-xs sm:text-base disabled:opacity-50"
-                onClick={() => navigate("prev")}
-                disabled={index === 0}
-              >
-                ⬅️ Previous
-              </button>
-
-              {!showAnswer && (
-                <button
-                  className="px-3 py-2 sm:px-4 sm:py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 text-xs sm:text-base"
-                  onClick={() => navigate("next", true)}
-                >
-                  Skip ⏭️
-                </button>
-              )}
-
-              {showAnswer && index < questions.length - 1 ? (
-                <button
-                  className="px-3 py-2 sm:px-4 sm:py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-xs sm:text-base"
-                  onClick={() => navigate("next")}
-                >
-                  Next ➡️
-                </button>
-              ) : (
-                showAnswer &&
-                index === questions.length - 1 && (
-                  <button
-                    className="px-3 py-2 sm:px-4 sm:py-2 bg-green-500 text-white rounded hover:bg-green-600 text-xs sm:text-base"
-                    onClick={toggleSummary}
-                  >
-                    Show Summary
-                  </button>
-                )
-              )}
-
-              {!showAnswer && (
-                <button
-                  className="px-3 py-2 sm:px-4 sm:py-2 bg-green-500 text-white rounded hover:bg-green-600 text-xs sm:text-base col-span-2 mt-2"
-                  onClick={() => handleOptionClick(q.correct_option)}
-                >
-                  Show Answer
-                </button>
-              )}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
