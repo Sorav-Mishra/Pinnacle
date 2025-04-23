@@ -1,4 +1,20 @@
 "use client";
+
+interface SubtopicRange {
+  start: number;
+  end: number;
+}
+
+interface DebugInfo {
+  subtopic?: string;
+  range?: SubtopicRange | null;
+  error?: string;
+  totalQuestions?: number;
+  filteredCount?: number;
+  sampleQuestionNumbers?: number[];
+  numberRange?: string;
+}
+
 import { useEffect, useState, useRef } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { Question } from "./utils/types";
@@ -24,7 +40,7 @@ const McqPractice = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [trimmedQuestion, setTrimmedQuestion] = useState<string>("");
-  const [debugInfo, setDebugInfo] = useState<any>(null);
+  const [debugInfo, setDebugInfo] = useState<DebugInfo>({});
 
   const {
     index,
@@ -108,21 +124,6 @@ const McqPractice = () => {
       const range = getSubtopicRange(subtopic);
 
       if (range) {
-        // console.log(
-        //   `Filtering for subtopic: ${subtopic}, range: ${range.start}-${range.end}`
-        // );
-
-        // Log a few sample questions with their extracted numbers for debugging
-        const sampleQuestions = allQuestions.slice(0, 10);
-        const sampleWithNumbers = sampleQuestions.map((q) => ({
-          question: q.question.substring(0, 50) + "...",
-          extractedNumber: extractQuestionNumber(q),
-        }));
-        // console.log(
-        //   "Sample questions with extracted numbers:",
-        //   sampleWithNumbers
-        // );
-
         const filteredQuestions = allQuestions.filter((q) => {
           const questionNumber = extractQuestionNumber(q);
           return questionNumber >= range.start && questionNumber <= range.end;
@@ -132,7 +133,6 @@ const McqPractice = () => {
         const allNumbers = allQuestions.map((q) => extractQuestionNumber(q));
         const minNumber = Math.min(...allNumbers);
         const maxNumber = Math.max(...allNumbers);
-        // console.log(`Question number range in data: ${minNumber}-${maxNumber}`);
 
         setDebugInfo({
           subtopic,
@@ -172,22 +172,22 @@ const McqPractice = () => {
         // Try fetching from GK folder
         try {
           gkRes = await fetch(`/data/GK/${chapter}.json`);
-        } catch (e) {
-          //console.log("Error fetching from GK folder:", e);
+        } catch {
+          // Silent catch
         }
 
         // Try fetching from English folder
         try {
           englishRes = await fetch(`/data/english/${chapter}.json`);
-        } catch (e) {
-          //console.log("Error fetching from English folder:", e);
+        } catch {
+          // Silent catch
         }
 
         // Add a new attempt for history-specific folder
         try {
           historyRes = await fetch(`/data/history/${chapter}.json`);
-        } catch (e) {
-          //console.log("Error fetching from history folder:", e);
+        } catch {
+          // Silent catch
         }
 
         // Try other possible locations
@@ -200,8 +200,8 @@ const McqPractice = () => {
           // Try without subfolder
           try {
             directRes = await fetch(`/data/${chapter}.json`);
-          } catch (e) {
-            // console.log("Error fetching directly from data folder:", e);
+          } catch {
+            // Silent catch
           }
         }
 
@@ -233,8 +233,6 @@ const McqPractice = () => {
           throw new Error(`No questions found for ${chapter}`);
         }
 
-        // console.log(`Loaded ${combinedData.length} questions for ${chapter}`);
-
         // Process each question to ensure it has a question number
         const processedData = combinedData.map((q, idx) => {
           if (!("questionNumber" in q)) {
@@ -246,23 +244,6 @@ const McqPractice = () => {
           }
           return q;
         });
-
-        // Log range of question numbers found
-        if (processedData.length > 0) {
-          const questionNumbers = processedData.map((q) =>
-            typeof q.questionNumber === "number"
-              ? q.questionNumber
-              : parseInt(String(q.questionNumber), 10)
-          );
-          const validNumbers = questionNumbers.filter((n) => !isNaN(n));
-          if (validNumbers.length > 0) {
-            // console.log(
-            //   `Question number range: ${Math.min(...validNumbers)} - ${Math.max(
-            //     ...validNumbers
-            //   )}`
-            // );
-          }
-        }
 
         setAllQuestions(processedData);
 
@@ -285,9 +266,9 @@ const McqPractice = () => {
             setWrong(parsedProgress.wrong || 0);
             setSkipped(parsedProgress.skipped || 0);
             setIndex(parsedProgress.index || 0);
-          } catch (e) {
+          } catch (error) {
             resetAllProgress();
-            console.log(e);
+            console.log(error);
           }
         }
       } catch (error) {
@@ -409,7 +390,7 @@ const McqPractice = () => {
           </button>
         </div>
 
-        {debugInfo && (
+        {debugInfo && Object.keys(debugInfo).length > 0 && (
           <div className="bg-gray-100 p-4 rounded-lg max-w-lg text-sm">
             <h3 className="font-bold mb-2">Debug Information</h3>
             <p>Chapter: {chapter}</p>
@@ -450,7 +431,6 @@ const McqPractice = () => {
       ? Math.round((Object.keys(progress).length / questions.length) * 100)
       : 0;
   const currentExamName = q.exam || exam;
-  //const expectedCount = subtopic ? getSubtopicRange(subtopic)?.count : null;
 
   return (
     <div className="min-h-screen bg-white text-black w-full">
@@ -462,16 +442,6 @@ const McqPractice = () => {
               <span className="ml-2 text-blue-600">| {subtopic}</span>
             )}
           </h2>
-          {/* <div className="text-sm text-gray-600 mt-1">
-            Showing {questions.length} questions
-            {subtopic &&
-              expectedCount &&
-              questions.length !== expectedCount &&
-              ` (Expected: ${expectedCount})`}
-            {!subtopic &&
-              allQuestions.length > 0 &&
-              ` of ${allQuestions.length} total`}
-          </div> */}
         </div>
 
         <ProgressHeader
