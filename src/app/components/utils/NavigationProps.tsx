@@ -5,7 +5,7 @@ interface NavigationProps {
   index: number;
   questions: Question[];
   progress: Record<number, ProgressStatus>;
-  showAnswer: boolean; // Include this in the interface
+  showAnswer: boolean;
   attempted: number;
   correct: number;
   wrong: number;
