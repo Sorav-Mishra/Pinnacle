@@ -23,8 +23,9 @@ export const ProgressCircle = ({
           cy="50"
           r={radius}
           fill="none"
-          stroke="#e5e7eb"
+          stroke="#e5e7eb" // light mode
           strokeWidth={strokeWidth}
+          className="dark:stroke-gray-700"
         />
         {/* Progress circle */}
         <circle
@@ -38,6 +39,7 @@ export const ProgressCircle = ({
           strokeDasharray={circumference}
           strokeDashoffset={strokeDashoffset}
           transform="rotate(-90 50 50)"
+          className="dark:stroke-blue-400"
         />
         {/* Current question number */}
         <text
@@ -46,11 +48,17 @@ export const ProgressCircle = ({
           textAnchor="middle"
           fontSize="18"
           fontWeight="bold"
-          fill="#111827"
+          className="fill-gray-900 dark:fill-white"
         >
           {current}
         </text>
-        <text x="50" y="65" textAnchor="middle" fontSize="12" fill="#4b5563">
+        <text
+          x="50"
+          y="65"
+          textAnchor="middle"
+          fontSize="12"
+          className="fill-gray-500 dark:fill-gray-400"
+        >
           of {total}
         </text>
       </svg>
@@ -59,7 +67,7 @@ export const ProgressCircle = ({
 };
 
 export const ProgressBar = ({ percentage, color }: ProgressBarProps) => (
-  <div className="w-full bg-gray-200 rounded-full h-2">
+  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
     <div
       className="h-2 rounded-full transition-all duration-300 ease-in-out"
       style={{
@@ -89,10 +97,12 @@ export const SummaryPanel = ({
       <div className="space-y-4 text-sm md:text-base">
         {/* Completion */}
         <div>
-          <p className="text-gray-600">Completion</p>
+          <p className="text-gray-600 dark:text-gray-300">Completion</p>
           <div className="flex justify-between items-center">
-            <span className="font-semibold">{completionPercentage}%</span>
-            <span className="text-gray-600">
+            <span className="font-semibold text-gray-900 dark:text-white">
+              {completionPercentage}%
+            </span>
+            <span className="text-gray-600 dark:text-gray-400">
               {progressCount}/{totalQuestions}
             </span>
           </div>
@@ -101,10 +111,12 @@ export const SummaryPanel = ({
 
         {/* Accuracy */}
         <div>
-          <p className="text-gray-600">Accuracy</p>
+          <p className="text-gray-600 dark:text-gray-300">Accuracy</p>
           <div className="flex justify-between items-center">
-            <span className="font-semibold">{accuracyPercentage}%</span>
-            <span className="text-gray-600">
+            <span className="font-semibold text-gray-900 dark:text-white">
+              {accuracyPercentage}%
+            </span>
+            <span className="text-gray-600 dark:text-gray-400">
               {correct}/{attempted}
             </span>
           </div>
@@ -112,26 +124,36 @@ export const SummaryPanel = ({
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-b py-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-b border-gray-300 dark:border-gray-600 py-4">
           <div>
-            <p className="text-gray-600">Answered</p>
-            <p className="font-semibold">{attempted}</p>
+            <p className="text-gray-600 dark:text-gray-300">Answered</p>
+            <p className="font-semibold text-gray-900 dark:text-white">
+              {attempted}
+            </p>
           </div>
           <div>
-            <p className="text-gray-600">Unanswered</p>
-            <p className="font-semibold">{unanswered}</p>
+            <p className="text-gray-600 dark:text-gray-300">Unanswered</p>
+            <p className="font-semibold text-gray-900 dark:text-white">
+              {unanswered}
+            </p>
           </div>
           <div>
-            <p className="text-gray-600">Correct</p>
-            <p className="font-semibold">{correct}</p>
+            <p className="text-gray-600 dark:text-gray-300">Correct</p>
+            <p className="font-semibold text-gray-900 dark:text-white">
+              {correct}
+            </p>
           </div>
           <div>
-            <p className="text-gray-600">Wrong</p>
-            <p className="font-semibold">{wrong}</p>
+            <p className="text-gray-600 dark:text-gray-300">Wrong</p>
+            <p className="font-semibold text-gray-900 dark:text-white">
+              {wrong}
+            </p>
           </div>
           <div>
-            <p className="text-gray-600">Skipped</p>
-            <p className="font-semibold">{skipped}</p>
+            <p className="text-gray-600 dark:text-gray-300">Skipped</p>
+            <p className="font-semibold text-gray-900 dark:text-white">
+              {skipped}
+            </p>
           </div>
         </div>
 
@@ -145,7 +167,7 @@ export const SummaryPanel = ({
           </button>
           <button
             onClick={onClose}
-            className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 w-full sm:w-auto"
+            className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded hover:bg-gray-400 dark:hover:bg-gray-600 w-full sm:w-auto"
           >
             Close
           </button>

@@ -12,16 +12,13 @@ export const useTTS = () => {
   const synth = useRef<SpeechSynthesis | null>(null);
 
   useEffect(() => {
-    // Initialize speech synthesis
     if (typeof window !== "undefined") {
       synth.current = window.speechSynthesis;
 
-      // Load available voices
       const loadVoices = () => {
         const availableVoices = synth.current?.getVoices() || [];
         setVoices(availableVoices);
 
-        // Set default voice (prefer English)
         const englishVoice = availableVoices.find(
           (voice) => voice.lang.includes("en-IN") && voice.localService
         );
@@ -32,14 +29,12 @@ export const useTTS = () => {
         }
       };
 
-      // Chrome loads voices asynchronously
       if (synth.current?.onvoiceschanged !== undefined) {
         synth.current.onvoiceschanged = loadVoices;
       }
 
       loadVoices();
 
-      // Cleanup function to cancel any ongoing speech when component unmounts
       return () => {
         if (synth.current?.speaking) {
           synth.current.cancel();
@@ -52,24 +47,17 @@ export const useTTS = () => {
     (text: string) => {
       if (!synth.current) return;
 
-      // Cancel any ongoing speech
       if (synth.current.speaking) {
         synth.current.cancel();
         setIsSpeaking(false);
-        // If we're already speaking the same text, just cancel and return
         if (isSpeaking) return;
       }
 
       const utterance = new SpeechSynthesisUtterance(text);
-
-      // Set the selected voice
       const voice = voices.find((v) => v.name === selectedVoice);
       if (voice) utterance.voice = voice;
-
-      // Set speech rate
       utterance.rate = speechRate;
 
-      // Handle speech events
       utterance.onstart = () => setIsSpeaking(true);
       utterance.onend = () => setIsSpeaking(false);
       utterance.onerror = () => setIsSpeaking(false);
@@ -90,14 +78,15 @@ export const useTTS = () => {
     setShowTtsSettings(!showTtsSettings);
   };
 
-  // Return component rendering functions instead of the component itself
   const renderTtsSettingsPanel = () => (
-    <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg mb-4 animate-fade-in">
-      <h3 className="font-bold mb-2">Text to speech</h3>
+    <div className="p-4 bg-blue-50 dark:bg-gray-800 border border-blue-200 dark:border-gray-700 rounded-lg mb-4 animate-fade-in">
+      <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">
+        Text to speech
+      </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label
-            className="block text-sm font-medium mb-1"
+            className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200"
             htmlFor="voice-select"
           >
             Voice
@@ -106,7 +95,7 @@ export const useTTS = () => {
             id="voice-select"
             value={selectedVoice}
             onChange={(e) => setSelectedVoice(e.target.value)}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600"
           >
             {voices.map((voice) => (
               <option key={voice.name} value={voice.name}>
@@ -117,7 +106,7 @@ export const useTTS = () => {
         </div>
         <div>
           <label
-            className="block text-sm font-medium mb-1"
+            className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200"
             htmlFor="rate-select"
           >
             Speech Rate: {speechRate}x
@@ -137,7 +126,7 @@ export const useTTS = () => {
       <div className="mt-4 flex justify-end">
         <button
           onClick={toggleTtsSettings}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm dark:bg-blue-700 dark:hover:bg-blue-800"
         >
           Close
         </button>
@@ -151,20 +140,6 @@ export const useTTS = () => {
     stopSpeech,
     showTtsSettings,
     toggleTtsSettings,
-    renderTtsSettingsPanel, // Return the render function instead
+    renderTtsSettingsPanel,
   };
 };
-
-// types.ts
-export type ProgressStatus = "correct" | "wrong" | "skipped";
-
-export interface Question {
-  question: string;
-  options: Record<string, string>;
-  correct_option: string;
-  exam?: string;
-  solution?: {
-    explanation: string;
-    incorrect_explanations?: Record<string, string>;
-  };
-}
