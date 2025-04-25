@@ -30,10 +30,11 @@ const authHandler = NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      //redirectUri: process.env.NEXTAUTH_URL as string,
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_URL,
   session: {
     strategy: "database",
   },
