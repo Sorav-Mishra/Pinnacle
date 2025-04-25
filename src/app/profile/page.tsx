@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -34,17 +34,16 @@ export default function Profile() {
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             Please sign in to view your profile
           </p>
-          <a
+          <Link
             href="/api/auth/signin"
             className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md transition duration-200"
           >
             Sign In
-          </a>
+          </Link>
         </div>
       </div>
     );
   }
-
   const handleSave = async () => {
     console.log("Saving name:", name);
     setIsEditing(false);
