@@ -5,6 +5,7 @@ import "./globals.css";
 import NavBar from "./components/navbar";
 import SessionGuard from "./components/SessionGuard";
 import SessionWrapper from "./components/SessionWrapper";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <title>PinnacleOnline</title>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300 bg-white text-black dark:bg-black dark:text-white`}
         suppressHydrationWarning
