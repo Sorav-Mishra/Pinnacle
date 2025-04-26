@@ -171,34 +171,34 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 pt-16 pb-10 border-t border-gray-200 dark:border-gray-800 shadow-inner">
-      <div className="container mx-auto px-6">
+    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 pt-10 sm:pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 shadow-inner">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company Information */}
           <div>
-            <h3 className="text-xl font-bold mb-5 text-gray-900 dark:text-white relative">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-900 dark:text-white relative">
               <span className="inline-block pr-2 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-blue-600 dark:after:bg-blue-500">
                 SSC Exam Preparation
               </span>
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
               Your comprehensive companion for SSC exam success. Access over
               20,000+ meticulously curated practice questions, subject-wise
               categorization, and authentic previous year papers to boost your
               preparation strategy.
             </p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex flex-wrap space-x-3 mt-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.url}
                   aria-label={social.name}
-                  className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-300 border border-gray-200 dark:border-gray-700 shadow-sm"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-300 border border-gray-200 dark:border-gray-700 shadow-sm mb-2"
                 >
                   <span className="sr-only">{social.name}</span>
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     aria-hidden="true"
                     fill="currentColor"
                     viewBox="0 0 24 24"
@@ -211,13 +211,13 @@ const Footer = () => {
           </div>
 
           {/* SSC Exams Links */}
-          <div>
-            <h3 className="text-xl font-bold mb-5 text-gray-900 dark:text-white relative">
+          <div className="mt-6 sm:mt-0">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-900 dark:text-white relative">
               <span className="inline-block pr-2 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-blue-600 dark:after:bg-blue-500">
                 SSC Exam Resources
               </span>
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {sscExams.slice(0, 6).map((exam, index) => (
                 <li
                   key={index}
@@ -225,7 +225,7 @@ const Footer = () => {
                 >
                   <Link
                     href={exam.path}
-                    className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                    className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                   >
                     <span className="text-blue-600 dark:text-blue-400 mr-2">
                       ›
@@ -237,7 +237,7 @@ const Footer = () => {
               <li className="mt-2">
                 <Link
                   href="/ssc-pyq"
-                  className="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                  className="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm sm:text-base"
                 >
                   View All Exams →
                 </Link>
@@ -246,13 +246,13 @@ const Footer = () => {
           </div>
 
           {/* Subject Areas */}
-          <div>
-            <h3 className="text-xl font-bold mb-5 text-gray-900 dark:text-white relative">
+          <div className="mt-6 lg:mt-0">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-900 dark:text-white relative">
               <span className="inline-block pr-2 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-blue-600 dark:after:bg-blue-500">
                 Subject Resources
               </span>
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {allTopics.subjects.slice(0, 6).map((subject, index) => (
                 <li
                   key={index}
@@ -260,7 +260,7 @@ const Footer = () => {
                 >
                   <Link
                     href={subject.path}
-                    className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                    className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                   >
                     <span className="text-blue-600 dark:text-blue-400 mr-2">
                       ›
@@ -272,7 +272,7 @@ const Footer = () => {
               <li className="mt-2">
                 <Link
                   href="/ssc-pyq"
-                  className="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                  className="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm sm:text-base"
                 >
                   Explore All Subjects →
                 </Link>
@@ -281,17 +281,17 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold mb-5 text-gray-900 dark:text-white relative">
+          <div className="mt-6 lg:mt-0">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-900 dark:text-white relative">
               <span className="inline-block pr-2 after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-blue-600 dark:after:bg-blue-500">
                 Quick Access
               </span>
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li className="transition-transform duration-200 hover:translate-x-1">
                 <Link
                   href="/profile"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                 >
                   <span className="text-blue-600 dark:text-blue-400 mr-2">
                     ›
@@ -302,7 +302,7 @@ const Footer = () => {
               <li className="transition-transform duration-200 hover:translate-x-1">
                 <Link
                   href="/ssc-pyq"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                 >
                   <span className="text-blue-600 dark:text-blue-400 mr-2">
                     ›
@@ -313,7 +313,7 @@ const Footer = () => {
               <li className="transition-transform duration-200 hover:translate-x-1">
                 <Link
                   href="/mock-tests"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                 >
                   <span className="text-blue-600 dark:text-blue-400 mr-2">
                     ›
@@ -324,7 +324,7 @@ const Footer = () => {
               <li className="transition-transform duration-200 hover:translate-x-1">
                 <Link
                   href="/performance-analytics"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                 >
                   <span className="text-blue-600 dark:text-blue-400 mr-2">
                     ›
@@ -332,10 +332,10 @@ const Footer = () => {
                   Performance Analytics
                 </Link>
               </li>
-              <li className="transition-transform duration-200 hover:translate-x-1">
+              <li className="hidden sm:block transition-transform duration-200 hover:translate-x-1">
                 <Link
                   href="/doubt-resolution"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                 >
                   <span className="text-blue-600 dark:text-blue-400 mr-2">
                     ›
@@ -343,10 +343,10 @@ const Footer = () => {
                   Expert Doubt Resolution
                 </Link>
               </li>
-              <li className="transition-transform duration-200 hover:translate-x-1">
+              <li className="hidden sm:block transition-transform duration-200 hover:translate-x-1">
                 <Link
                   href="/success-stories"
-                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center"
+                  className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors flex items-center text-sm sm:text-base"
                 >
                   <span className="text-blue-600 dark:text-blue-400 mr-2">
                     ›
@@ -354,18 +354,26 @@ const Footer = () => {
                   Success Stories
                 </Link>
               </li>
+              <li className="sm:hidden mt-2">
+                <Link
+                  href="/more-resources"
+                  className="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:underline font-medium text-sm"
+                >
+                  More Resources →
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* SEO Links Section - Collapsed by default for better UX */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <details className="group cursor-pointer">
-            <summary className="font-medium text-gray-800 dark:text-gray-200 mb-4 outline-none flex items-center">
+            <summary className="font-medium text-gray-800 dark:text-gray-200 mb-3 outline-none flex items-center text-sm sm:text-base">
               <span className="text-blue-600 dark:text-blue-400 mr-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline group-open:rotate-90 transition-transform duration-200"
+                  className="h-4 w-4 sm:h-5 sm:w-5 inline group-open:rotate-90 transition-transform duration-200"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -378,12 +386,12 @@ const Footer = () => {
               </span>
               English Language Topics
             </summary>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 pl-7 mt-3 pb-2">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 pl-6 sm:pl-7 mt-3 pb-2">
               {allTopics.english.map((topic, index) => (
                 <Link
                   key={index}
                   href={topic.path}
-                  className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors hover:underline"
+                  className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors hover:underline truncate"
                 >
                   {topic.name}
                 </Link>
@@ -392,13 +400,13 @@ const Footer = () => {
           </details>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <details className="group cursor-pointer">
-            <summary className="font-medium text-gray-800 dark:text-gray-200 mb-4 outline-none flex items-center">
+            <summary className="font-medium text-gray-800 dark:text-gray-200 mb-3 outline-none flex items-center text-sm sm:text-base">
               <span className="text-blue-600 dark:text-blue-400 mr-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline group-open:rotate-90 transition-transform duration-200"
+                  className="h-4 w-4 sm:h-5 sm:w-5 inline group-open:rotate-90 transition-transform duration-200"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -411,12 +419,12 @@ const Footer = () => {
               </span>
               General Knowledge Resources
             </summary>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 pl-7 mt-3 pb-2">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 pl-6 sm:pl-7 mt-3 pb-2">
               {allTopics.gk.map((topic, index) => (
                 <Link
                   key={index}
                   href={topic.path}
-                  className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors hover:underline"
+                  className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors hover:underline truncate"
                 >
                   {topic.name}
                 </Link>
@@ -426,13 +434,13 @@ const Footer = () => {
         </div>
 
         {/* Year-wise PYQs for SEO */}
-        <div className="mb-10">
+        <div className="mb-8">
           <details className="group cursor-pointer">
-            <summary className="font-medium text-gray-800 dark:text-gray-200 mb-4 outline-none flex items-center">
+            <summary className="font-medium text-gray-800 dark:text-gray-200 mb-3 outline-none flex items-center text-sm sm:text-base">
               <span className="text-blue-600 dark:text-blue-400 mr-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 inline group-open:rotate-90 transition-transform duration-200"
+                  className="h-4 w-4 sm:h-5 sm:w-5 inline group-open:rotate-90 transition-transform duration-200"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -445,16 +453,15 @@ const Footer = () => {
               </span>
               Year-wise SSC Previous Papers
             </summary>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 pl-7 mt-3 pb-2">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 pl-6 sm:pl-7 mt-3 pb-2">
               {sscExams.slice(0, 5).map((exam) =>
                 examYears.slice(0, 5).map((year, yIndex) => (
                   <Link
                     key={`${exam.name}-${year}-${yIndex}`}
                     href={`${exam.path}&year=${year}`}
-                    className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors hover:underline"
+                    className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors hover:underline truncate"
                   >
                     {exam.name} {year}
-                    {/* {(exam.name, "/ssc-pyq")} */}
                   </Link>
                 ))
               )}
@@ -463,29 +470,29 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Subscription */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-10 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-md mb-8 border border-gray-200 dark:border-gray-700">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0 md:mr-6">
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+            <div className="mb-4 md:mb-0 md:mr-6 text-center md:text-left">
+              <h4 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2">
                 Subscribe for Exam Updates
               </h4>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Get the latest SSC notifications, study tips, and free resources
                 directly in your inbox
               </p>
             </div>
             <div className="w-full md:w-auto">
-              <div className="flex">
+              <div className="flex max-w-md mx-auto md:mx-0">
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="flex-grow px-4 py-2 rounded-l-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                  className="flex-grow px-3 sm:px-4 py-2 text-sm rounded-l-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
                 />
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-r-md transition duration-300">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-3 sm:px-6 rounded-r-md transition duration-300 text-sm whitespace-nowrap">
                   Subscribe
                 </button>
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center md:text-left">
                 We respect your privacy. Unsubscribe anytime.
               </p>
             </div>
@@ -493,11 +500,11 @@ const Footer = () => {
         </div>
 
         {/* Popular Keyword Combinations for SEO */}
-        <div className="text-xs text-gray-500 dark:text-gray-500 mt-8 border-t border-gray-200 dark:border-gray-800 pt-8">
-          <h4 className="font-medium mb-3 text-gray-700 dark:text-gray-300">
+        <div className="text-xs text-gray-500 dark:text-gray-500 mt-6 sm:mt-8 border-t border-gray-200 dark:border-gray-800 pt-6 sm:pt-8">
+          <h4 className="font-medium mb-2 sm:mb-3 text-gray-700 dark:text-gray-300 text-xs sm:text-sm">
             Popular Search Terms:
           </h4>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-xs">
             SSC CGL Previous Year Papers with Solutions, SSC CHSL Topic-wise
             Question Bank, SSC GD Constable Practice Sets, English Grammar Rules
             for Competitive Exams, Quantitative Aptitude Shortcuts for SSC,
@@ -515,26 +522,26 @@ const Footer = () => {
         </div>
 
         {/* Copyright and Trust Signals */}
-        <div className="pt-8 mt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
+        <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0 text-center md:text-left">
             © {currentYear} SSC Exam Preparation Hub. All rights reserved.
           </p>
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-wrap justify-center md:justify-end items-center gap-3 sm:gap-4">
             <Link
               href="/privacy-policy"
-              className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+              className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+              className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             >
               Terms of Service
             </Link>
             <Link
               href="/contact-us"
-              className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+              className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             >
               Contact Us
             </Link>
