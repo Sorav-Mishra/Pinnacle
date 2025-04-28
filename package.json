@@ -19,6 +19,7 @@
     "openai": "^4.94.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "swiper": "^11.2.6",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

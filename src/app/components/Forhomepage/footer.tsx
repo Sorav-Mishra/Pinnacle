@@ -528,19 +528,19 @@ const Footer = () => {
           </p>
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-3 sm:gap-4">
             <Link
-              href="/privacy-policy"
+              href="/instagram.com/pinnacle0nline"
               className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms-of-service"
+              href="/instagram.com/pinnacle0nline"
               className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             >
               Terms of Service
             </Link>
             <Link
-              href="/contact-us"
+              href="/instagram.com/pinnacle0nline"
               className="text-xs sm:text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
             >
               Contact Us
