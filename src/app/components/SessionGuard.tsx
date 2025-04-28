@@ -22,12 +22,8 @@ export default function SessionGuard({
         const storedTime = localStorage.getItem("entryTime");
         const now = Date.now();
 
-        if (
-          storedTime &&
-          !session &&
-          now - parseInt(storedTime) > 12000000000
-        ) {
-          signIn(); // Will open Google login 120000
+        if (storedTime && !session && now - parseInt(storedTime) > 120000) {
+          signIn(); // Will open Google login   12000000000
         }
       }, 1000);
 
