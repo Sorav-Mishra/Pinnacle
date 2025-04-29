@@ -15,10 +15,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
-// next.config.js
-module.exports = {
-  images: {
-    domains: ["upload.wikimedia.org"], // 👈 Add this
-  },
-};

@@ -5,6 +5,7 @@ import "./globals.css";
 import NavBar from "./components/navbar";
 import SessionGuard from "./components/SessionGuard";
 import SessionWrapper from "./components/SessionWrapper";
+import Script from "next/script";
 //import Head from "next/head";
 
 const geistSans = Geist({
@@ -84,7 +85,7 @@ export const metadata: Metadata = {
   },
   other: {
     "linkedin:profile": "https://www.linkedin.com/in/abhishek-mishra-b18531339",
-    "x:profile": "https://x.com/pinnacle0nline", // custom key for reference
+    "x:profile": "https://x.com/pinnacle0nline",
   },
 };
 
@@ -95,6 +96,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* ✅ Inject the Organization Structured Data */}
+        <Script
+          type="application/ld+json"
+          id="organization-schema"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Pinnacle Online",
+            url: "https://pinnacleonline.vercel.app",
+            logo: "https://pinnacleonline.vercel.app/logo.png",
+            sameAs: [
+              "https://www.linkedin.com/in/abhishek-mishra-b18531339",
+              "https://x.com/pinnacle0nline",
+            ],
+          })}
+        </Script>
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300 bg-white text-black dark:bg-black dark:text-white`}
         suppressHydrationWarning

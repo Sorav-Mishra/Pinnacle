@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import staticlogo from "../../../public/images/iiii.jpg";
@@ -10,14 +10,27 @@ import staticlogo from "../../../public/images/iiii.jpg";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const { data: session, status } = useSession(); // Get session data and status
+  const { data: session, status } = useSession();
+  const [profileImageError, setProfileImageError] = useState(false);
+
+  // Reset image error state when session changes
+  useEffect(() => {
+    setProfileImageError(false);
+  }, [session]);
 
   const profile = () => {
     router.push("/profile");
   };
 
-  // Determine the profile image source based on auth status
-  const profileImageSrc = session?.user?.image || "/images/default-profile.jpg";
+  // Handle profile image with proper fallback
+  const getProfileImage = () => {
+    if (profileImageError || !session?.user?.image) {
+      return staticlogo;
+    }
+
+    // Return the user's profile image
+    return session.user.image;
+  };
 
   return (
     <nav className="bg-blue-700 text-white p-4 fixed top-0 w-full z-50 shadow-lg">
@@ -55,14 +68,19 @@ export default function NavBar() {
             title={session ? "View your profile" : "Sign in"}
             className="relative"
           >
-            <Image
-              src={status === "authenticated" ? profileImageSrc : staticlogo}
-              alt="Profile"
-              width={32}
-              height={32}
-              className="rounded-full border-2 border-white"
-              priority
-            />
+            <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-white">
+              <Image
+                src={getProfileImage()}
+                alt="Profile"
+                fill
+                className="object-cover"
+                priority
+                onError={() => {
+                  console.log("Profile image failed to load, using fallback");
+                  setProfileImageError(true);
+                }}
+              />
+            </div>
 
             {status === "loading" && (
               <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-gray-300 rounded-full"></span>
@@ -99,14 +117,19 @@ export default function NavBar() {
           title={session ? "View your profile" : "Sign in"}
           className="relative"
         >
-          <Image
-            src={status === "authenticated" ? profileImageSrc : staticlogo}
-            alt="Profile"
-            width={32}
-            height={32}
-            className="rounded-full border-2 border-white"
-            priority
-          />
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-white">
+            <Image
+              src={getProfileImage()}
+              alt="Profile"
+              fill
+              className="object-cover"
+              priority
+              onError={() => {
+                console.log("Profile image failed to load, using fallback");
+                setProfileImageError(true);
+              }}
+            />
+          </div>
 
           {status === "authenticated" && (
             <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full"></span>
