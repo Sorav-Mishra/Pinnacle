@@ -3457,8 +3457,8 @@
   },
   {
     "id": 217,
-    "exam": "SSC Spot the Error",
-    "question": "He  has  been  (1)  watered  the  plants  (2)  for  one  hour.  (3) No error Higher Secondary 20/06/2024 (Shift - 2)",
+    "exam": "Higher Secondary 20/06/2024 (Shift - 2)",
+    "question": "He  has  been  (1)  watered  the  plants  (2)  for  one  hour  (3) No error. Higher Secondary 20/06/2024 (Shift - 2)",
     "options": {
       "A": "4",
       "B": "3",
@@ -3473,7 +3473,7 @@
   },
   {
     "id": 218,
-    "exam": "SSC Spot the Error",
+    "exam": "Higher Secondary 20/06/2024 (Shift - 2)",
     "question": "The  toast  was  raised  in  honour  of  the  chairman  yesterday at hall. Higher Secondary 20/06/2024 (Shift - 2)",
     "options": {
       "A": "raised in honour",
@@ -3489,8 +3489,8 @@
   },
   {
     "id": 219,
-    "exam": "SSC Spot the Error",
-    "question": "Identify  the  error  in  the  verb  form  in  the  following sentence  and  choose  the  correct  sentence  from  the  given options (Present Tense). Earth revolve around the sun. Higher Secondary 21/06/2024 (Shift - 2)",
+    "exam": "Higher Secondary 21/06/2024 (Shift - 2)",
+    "question": "Identify  the  error  in  the  verb  form  in  the  following sentence  and  choose  the  correct  sentence  from  the  given options (Present Tense) Earth revolve around the sun. Higher Secondary 21/06/2024 (Shift - 2)",
     "options": {
       "A": "Earth revolves around the sun.",
       "B": "Earth has revolve around the sun.",
@@ -3505,7 +3505,7 @@
   },
   {
     "id": 220,
-    "exam": "SSC Spot the Error",
+    "exam": "Higher Secondary 24/06/2024 (Shift - 2)",
     "question": "Hiking  across  an  Himalayas  is  going  to  be  a  tough  task for a beginner. Higher Secondary 24/06/2024 (Shift - 2)",
     "options": {
       "A": "task for a beginner.",
@@ -3521,7 +3521,7 @@
   },
   {
     "id": 221,
-    "exam": "SSC Spot the Error",
+    "exam": "Higher Secondary 25/06/2024 (Shift - 2)",
     "question": "Children  should  watch  TV  from  distance  as  it  will  affect their eyesight. Higher Secondary 25/06/2024 (Shift - 2)",
     "options": {
       "A": "as it will affect",
@@ -3537,7 +3537,7 @@
   },
   {
     "id": 222,
-    "exam": "SSC Spot the Error",
+    "exam": "Higher Secondary 25/06/2024 (Shift - 2)",
     "question": "My  friends  /  and  their  family  members  /  have  gone  to  the beach / two days ago. Higher Secondary 25/06/2024 (Shift - 2)",
     "options": {
       "A": "she has been teaching",
@@ -3553,7 +3553,7 @@
   },
   {
     "id": 224,
-    "exam": "SSC Spot the Error",
+    "exam": "Higher Secondary 26/06/2024 (Shift - 2)",
     "question": "Can we make sure we have a lots of fun on the  trip? Higher Secondary 26/06/2024 (Shift - 2)",
     "options": {
       "A": "Can we make",
@@ -3569,11 +3569,13 @@
   },
   {
     "id": 225,
-    "exam": "SSC Spot the Error",
-    "question": "Paul  and  I  played  tennis  yesterday.  He’s  much  better  than me, so he win easily. Higher Secondary 26/06/2024 (Shift - 2)",
+    "exam": "Higher Secondary 26/06/2024 (Shift - 2)",
+    "question": "Paul  and  I  played  tennis  yesterday  He’s  much  better  than me, so he win easily. Higher Secondary 26/06/2024 (Shift - 2)",
     "options": {
-      "A": "Played tennis yesterday            (b) So he win easily",
-      "C": "Paul and I                                     (d) He’s much better than me"
+      "A": "Played tennis yesterday",
+      "B": "So he win easily",
+      "C": "Paul and I",
+      "D": "He’s much better than me"
     },
     "correct_option": "B",
     "solution": {
@@ -3583,7 +3585,7 @@
   },
   {
     "id": 226,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 20/06/2024 (Shift - 3)",
     "question": "King  Solomon  of  Israel  is  said  to  be  one  of  a  wisest  man who ruled the earth. Graduate Level 20/06/2024 (Shift - 3)",
     "options": {
       "A": "is said to be one",
@@ -3599,22 +3601,23 @@
   },
   {
     "id": 227,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 20/06/2024 (Shift - 3)",
     "question": "He  was  consulted  seldom  by  his  colleagues  while making important decisions on ﬁnancial matters. Graduate Level 20/06/2024 (Shift - 3)",
     "options": {
-      "A": "He was consulted seldom  (b) decisions on ﬁnancial matters.",
+      "A": "He was consulted seldom",
+      "B": "decisions on ﬁnancial matters.",
       "C": "by his colleagues",
       "D": "while making important"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. He was consulted seldom  (b) decisions on ﬁnancial matters.",
+      "correct_answer": "A. He was consulted seldom",
       "explanation": "He was consulted seldom An adverb of frequency is generally placed after the helping verb and before the main verb in a sentence. Examples are :- often, always, seldom, never, etc. Therefore, ‘seldom’ will be placed after the helping verb ‘was’. Hence, ‘He was seldom consulted’ is the most appropriate answer."
     }
   },
   {
     "id": 228,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 21/06/2024 (Shift - 3)",
     "question": "The  Prime  Minister  and  a  President  are  visiting  the  town day to see the preparations of International Seminar. Graduate Level 21/06/2024 (Shift - 3)",
     "options": {
       "A": "The Prime Minister and",
@@ -3630,8 +3633,8 @@
   },
   {
     "id": 229,
-    "exam": "SSC Spot the Error",
-    "question": "The  following  sentence  may  have  an  error  of  article. Choose  the  correct  sentence  from  the  given  options.  Choose  ‘No error’ if the sentence has no error. The  festivals  are  celebrated  everywhere  to  rejuvenate  the  minds of people Graduate Level 24/06/2024 (Shift - 3)",
+    "exam": "Graduate Level 24/06/2024 (Shift - 3)",
+    "question": "The  following  sentence  may  have  an  error  of  article; Choose  the  correct  sentence  from  the  given  options.  Choose  ‘No error’ if the sentence has no error; The  festivals  are  celebrated  everywhere  to  rejuvenate  the  minds of people. Graduate Level 24/06/2024 (Shift - 3)",
     "options": {
       "A": "An festivals are celebrated everywhere to rejuvenate the",
       "B": "No error",
@@ -3646,21 +3649,23 @@
   },
   {
     "id": 230,
-    "exam": "SSC Spot the Error",
-    "question": "Identify the INCORRECT section of the given  sentence. Four people / were / witnesses of / that event. Graduate Level 24/06/2024 (Shift - 3)",
+    "exam": "Graduate Level 24/06/2024 (Shift - 3)",
+    "question": "Identify the INCORRECT section of the given  sentence; Four people / were / witnesses of / that event. Graduate Level 24/06/2024 (Shift - 3)",
     "options": {
-      "A": "witnesses of    (b) that event.     (c) were",
+      "A": "witnesses of",
+      "B": "that event.",
+      "C": "were",
       "D": "Four people"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. witnesses of    (b) that event.     (c) were",
+      "correct_answer": "A. witnesses of",
       "explanation": "witnesses of The preposition ‘to’ is used after the nouns ‘witness’ or ‘testimony’. And the correct structure is ‘witness/testimony to an event’. Hence, ‘witnesses to’ is the most appropriate answer."
     }
   },
   {
     "id": 231,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 25/06/2024 (Shift - 3)",
     "question": "We  have  to  be  cautius  regarding  the  impact  of  global warming. Graduate Level 25/06/2024 (Shift - 3)",
     "options": {
       "A": "We have to",
@@ -3676,7 +3681,7 @@
   },
   {
     "id": 232,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 25/06/2024 (Shift - 3)",
     "question": "Due  to  its  fragrance,  the  petals  of  an  rose  are  often  used in perfumes and cosmetics. Graduate Level 25/06/2024 (Shift - 3)",
     "options": {
       "A": "Due to its fragrance,",
@@ -3692,7 +3697,7 @@
   },
   {
     "id": 233,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 26/06/2024 (Shift - 3)",
     "question": "She  is  enough  wise  not  to  interfere  in  their  matter,  once being insulted publicly by them. Graduate Level 26/06/2024 (Shift - 3)",
     "options": {
       "A": "not to interfere in",
@@ -3708,11 +3713,13 @@
   },
   {
     "id": 234,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 26/06/2024 (Shift - 3)",
     "question": "Generally,  a  cycle  has  an  seat  and  handle  along  with  two pedals and a bell, sometimes a carrier too. Graduate Level 26/06/2024 (Shift - 3)",
     "options": {
-      "A": "a bell, sometimes a carrier too.    (b) with two pedals and",
-      "C": "seat and handle along                    (d) Generally, a cycle has an"
+      "A": "a bell, sometimes a carrier too.",
+      "B": "with two pedals and",
+      "C": "seat and handle along",
+      "D": "Generally, a cycle has an"
     },
     "correct_option": "D",
     "solution": {
@@ -3722,25 +3729,27 @@
   },
   {
     "id": 235,
-    "exam": "SSC CHSL 2023 Tier",
+    "exam": " Graduate Level 26/06/2024 (Shift - 4)",
     "question": "Netaji,  a  hero  of  Modern  India,  is  remembered  for  his contribution in the establishment of Indian Army. Graduate Level 26/06/2024 (Shift - 4)",
     "options": {
       "A": "his contribution in the",
       "B": "establishment of Indian Army.",
-      "C": "Netaji, a hero of Modern       (d) India, is remembered for"
+      "C": "Netaji, a hero of Modern",
+      "D": "India, is remembered for"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. Netaji, a hero of Modern       (d) India, is remembered for",
+      "correct_answer": "C. Netaji, a hero of Modern",
       "explanation": "Netaji, a hero of Modern Article ‘the’ is used before the title given to an important personality. ‘Hero of Modern India’ is a title given to ‘Netaji’. Hence, ‘Netaji, the Hero of Modern’ is the most appropriate answer. SSC CHSL 2023 Tier - 2"
     }
   },
   {
     "id": 236,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CHSL Tier II  (02/11/2023)",
     "question": "Sincere  students  /  like  you  and  he  should  study  / regularly to pass the examination. SSC CHSL Tier II  (02/11/2023)",
     "options": {
-      "A": "Sincere students            (b) regularly to pass the examination.",
+      "A": "Sincere students            ",
+      "B": "regularly to pass the examination.",
       "C": "No error",
       "D": "like you and he should study"
     },
@@ -3752,7 +3761,7 @@
   },
   {
     "id": 237,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CHSL Tier II  (10/01/2024)",
     "question": "While  astrology  has/  a  long  history  /  it  is  generally/ considered pseudoscience. SSC CHSL Tier II  (10/01/2024)",
     "options": {
       "A": "it is generally",
@@ -3768,7 +3777,7 @@
   },
   {
     "id": 238,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CHSL Tier II  (10/01/2024)",
     "question": "I  have  three  sisters:  /  Meera  is  the  elder  /  and  Charu  is the youngest. SSC CHSL Tier II  (10/01/2024)",
     "options": {
       "A": "No error",
@@ -3784,7 +3793,7 @@
   },
   {
     "id": 239,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CHSL Tier II  (10/01/2024)",
     "question": "A  man  who  has  been  accused  of  fraud  /  in  an  earlier  job, he will never be / welcome in any other organisation. SSC CHSL Tier II  (10/01/2024)",
     "options": {
       "A": "No error",
@@ -3800,7 +3809,7 @@
   },
   {
     "id": 240,
-    "exam": "SSC CPO 2023 Tier",
+    "exam": "SSC CHSL Tier II  (10/01/2024)",
     "question": "It  is  a  well-known  fact/  that  the  Monarchy  is  /  not  the best form /of governance. SSC CHSL Tier II  (10/01/2024)",
     "options": {
       "A": "that the Monarchy is",
@@ -3816,7 +3825,7 @@
   },
   {
     "id": 241,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "Specialists  say  that  this  method  speeds  up  language learning tremendously. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "Specialists say that",
@@ -3832,7 +3841,7 @@
   },
   {
     "id": 242,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "Two  elderly  gentlemen  told  the  rather  improbable  story  to mislead the police personnel. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "story to mislead",
@@ -3848,7 +3857,7 @@
   },
   {
     "id": 243,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "We  cannot  postpone  discussion  on  this  issue  although  it is urgent. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "although it is urgent.",
@@ -3864,7 +3873,7 @@
   },
   {
     "id": 244,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "Are you yet afraid of going out in the dark? SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "in the dark",
@@ -3880,7 +3889,7 @@
   },
   {
     "id": 245,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "Rohit Sharma’s century was very acclaimed  in the media. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "very acclaimed",
@@ -3896,7 +3905,7 @@
   },
   {
     "id": 246,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "You  can  take  a  horse  to  the  water  but  you  cannot  make  it to drink. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "You can take a horse",
@@ -3912,8 +3921,8 @@
   },
   {
     "id": 247,
-    "exam": "SSC Spot the Error",
-    "question": "Select  the  most  appropriate  option  that  rectiﬁes  the error(s) in the following sentence. One must do his/her duty proparly. SSC CPO Tier II (08/01/2024)",
+    "exam": " SSC CPO Tier II (08/01/2024)",
+    "question": "Select  the  most  appropriate  option  that  rectiﬁes  the error(s) in the following sentence; One must do his/her duty proparly. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "One must do ones duty properly.",
       "B": "One must do one’s duty properly.",
@@ -3928,10 +3937,11 @@
   },
   {
     "id": 248,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "It  is  time  someone  takes  concrete  steps  to  alleviate  the problem of unemployment in the country. SSC CPO Tier II (08/01/2024)",
     "options": {
-      "A": "the problem of unemployment  (b) It is time someone takes",
+      "A": "the problem of unemployment",
+      "B": "It is time someone takes",
       "C": "in the country",
       "D": "concrete steps to alleviate"
     },
@@ -3943,7 +3953,7 @@
   },
   {
     "id": 249,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "The food was not as delicious as we had expected. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "we had expected",
@@ -3959,7 +3969,7 @@
   },
   {
     "id": 250,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "None  than  you  deserve  credit  for  the  success  of  this project. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "deserve credit",
@@ -3975,7 +3985,7 @@
   },
   {
     "id": 251,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "Hold  my  hand  lest  you  should  not  get  lost  in  the  huge crowd at the fair. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "lest you should not",
@@ -3991,7 +4001,7 @@
   },
   {
     "id": 252,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "I  will  deﬁnitely  accept  the  responsibility  while  the  time comes. SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "the responsibility",
@@ -4007,7 +4017,7 @@
   },
   {
     "id": 253,
-    "exam": "SSC CGL 2023 Tier",
+    "exam": "SSC CPO Tier II (08/01/2024)",
     "question": "Let  us  work  out  the  details  of  our  endeavour,  shouldn’t we? SSC CPO Tier II (08/01/2024)",
     "options": {
       "A": "the details of",
@@ -4023,10 +4033,13 @@
   },
   {
     "id": 254,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (26/10/2023)",
     "question": "This is the book whom I wanted to buy. SSC CGL Tier II  (26/10/2023)",
     "options": {
-      "A": "the book   (b) wanted to buy.    (c) whom I    (d) This is"
+      "A": "the book",
+      "B": "wanted to buy.",
+      "C": "whom I",
+      "D": "This is"
     },
     "correct_option": "C",
     "solution": {
@@ -4036,7 +4049,7 @@
   },
   {
     "id": 255,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (26/10/2023)",
     "question": "Everyone  should  respect  those  parents,  teachers,  and elders. SSC CGL Tier II  (26/10/2023)",
     "options": {
       "A": "and elders.",
@@ -4052,11 +4065,12 @@
   },
   {
     "id": 256,
-    "exam": "SSC Spot the Error",
-    "question": "",
+    "exam": "SSC CGL Tier II (26/10/2023)",
+    "question": "(A) They were / (B) married happily / (C) before she / (D)quit her job. SSC CGL Tier II (26/10/2023)",
     "options": {
       "A": "B",
-      "B": "D                 (c) C",
+      "B": "D",
+      "C": "C",
       "D": "A"
     },
     "correct_option": "A",
@@ -4067,11 +4081,13 @@
   },
   {
     "id": 257,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (26/10/2023)",
     "question": "The  speaker’s  emphasiss  is  on  the  present-day  problems that are being faced by ordinary men of India. SSC CGL Tier II  (26/10/2023)",
     "options": {
-      "A": "that are being faced             (b) on the present-day problems",
-      "C": "by ordinary men of India      (d) The speaker’s emphasiss is"
+      "A": "that are being faced",
+      "B": "on the present-day problems",
+      "C": "by ordinary men of India      ",
+      "D": "The speaker’s emphasiss is"
     },
     "correct_option": "D",
     "solution": {
@@ -4081,7 +4097,7 @@
   },
   {
     "id": 258,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (26/10/2023)",
     "question": "They want to live in ﬁrst ﬂoor of this building. SSC CGL Tier II  (26/10/2023)",
     "options": {
       "A": "They want to",
@@ -4097,20 +4113,23 @@
   },
   {
     "id": 259,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (26/10/2023)",
     "question": "We / has seen / that movie / before. SSC CGL Tier II  (26/10/2023)",
     "options": {
-      "A": "has seen          (b) before          (c) that movie          (d) We"
+      "A": "has seen",
+      "B": "before",
+      "C": "that movie",
+      "D": "We"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. has seen          (b) before          (c) that movie          (d) We",
+      "correct_answer": "A. has seen",
       "explanation": "has seen According to the “Subject-Verb Agreement Rule”, a singular subject always takes a singular verb and a plural subject always takes a plural verb. In the given sentence, ‘we’ is a plural subject that will take ‘have’ as a plural verb. Hence, ‘have seen’ is the most appropriate answer."
     }
   },
   {
     "id": 260,
-    "exam": "SSC CPO 2023 Tier",
+    "exam": "SSC CGL Tier II  (26/10/2023)",
     "question": "The  given  sentence  has  an  error.  Choose  the  option  that corrects the error Throw a rounder stone to create ripples in the water. SSC CGL Tier II  (26/10/2023)",
     "options": {
       "A": "Throw  the  roundest  stone  to  create  ripples  in  the",
@@ -4129,11 +4148,14 @@
     "exam": "SSC CPO 03/10/2023 (1st Shift",
     "question": "The dancers swayed dainty on the stage last  night. SSC CPO 03/10/2023 (1st Shift)",
     "options": {
-      "A": "swayed dainty  (b) The dancers (c) last night (d) on the stage"
+      "A": "swayed dainty   ",
+      "B": "The dancers",
+      "C": "last night",
+      "D": "on the stage"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. swayed dainty  (b) The dancers (c) last night (d) on the stage",
+      "correct_answer": "A. swayed dainty",
       "explanation": "swayed dainty ‘Dainty’ must be replaced with ‘daintily’. The given sentence needs an adverb to modify the verb (swayed) and not an adjective(dainty). Hence, ‘swayed daintily’ is the most appropriate answer."
     }
   },
@@ -4142,8 +4164,10 @@
     "exam": "SSC CPO 03/10/2023 (1st Shift",
     "question": "We  feed  the  horse  oats  for  a  week  because  it  had  eaten all the hay. SSC CPO 03/10/2023 (1st Shift)",
     "options": {
-      "A": "No error                               (b) it had eaten all the hay",
-      "C": "for a week because           (d) We feed the horse oats"
+      "A": "No error",
+      "B": "it had eaten all the hay",
+      "C": "for a week because",
+      "D": "We feed the horse oats"
     },
     "correct_option": "D",
     "solution": {
@@ -4268,7 +4292,10 @@
     "exam": "SSC CPO 04/10/2023 (1st Shift",
     "question": "Rani was extreme upset with her results this  year. SSC CPO 04/10/2023 (1st Shift)",
     "options": {
-      "A": "Rani was (b) this year (c) with her results (d) extreme upset"
+      "A": "Rani was",
+      "B": "this year",
+      "C": "with her results ",
+      "D": "extreme upset"
     },
     "correct_option": "D",
     "solution": {
@@ -4361,11 +4388,14 @@
     "exam": "SSC CPO 04/10/2023 (3rd Shift",
     "question": "We should / not make an noise / in the class. SSC CPO 04/10/2023 (3rd Shift)",
     "options": {
-      "A": "not make an noise (b) in the class (c) We should (d) No error"
+      "A": "not make an noise",
+      "B": "in the class",
+      "C": "We should",
+      "D": "No error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. not make an noise (b) in the class (c) We should (d) No error",
+      "correct_answer": "A. not make an noise",
       "explanation": "not make an noise ‘An noise’ must be replaced with ‘a noise’. Article ‘A’ is used before the words starting from a consonant sound - (a conversation, a story). Hence, ‘not make a noise’ is the most appropriate answer."
     }
   },
@@ -4374,7 +4404,10 @@
     "exam": "SSC CPO 04/10/2023 (3rd Shift",
     "question": "I was wish / to meet her / on her birthday. SSC CPO 04/10/2023 (3rd Shift)",
     "options": {
-      "A": "to meet her (b) No error (c) I was wish (d) on her birthday"
+      "A": "to meet her",
+      "B": "No error",
+      "C": "I was wish",
+      "D": "on her birthday"
     },
     "correct_option": "C",
     "solution": {
@@ -4449,7 +4482,7 @@
   {
     "id": 282,
     "exam": "SSC CPO 05/10/2023 (2nd Shift",
-    "question": "One  of  their  freighters,  /  a  Neptune,/  will  be  leaving/  in two weeks. www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error SSC CPO 05/10/2023 (2nd Shift)",
+    "question": "One  of  their  freighters,  /  a  Neptune,/  will  be  leaving/  in two weeks. SSC CPO 05/10/2023 (2nd Shift)",
     "options": {
       "A": "One of their freighters",
       "B": "will be leaving",
@@ -4497,24 +4530,23 @@
   {
     "id": 285,
     "exam": "SSC CPO 05/10/2023 (3rd Shift",
-    "question": "",
+    "question": "(1) He could / (2) be pass his exams / (3) if he studied harder. / (4) No error. SSC CPO 05/10/2023 (3rd Shift)",
     "options": {
-      "1": "He  could  /  (2)  be  pass  his  exams  /  (3)  if  he  studied",
       "A": "3",
-      "B": "An  simple  mistake  which  was  committed  by  the  boy  haunted",
-      "C": "The  simple  mistake  which  was  committed  by  an  boy  haunted",
-      "D": "A  simple  mistake  which  was  committed  by  an  boy  haunted"
+      "B": "2",
+      "C": "1",
+      "D": "4"
     },
     "correct_option": "B",
     "solution": {
       "correct_answer": "B. An  simple  mistake  which  was  committed  by  the  boy  haunted",
-      "explanation": "2 ‘Be pass’ must be replaced with ‘have passed’ as the given sentence is an example of a third conditional sentence and the correct grammatical structure for it is “If + Simple past(V 2 ) / past perfect(had + V 3 )…….. Would have + V 3 ”. Hence, ‘would have passed his exams’ is the most appropriate answer. SSC MTS 2023 Tier - 1"
+      "explanation": "2 ‘Be pass’ must be replaced with ‘have passed’ as the given sentence is an example of a third conditional sentence and the correct grammatical structure for it is “If + Simple past(V 2 ) / past perfect(had + V 3 )…….. Would have + V 3 ”. Hence, ‘would have passed his exams’ is the most appropriate answer."
     }
   },
   {
     "id": 286,
     "exam": "SSC MTS 01/09/2023 (1st Shift",
-    "question": "The  given  sentence  contains  an  error.  Select  the  option that correctly rectiﬁes the error. The  boy  told  his  mother  that  he  saw  the  most  tall  giraffe  at  the zoo. SSC MTS 01/09/2023 (1st Shift)",
+    "question": "The  given  sentence  contains  an  error.  Select  the  option that correctly rectiﬁes the error; The  boy  told  his  mother  that  he  saw  the  most  tall  giraffe  at  the zoo. SSC MTS 01/09/2023 (1st Shift)",
     "options": {
       "A": "The boy told his mother that he saw the tallest giraffe at the",
       "B": "The boy told his mother that he saw the most taller giraffe at",
@@ -4596,11 +4628,14 @@
     "exam": "SSC MTS 04/09/2023 (1st Shift",
     "question": "Parts  of  the  following  sentence  have  been  underlined  and given as options. Select the option that contains an error. If he will come  early,  we will  leave  on time  . SSC MTS 04/09/2023 (1st Shift)",
     "options": {
-      "A": "will come        (b) If he        (c) on time        (d) we will"
+      "A": "will come",
+      "B": "If he",
+      "C": "on time",
+      "D": "we will"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. will come        (b) If he        (c) on time        (d) we will",
+      "correct_answer": "A. will come",
       "explanation": "will come ‘Will come’ must be replaced with ‘comes’. The given sentence is an example of the ﬁrst conditional sentence and the correct grammatical structure is “if + simple present…….will +V 1 ”. Hence ‘comes’ is the most appropriate answer."
     }
   },
@@ -4737,7 +4772,10 @@
     "exam": "SSC MTS 05/09/2023 (2nd Shift",
     "question": "They will start their journey after the breakfast. SSC MTS 05/09/2023 (2nd Shift)",
     "options": {
-      "A": "will start (b) their journey (c) They (d) after the breakfast"
+      "A": "will start",
+      "B": "their journey",
+      "C": "They",
+      "D": "after the breakfast"
     },
     "correct_option": "D",
     "solution": {
@@ -5006,11 +5044,14 @@
     "exam": "SSC MTS 08/09/2023 (3rd Shift",
     "question": "I had / a bad habit of / waking up / lately. SSC MTS 08/09/2023 (3rd Shift)",
     "options": {
-      "A": "lately  (b) waking up    (c) a bad habit of    (d) I had"
+      "A": "lately",
+      "B": "waking up",
+      "C": "a bad habit of",
+      "D": "I had"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. lately  (b) waking up    (c) a bad habit of    (d) I had",
+      "correct_answer": "A. lately",
       "explanation": "lately Lately means recently while ‘late’ means after the usual or expected time. Adverb ‘late’ is the correct choice here as it denotes the person’s habit of waking up after the expected time in the past. Hence, ‘late’ is the most appropriate answer."
     }
   },
@@ -5036,12 +5077,13 @@
     "question": "The platinum is a precious metal. SSC MTS 11/09/2023 (1st Shift)",
     "options": {
       "A": "is",
-      "B": "The platinum            (c) a",
+      "B": "The platinum",
+      "C": "a",
       "D": "precious metal"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. The platinum            (c) a",
+      "correct_answer": "B. The platinum",
       "explanation": "The platinum Article ‘the’ must be removed as the deﬁnite article 'the' is not used before the name of materials like Gold, Silver, Platinum etc. Hence, ‘platinum’ is the most appropriate answer."
     }
   },
@@ -5050,18 +5092,21 @@
     "exam": "SSC MTS 11/09/2023 (1st Shift",
     "question": "Parts  of  the  following  sentence  have  been  underlined  and given as options. Select the option that contains an error. What  most off  us  want most  is to  move forward  . SSC MTS 11/09/2023 (1st Shift)",
     "options": {
-      "A": "most off    (b) is to   (c) want most    (d) move forward"
+      "A": "most off",
+      "B": "is to",
+      "C": "want most",
+      "D": "move forward"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. most off    (b) is to   (c) want most    (d) move forward",
+      "correct_answer": "A. most off",
       "explanation": "most off ‘Off’ must be replaced with ‘of’ as ‘Off’ is usually used as a preposition to indicate separation (going away from something) or disconnection. Preposition ‘Of’ is used to indicate something being part of something. Therefore, ‘most of’ is the most appropriate answer."
     }
   },
   {
     "id": 321,
     "exam": "SSC MTS 11/09/2023 (2nd Shift",
-    "question": "This  is  the  eldest  standing  structure  of  Chola  architecture in India. SSC MTS 11/09/2023 (2nd Shift) www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error",
+    "question": "This  is  the  eldest  standing  structure  of  Chola  architecture in India. SSC MTS 11/09/2023 (2nd Shift)",
     "options": {
       "A": "This is the more older standing structure of Chola",
       "B": "This is the most old standing structure of Chola architecture",
@@ -5108,11 +5153,13 @@
   },
   {
     "id": 324,
-    "exam": "SSC MTS 12/09/2023 (1st Shift",
+    "exam": "SSC MTS 12/09/2023 (1st Shift)",
     "question": "The  SNAP-10  A  /  was  launched  on  3  April  1965  /  on  a Atlas-Agena D rocket / from Vandenberg Air Force Base. SSC MTS 12/09/2023 (1st Shift)",
     "options": {
-      "A": "at Vandenberg Air Force Base (b) A SNAP-10 A",
-      "C": "was launch on 3 April 1965      (d) on an Atlas-Agena D rocket"
+      "A": "at Vandenberg Air Force Base",
+      "B": "A SNAP-10 A",
+      "C": "was launch on 3 April 1965",
+      "D": "on an Atlas-Agena D rocket"
     },
     "correct_option": "D",
     "solution": {
@@ -5122,8 +5169,8 @@
   },
   {
     "id": 325,
-    "exam": "SSC MTS 12/09/2023 (1st Shift",
-    "question": "Parts  of  the  given  sentence  have  been  underlined.  One  of them  contains  an  error.  The  underlined  parts  are  given  as options  with  some  changes.  Select  the  option  that  correctly rectiﬁes the error. This car is  lesser  expensive than the  one  I had  come  to buy. SSC MTS 12/09/2023 (1st Shift)",
+    "exam": "SSC MTS 12/09/2023 (1st Shift)",
+    "question": "Parts  of  the  given  sentence  have  been  underlined.  One  of them  contains  an  error;  The  underlined  parts  are  given  as options  with  some  changes;  Select  the  option  that  correctly rectiﬁes the error; This car is  lesser  expensive than the  one  I had  come  to buy. SSC MTS 12/09/2023 (1st Shift)",
     "options": {
       "A": "for",
       "B": "came",
@@ -5155,9 +5202,12 @@
   {
     "id": 327,
     "exam": "SSC MTS 12/09/2023 (2nd Shift",
-    "question": "Parts of the following sentence have been underlined  and given as options. Select the option that contains an error. We  think  of  the  past  history  of  the  world  as  ﬁxed  but  of  the future  as undecided  and open to a  wealth off  possibilities. SSC MTS 12/09/2023 (2nd Shift)",
+    "question": "Parts of the following sentence have been underlined  and given as options; Select the option that contains an error; We  think  of  the  past  history  of  the  world  as  ﬁxed  but  of  the future  as undecided  and open to a  wealth off  possibilities. SSC MTS 12/09/2023 (2nd Shift)",
     "options": {
-      "A": "of the past     (b) as undecided     (c) as ﬁxed      (d) wealth off"
+      "A": "of the past",
+      "B": "as undecided",
+      "C": "as ﬁxed",
+      "D": "wealth off"
     },
     "correct_option": "D",
     "solution": {
@@ -5184,7 +5234,7 @@
   {
     "id": 329,
     "exam": "SSC MTS 12/09/2023 (3rd Shift",
-    "question": "",
+    "question": "(A) It is a / (B) state of chaos / (C) since the/ (D) chairman resigned. SSC MTS 12/09/2023 (3rd Shift)",
     "options": {
       "A": "D",
       "B": "A",
@@ -5248,9 +5298,12 @@
   {
     "id": 333,
     "exam": "SSC MTS 13/09/2023 (2nd Shift",
-    "question": "Parts  of  the  following  sentence  have  been  underlined  and given as options. Select the option that contains an error. To  much  seriousness  hardens  the  world,  pinning  it  down  with rules  . SSC MTS 13/09/2023 (2nd Shift)",
+    "question": "Parts  of  the  following  sentence  have  been  underlined  and given as options; Select the option that contains an error; To  much  seriousness  hardens  the  world,  pinning  it  down  with rules  . SSC MTS 13/09/2023 (2nd Shift)",
     "options": {
-      "A": "with rules   (b) hardens the   (c) to much   (d) world, pinning"
+      "A": "with rules",
+      "B": "hardens the",
+      "C": "to much",
+      "D": "world, pinning"
     },
     "correct_option": "C",
     "solution": {
@@ -5263,7 +5316,10 @@
     "exam": "SSC MTS 13/09/2023 (2nd Shift",
     "question": "The boy whose the sister is ill has left. SSC MTS 13/09/2023 (2nd Shift)",
     "options": {
-      "A": "is ill  (b) has left    (c) The boy    (d) whose the sister"
+      "A": "is ill",
+      "B": "has left ",
+      "C": "The boy",
+      "D": "whose the sister"
     },
     "correct_option": "D",
     "solution": {
@@ -5276,12 +5332,14 @@
     "exam": "SSC MTS 13/09/2023 (3rd Shift",
     "question": "The  space  agency  wanted  /  to  test  with  a  chimp  /  before orbiting a astronaut / in a Mercury capsule. SSC MTS 13/09/2023 (3rd Shift)",
     "options": {
-      "A": "The space agency want            (b) in an Mercury capsule.",
-      "C": "before orbiting an astronaut    (d) to test with an chimp"
+      "A": "The space agency want",
+      "B": "in an Mercury capsule.",
+      "C": "before orbiting an astronaut",
+      "D": "to test with an chimp"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. before orbiting an astronaut    (d) to test with an chimp",
+      "correct_answer": "C. before orbiting an astronaut",
       "explanation": "before orbiting an astronaut Article ‘A’ is used before the words starting from a consonant sound - (a conversation, a story). Whereas, the article ‘An’ is used before the words starting with a vowel sound(an imminent danger, an apple). Similarly, in the given sentence, ‘astronaut’ is a noun starting with a vowel sound. Hence, ‘an astronaut’ is the most appropriate answer."
     }
   },
@@ -5323,11 +5381,13 @@
     "question": "When Nisha will have ﬁnished her task? SSC MTS 14/09/2023 (1st Shift)",
     "options": {
       "A": "have",
-      "B": "When Nisha will    (c) ﬁnished   (d) her task"
+      "B": "When Nisha will",
+      "C": "ﬁnished",
+      "D": "her task"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. When Nisha will    (c) ﬁnished   (d) her task",
+      "correct_answer": "B. When Nisha will",
       "explanation": "when Nisha will ‘Nisha will’ must be replaced with ‘will Nisha’ as the correct grammatical structure to form interrogative sentences is “Wh. Word + Helping Verb + Subject + Main Verb”. Hence, ‘when will Nisha’ is the most appropriate answer."
     }
   },
@@ -5368,7 +5428,10 @@
     "exam": "SSC MTS 14/09/2023 (2nd Shift",
     "question": "If you work hard, you secure good marks. SSC MTS 14/09/2023 (2nd Shift)",
     "options": {
-      "A": "good marks   (b) If you   (c) work hard  (d) you secure"
+      "A": "good marks",
+      "B": "If you ",
+      "C": "work hard ",
+      "D": "you secure"
     },
     "correct_option": "D",
     "solution": {
@@ -5382,11 +5445,13 @@
     "question": "The cholera is a frightful disease. SSC MTS 14/09/2023 (3rd Shift)",
     "options": {
       "A": "is",
-      "B": "The cholera        (c) frightful disease       (d) a"
+      "B": "The cholera",
+      "C": "frightful disease ",
+      "D": "a"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. The cholera        (c) frightful disease       (d) a",
+      "correct_answer": "B. The cholera",
       "explanation": "The cholera Article ‘the’ must be removed before ‘cholera’ as we generally don’t use the deﬁnite article ‘the’ before the names of illnesses or diseases. Hence, ‘cholera’ is the most appropriate answer."
     }
   },
@@ -5411,11 +5476,14 @@
     "exam": "SSC CHSL 02/08/2023 (4th Shift",
     "question": "He / lives / in 45 Church Street / with his  family. SSC CHSL 02/08/2023 (4th Shift)",
     "options": {
-      "A": "in 45 Church Street    (b) with his family     (c) lives  (d) He"
+      "A": "in 45 Church Street          ",
+      "B": "with his family",
+      "C": "lives",
+      "D": "He"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. in 45 Church Street    (b) with his family     (c) lives  (d) He",
+      "correct_answer": "A. in 45 Church Street",
       "explanation": "in 45 Church Street ‘In’ must be replaced with ‘at’ as we generally use the preposition ‘at’ for smaller or speciﬁc locations. Hence, ‘at 45 Church Street’ is the most appropriate answer."
     }
   },
@@ -5438,7 +5506,7 @@
   {
     "id": 346,
     "exam": "SSC CHSL 03/08/2023 (1st Shift",
-    "question": "Identify  the  error  in  the  use  of  preposition  in  the  given sentence and select the correct option. Radhika  is  not  capable  on  participating  in  a  national  level competition. SSC CHSL 03/08/2023 (1st Shift)",
+    "question": "Identify  the  error  in  the  use  of  preposition  in  the  given sentence and select the correct option; Radhika  is  not  capable  on  participating  in  a  national  level competition. SSC CHSL 03/08/2023 (1st Shift)",
     "options": {
       "A": "about",
       "B": "of",
@@ -5486,7 +5554,7 @@
   {
     "id": 349,
     "exam": "SSC CHSL 04/08/2023 (3rd Shift",
-    "question": "The  current  state  of  the  literature  /  on  the  eﬃcacy  under cognitive-behavioural  therapy  /  for  individuals  with  generalised anxiety  disorder  /  suggests  that  it  is  a  promising  treatment option. www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error SSC CHSL 04/08/2023 (3rd Shift)",
+    "question": "The  current  state  of  the  literature  /  on  the  eﬃcacy  under cognitive-behavioural  therapy  /  for  individuals  with  generalised anxiety  disorder  /  suggests  that  it  is  a  promising  treatment option. SSC CHSL 04/08/2023 (3rd Shift)",
     "options": {
       "A": "The current state of the literature",
       "B": "suggests that it is a promising treatment option",
@@ -5504,7 +5572,10 @@
     "exam": "SSC CHSL 04/08/2023 (4th Shift",
     "question": "The rich / should / help / poor. SSC CHSL 04/08/2023 (4th Shift)",
     "options": {
-      "A": "help            (b) should                 (c) poor               (d) The rich"
+      "A": "help",
+      "B": "should",
+      "C": "poor",
+      "D": "The rich"
     },
     "correct_option": "C",
     "solution": {
@@ -5581,13 +5652,14 @@
     "exam": "SSC CHSL 08/08/2023 (2nd Shift",
     "question": "Nobody  from  the  gathering  /  of  odd  people  could  guess  / the accident occurring blast. SSC CHSL 08/08/2023 (2nd Shift)",
     "options": {
-      "A": "the accident occurring blast    (b) Nobody from the gathering",
+      "A": "the accident occurring blast",
+      "B": "Nobody from the gathering",
       "C": "No error",
       "D": "of odd people could guess"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. the accident occurring blast    (b) Nobody from the gathering",
+      "correct_answer": "A. the accident occurring blast",
       "explanation": "the accident occurring blast ‘Occurring’ must be replaced with ‘that caused the’ as ‘caused’ means to make something happen. The phrase \"that caused the blast\" is used to clarify that the accident was responsible for the blast. Hence, ‘that caused the blast’ is the most appropriate answer."
     }
   },
@@ -5598,7 +5670,8 @@
     "options": {
       "A": "I have read that",
       "B": "a Leaning Tower of Pisa is a",
-      "C": "popular tourist attraction      (d) in the world"
+      "C": "popular tourist attraction",
+      "D": "in the world"
     },
     "correct_option": "B",
     "solution": {
@@ -5643,12 +5716,14 @@
     "exam": "SSC CHSL 08/08/2023 (4th Shift",
     "question": "It  was  Ravi,  not  his  friends,  /  who  were  shouting  /  at  late hours last night. SSC CHSL 08/08/2023 (4th Shift)",
     "options": {
-      "A": "It was Ravi, not his friends,   (b) No error",
-      "C": "who were shouting                 (d) at late hours last night."
+      "A": "It was Ravi, not his friends",
+      "B": "No error",
+      "C": "who were shouting",
+      "D": "at late hours last night."
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. who were shouting                 (d) at late hours last night.",
+      "correct_answer": "C. who were shouting",
       "explanation": "who were shouting ‘Were’ must be replaced with ‘was.’ According to the “Subject-Verb Agreement Rule”, a singular subject always takes a singular verb and a plural subject always takes a plural verb. ‘Ravi’ is a singular subject that will take ‘was’ as a singular verb. Hence, ‘who was shouting’ is the most appropriate answer."
     }
   },
@@ -5707,7 +5782,8 @@
     "options": {
       "A": "No error",
       "B": "is not enough big to meet",
-      "C": "The food container      (d) the demands of the affected people"
+      "C": "The food container",
+      "D": "the demands of the affected people"
     },
     "correct_option": "B",
     "solution": {
@@ -5718,7 +5794,7 @@
   {
     "id": 364,
     "exam": "SSC CHSL 09/08/2023 (4th Shift",
-    "question": "By  virtue  off  /  the  power  given  to  the  leader  /  the followers accepted his decision SSC CHSL 09/08/2023 (4th Shift)",
+    "question": "By  virtue  off  /  the  power  given  to  the  leader  /  the followers accepted his decision. SSC CHSL 09/08/2023 (4th Shift)",
     "options": {
       "A": "No error",
       "B": "By virtue off",
@@ -5833,12 +5909,13 @@
     "question": "The man / is a / social animal. SSC CHSL 11/08/2023 (2nd Shift)",
     "options": {
       "A": "social animal",
-      "B": "The man           (c) No error",
+      "B": "The man",
+      "C": "(c) No error",
       "D": "is a"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. The man           (c) No error",
+      "correct_answer": "B. The man",
       "explanation": "The man No article is used when a noun is used in the general sense. Therefore, article ‘the’ must be removed before ‘man’. Hence, ‘man’ is the most appropriate answer."
     }
   },
@@ -5863,8 +5940,10 @@
     "exam": "SSC CHSL 11/08/2023 (3rd Shift",
     "question": "Select the grammatically correct sentence. SSC CHSL 11/08/2023 (3rd Shift)",
     "options": {
-      "A": "He ate the sweets greedy.      (b) I could not ﬁnd it anywhere.",
-      "C": "I haven't got none.                    (d) He is much weak."
+      "A": "He ate the sweets greedy.",
+      "B": "I could not ﬁnd it anywhere.",
+      "C": "I haven't got none.",
+      "D": "He is much weak."
     },
     "correct_option": "B",
     "solution": {
@@ -5909,11 +5988,14 @@
     "exam": "SSC CHSL 14/08/2023 (2nd Shift",
     "question": "The news / is / very good / to be true. SSC CHSL 14/08/2023 (2nd Shift)",
     "options": {
-      "A": "to be true     (b) very good     (c) The news     (d) is"
+      "A": "to be true",
+      "B": "very good",
+      "C": "The news ",
+      "D": "is"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. ",
+      "correct_answer": "B. very good",
       "explanation": "very good ‘Very’ must be replaced with ‘too’ as ‘too good to be true’ is an idiom that means something is so positive or favorable. Hence, ‘too good’ is the most appropriate answer."
     }
   },
@@ -5924,7 +6006,8 @@
     "options": {
       "A": "over",
       "B": "in",
-      "C": "upon          (d) of"
+      "C": "upon",
+      "D": "of"
     },
     "correct_option": "B",
     "solution": {
@@ -6014,7 +6097,7 @@
   },
   {
     "id": 383,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 14/07/2023 (1st shift)",
     "question": "Select the grammatically correct sentence. SSC CGL 14/07/2023 (1st shift)",
     "options": {
       "A": "The participants of the competition are waiting for their turn",
@@ -6030,7 +6113,7 @@
   },
   {
     "id": 384,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 14/07/2023 (2nd shift)",
     "question": "After  knowing  truth,  /  the  jury  took  the  right  decision  /  in the case. SSC CGL 14/07/2023 (2nd shift)",
     "options": {
       "A": "The jury took the right decision",
@@ -6046,10 +6129,11 @@
   },
   {
     "id": 385,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 14/07/2023 (4th shift)",
     "question": "The  availability  of  funds  will  be  /  ensured  if  they  all  tried to / submit the proposals on time. SSC CGL 14/07/2023 (4th shift)",
     "options": {
-      "A": "The availability of funds will be  (b) No error",
+      "A": "The availability of funds will be",
+      "B": "No error",
       "C": "submit the proposals on time",
       "D": "ensured  if they all tried to"
     },
@@ -6061,8 +6145,8 @@
   },
   {
     "id": 386,
-    "exam": "SSC Spot the Error",
-    "question": "Select  the  grammatically  correct  statement  from  among the given options. A. It is a nice party. I am enjoying the party. B. It is a party. I am enjoying an party. C. It is party. I am enjoying a party. D. It is the party. I am enjoying an party. SSC CGL 14/07/2023 (4th shift)",
+    "exam": "SSC CGL 14/07/2023 (4th shift)",
+    "question": "Select  the  grammatically  correct  statement  from  among the given options; A, It is a nice party; I am enjoying the party; B, It is a party; I am enjoying an party; C, It is party; I am enjoying a party; D, It is the party; I am enjoying an party. SSC CGL 14/07/2023 (4th shift)",
     "options": {
       "A": "D",
       "B": "C",
@@ -6077,8 +6161,8 @@
   },
   {
     "id": 387,
-    "exam": "SSC Spot the Error",
-    "question": "I  can't  talk  right  now.  /  I  am  being  really  busy.  /  I'll  call  you later. SSC CGL 18/07/2023 (2nd shift)",
+    "exam": "SSC CGL 18/07/2023 (2nd shift)",
+    "question": "I  can't  talk  right  now,  /  I  am  being  really  busy,  /  I'll  call  you later. SSC CGL 18/07/2023 (2nd shift)",
     "options": {
       "A": "I can't talk right now",
       "B": "I am being really busy",
@@ -6093,8 +6177,8 @@
   },
   {
     "id": 388,
-    "exam": "SSC Spot the Error",
-    "question": "The  following  sentence  has  been  divided  into  three segments,  A,  B,  C.  One  of  them  may  contain  a  grammatical  error. Select  the  segment  that  contains  the  error,  form  the  given options.  If  you  don’t  ﬁnd  any  error,  mark  ‘No  error’  as  your answer. Aniket lives (A) / in the small apartment (B) / in the suburbs (C). SSC CGL 18/07/2023 (3rd shift)",
+    "exam": "SSC CGL 18/07/2023 (3rd shift)",
+    "question": "The  following  sentence  has  been  divided  into  three segments,  A,  B,  C,  One  of  them  may  contain  a  grammatical  error; Select  the  segment  that  contains  the  error,  form  the  given options;  If  you  don’t  ﬁnd  any  error,  mark  ‘No  error’  as  your answer; Aniket lives (A) / in the small apartment (B) / in the suburbs (C). SSC CGL 18/07/2023 (3rd shift)",
     "options": {
       "A": "C",
       "B": "No error",
@@ -6109,7 +6193,7 @@
   },
   {
     "id": 389,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 18/07/2023 (3rd shift)",
     "question": "The  present-century  threats  to  our  environment,  /  which include  interfering  species,  ailments,  pollution  and  /  a  boiling temperature, were putting wildlife populations at peril. SSC CGL 18/07/2023 (3rd shift)",
     "options": {
       "A": "which include interfering species, ailments, pollution and",
@@ -6125,8 +6209,8 @@
   },
   {
     "id": 390,
-    "exam": "SSC Spot the Error",
-    "question": "\"Do  you  want  to  join  us  for  lunch?\"  /  \"I'm  sorry  /  my physics class will start at 1 p.m. / and doesn't ﬁnish till 3 p.m.\" SSC CGL 19/07/2023 (1st shift)",
+    "exam": "SSC CGL 19/07/2023 (1st shift)",
+    "question": "\"Do  you  want  to  join  us  for  lunch?\"  /  \"I'm  sorry  /  my physics class will start at 1 pm / and doesn't ﬁnish till 3 pm.\" SSC CGL 19/07/2023 (1st shift)",
     "options": {
       "A": "my physics class will start at 1 p.m.",
       "B": "I'm sorry",
@@ -6141,7 +6225,7 @@
   },
   {
     "id": 391,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 19/07/2023 (2nd shift)",
     "question": "Sky  appears  blue  /  as  it  absorbs  /  all  colours  and /reﬂects only blue. SSC CGL 19/07/2023 (2nd shift)",
     "options": {
       "A": "reﬂects only blue",
@@ -6157,7 +6241,7 @@
   },
   {
     "id": 392,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 19/07/2023 (2nd shift)",
     "question": "A  celestial  body  or  astronomical  object  is  /  a  naturally occurring  physical  thing,  association,  /  or  conﬁguration  that happens in the visible universe. SSC CGL 19/07/2023 (2nd shift)",
     "options": {
       "A": "No error",
@@ -6173,8 +6257,8 @@
   },
   {
     "id": 393,
-    "exam": "SSC Spot the Error",
-    "question": "The  following  sentence  has  been  divided  into  three segments,  A,  B,  C.  One  of  them  may  contain  a  grammatical  error. Select  the  segment  that  contains  the  error,  from  the  given options.  If  you  don't  ﬁnd  any  error,  mark  'No  error'  as  your answer. It was (A) / by a chance (B) / he saw a movie in a theatre (C). SSC CGL 19/07/2023 (4th shift)",
+    "exam": "SSC CGL 19/07/2023 (4th shift)",
+    "question": "The  following  sentence  has  been  divided  into  three segments,  A,  B,  C;  One  of  them  may  contain  a  grammatical  error; Select  the  segment  that  contains  the  error,  from  the  given options;  If  you  don't  ﬁnd  any  error,  mark  'No  error'  as  your answer; It was (A) / by a chance (B) / he saw a movie in a theatre (C). SSC CGL 19/07/2023 (4th shift)",
     "options": {
       "A": "A",
       "B": "C",
@@ -6189,21 +6273,24 @@
   },
   {
     "id": 394,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 20/07/2023 (1st shift)",
     "question": "One of these / boxes have / the portrait /  of the heiress. SSC CGL 20/07/2023 (1st shift)",
     "options": {
-      "A": "boxes have (b) of the heiress (c) the portrait (d) One of these"
+      "A": "boxes have",
+      "B": "of the heiress",
+      "C": "the portrait",
+      "D": "One of these"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. boxes have (b) of the heiress (c) the portrait (d) One of these",
+      "correct_answer": "A. boxes have",
       "explanation": "boxes have ‘Have’ must be replaced with ‘has.’ According to the “Subject-Verb Agreement Rule”, ‘One of/ Each of/ Most of/ Either of + Plural Subject + Singular verb’ is grammatically the correct structure. Hence, ‘boxes has’ is the most appropriate answer."
     }
   },
   {
     "id": 395,
-    "exam": "SSC Spot the Error",
-    "question": "You can fool some of the people all the time,  and all the www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error people  some  of  the  time;  but  you  cannot  fool  all  the  people  all the time. SSC CGL 20/07/2023 (2nd shift)",
+    "exam": "SSC CGL 20/07/2023 (2nd shift)",
+    "question": "You can fool some of the people all the time, and all the people some of the time; but you cannot fool all the people all the time. SSC CGL 20/07/2023 (2nd shift)",
     "options": {
       "A": "No error",
       "B": "You can fool some of the people all the time",
@@ -6218,7 +6305,7 @@
   },
   {
     "id": 396,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 20/07/2023 (3rd shift)",
     "question": "Hardik's  horoscope  says  /  that  the  stars  /  will  be exercised/ a benign inﬂuence on his life. SSC CGL 20/07/2023 (3rd shift)",
     "options": {
       "A": "will be exercised",
@@ -6234,8 +6321,8 @@
   },
   {
     "id": 397,
-    "exam": "SSC Spot the Error",
-    "question": "Parts of the following sentence have been underlined  and given as options. Select the option that contains an error. I  had gone  to Siliguri  before  I  go  to Raiganj . SSC CGL 20/07/2023 (4th shift)",
+    "exam": "SSC CGL 20/07/2023 (4th shift)",
+    "question": "Parts of the following sentence have been underlined  and given as options; Select the option that contains an error; I  had gone  to Siliguri  before  I  go  to Raiganj . SSC CGL 20/07/2023 (4th shift)",
     "options": {
       "A": "go",
       "B": "before",
@@ -6250,7 +6337,7 @@
   },
   {
     "id": 398,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 21/07/2023 (3rd shift)",
     "question": "If  things  were  not  going  to  be  normal  /  after  the pandemic, mankind will / have to accept the New Normal. SSC CGL 21/07/2023 (3rd shift)",
     "options": {
       "A": "after the pandemic, mankind will",
@@ -6266,7 +6353,7 @@
   },
   {
     "id": 399,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 21/07/2023 (4th shift)",
     "question": "Select the grammatically correct sentence. SSC CGL 21/07/2023 (4th shift)",
     "options": {
       "A": "The decision to change a hospital saved an life of the",
@@ -6282,7 +6369,7 @@
   },
   {
     "id": 400,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 24/07/2023 (1st shift)",
     "question": "I  am  sure  that  /  the  postman  would  be  /  coming  shortly  / to deliver the letter. SSC CGL 24/07/2023 (1st shift)",
     "options": {
       "A": "I am sure that",
@@ -6298,7 +6385,7 @@
   },
   {
     "id": 401,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 24/07/2023 (1st shift)",
     "question": "Maruti  likes  /  adventure  /  stories,  especially  /  an adventures of Tarzan. SSC CGL 24/07/2023 (1st shift)",
     "options": {
       "A": "stories, especially",
@@ -6314,7 +6401,7 @@
   },
   {
     "id": 402,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 24/07/2023 (3rd shift)",
     "question": "The  historians  /  are  a  great  /  asset  to  the/  ﬁeld  of academia. SSC CGL 24/07/2023 (3rd shift)",
     "options": {
       "A": "ﬁeld of academia",
@@ -6330,7 +6417,7 @@
   },
   {
     "id": 403,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 24/07/2023 (4th shift)",
     "question": "Select the grammatically correct sentence. SSC CGL 24/07/2023 (4th shift)",
     "options": {
       "A": "The warrior was waiting for an right  time to attack the lion",
@@ -6346,7 +6433,7 @@
   },
   {
     "id": 404,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 25/07/2023 (1st shift)",
     "question": "We  hardly  knew  nothing  /  about  the  manager  /  who  had recently joined. SSC CGL 25/07/2023 (1st shift)",
     "options": {
       "A": "We hardly knew nothing",
@@ -6362,7 +6449,7 @@
   },
   {
     "id": 405,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 25/07/2023 (2nd shift)",
     "question": "Anti-party  activities  /  improved  my  relations  /with  an opposition. SSC CGL 25/07/2023 (2nd shift)",
     "options": {
       "A": "Anti-party activities",
@@ -6378,11 +6465,13 @@
   },
   {
     "id": 406,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 25/07/2023 (3rd shift)",
     "question": "You wash / the dishes / and / I dry the same. SSC CGL 25/07/2023 (3rd shift)",
     "options": {
       "A": "and",
-      "B": "You wash      (c) l dry the same      (d) the dishes"
+      "B": "You wash",
+      "C": "l dry the same",
+      "D": "the dishes"
     },
     "correct_option": "C",
     "solution": {
@@ -6392,7 +6481,7 @@
   },
   {
     "id": 407,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 25/07/2023 (4th shift)",
     "question": "Select the grammatically correct sentence. SSC CGL 25/07/2023 (4th shift)",
     "options": {
       "A": "It was a hectic day for Susan with a lot of purchases and a",
@@ -6408,8 +6497,8 @@
   },
   {
     "id": 408,
-    "exam": "SSC Spot the Error",
-    "question": "Select  the  option  that  contains  a  grammatical  error  in  the underlined portion. When  Mrs.  Sinha  came  to  see  Varanasi  in  2019,  Nupur  has already been teaching there for ﬁve years. SSC CGL 26/07/2023 (1st shift)",
+    "exam": "SSC CGL 26/07/2023 (1st shift)",
+    "question": "Select  the  option  that  contains  a  grammatical  error  in  the underlined portion; When  Mrs  Sinha  came  to  see  Varanasi  in  2019,  Nupur  has already been teaching there for ﬁve years. SSC CGL 26/07/2023 (1st shift)",
     "options": {
       "A": "When Mrs. Sinha came to see Varanasi  in 2019,  Nupur has",
       "B": "When Mrs. Sinha came to see Varanasi  in 2019,  Nupur has",
@@ -6424,10 +6513,13 @@
   },
   {
     "id": 409,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 26/07/2023 (1st shift)",
     "question": "She is in / an hurry / to meet / her brother. SSC CGL 26/07/2023 (1st shift)",
     "options": {
-      "A": "to meet     (b) She is in     (c) her brother      (d) an hurry"
+      "A": "to meet",
+      "B": "She is in",
+      "C": "her brother",
+      "D": "an hurry"
     },
     "correct_option": "D",
     "solution": {
@@ -6437,7 +6529,7 @@
   },
   {
     "id": 410,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 26/07/2023 (3rd shift)",
     "question": "Select  the  option  that  contains  a  grammatical  error  in  the underlined portion. He  was  always  been  a  grumpy  man  so  I  never  liked  him  and avoided his company. SSC CGL 26/07/2023 (3rd shift)",
     "options": {
       "A": "He was always been a grumpy man, so I never liked him and",
@@ -6453,7 +6545,7 @@
   },
   {
     "id": 411,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 26/07/2023 (4th shift)",
     "question": "Identify  the  option  that  rectiﬁes  the  error  in  the  given sentence. In  2023,  she  will  has  been  working  in  the  company  for  three years. SSC CGL 26/07/2023 (4th shift)",
     "options": {
       "A": "By 2023",
@@ -6469,7 +6561,7 @@
   },
   {
     "id": 412,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 27/07/2023 (2nd shift)",
     "question": "They  usually  allege  that  there  is  /  a  delay  in  procuring stationery / due to the faulty purchase orders. SSC CGL 27/07/2023 (2nd shift)",
     "options": {
       "A": "due to the faulty purchase orders",
@@ -6485,7 +6577,7 @@
   },
   {
     "id": 413,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL 27/07/2023 (3rd shift)",
     "question": "It can / get extreme cold / during / the winters. SSC CGL 27/07/2023 (3rd shift)",
     "options": {
       "A": "The  warrior  was  waiting  for  an  right  time  to  attack  the  lion",
@@ -6501,10 +6593,13 @@
   },
   {
     "id": 414,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 27/06/2023 (Shift - 4)",
     "question": "I caught / a white cat / rustling / beneath  my room. Graduate Level 27/06/2023 (Shift - 4)",
     "options": {
-      "A": "a white cat   (b) I caught   (c) rustling  (d) beneath my room."
+      "A": "a white cat",
+      "B": "I caught",
+      "C": "rustling",
+      "D": "beneath my room."
     },
     "correct_option": "D",
     "solution": {
@@ -6514,8 +6609,8 @@
   },
   {
     "id": 415,
-    "exam": "SSC Spot the Error",
-    "question": "Kids  learn  /  a  lot  by  /  their  /  school  activities  and homework Graduate Level 28/06/2023 (Shift - 3)",
+    "exam": "Graduate Level 28/06/2023 (Shift - 3)",
+    "question": "Kids  learn  /  a  lot  by  /  their  /  school  activities  and homework. Graduate Level 28/06/2023 (Shift - 3)",
     "options": {
       "A": "Kids learn",
       "B": "school activities and homework",
@@ -6530,8 +6625,8 @@
   },
   {
     "id": 416,
-    "exam": "SSC Spot the Error",
-    "question": "Select the grammatically correct sentence. A. I would like to spend an evening near pool with a cup of coffee. B. I would like to spend an evening near pool with cup of coffee. C.  I  would  like  to  spend  a  evening  near  a  pool  with  a  cup  of coffee. D.  I  would  like  to  spend  an  evening  near  a  pool  with  a  cup  of coffee Graduate Level 28/06/2023 (Shift - 3)",
+    "exam": "Graduate Level 28/06/2023 (Shift - 3)",
+    "question": "Select the grammatically correct sentence; A, I would like to spend an evening near pool with a cup of coffee; B, I would like to spend an evening near pool with cup of coffee; C,  I  would  like  to  spend  a  evening  near  a  pool  with  a  cup  of coffee; D,  I  would  like  to  spend  an  evening  near  a  pool  with  a  cup  of coffee. Graduate Level 28/06/2023 (Shift - 3)",
     "options": {
       "A": "C",
       "B": "D",
@@ -6546,7 +6641,7 @@
   },
   {
     "id": 417,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 30/06/2023 (Shift - 1)",
     "question": "If  you  live  /  in  a  foreign  country,/  you  should/  try  and learn language. Graduate Level 30/06/2023 (Shift - 1)",
     "options": {
       "A": "If you live",
@@ -6562,7 +6657,7 @@
   },
   {
     "id": 418,
-    "exam": "SSC Spot the Error",
+    "exam": "Graduate Level 30/06/2023 (Shift - 1)",
     "question": "There  are  more  than  two  million/job-seekers  who  are already / completed their ﬁtness test/for the post since 2020. Graduate Level 30/06/2023 (Shift - 1)",
     "options": {
       "A": "There are more than two million",
@@ -6578,7 +6673,7 @@
   },
   {
     "id": 419,
-    "exam": "SSC Spot the Error",
+    "exam": "Higher Secondary 28/06/2023 (Shift - 2)",
     "question": "He  is  as  concerned  as  me  /  regarding  /  the  renewed  / examination schedule. Higher Secondary 28/06/2023 (Shift - 2)",
     "options": {
       "A": "the renewed",
@@ -6594,8 +6689,8 @@
   },
   {
     "id": 420,
-    "exam": "SSC CHSL 2022 Tier",
-    "question": "After  that  long  afternoon,  /  when  I  quietly  entered  her room  /  to  hand  over  the  packet  to  her,  /  she  asked  me  to  sit reluctant Higher Secondary 30/06/2023 (Shift - 2)",
+    "exam": "Higher Secondary 30/06/2023 (Shift - 2)",
+    "question": "After  that  long  afternoon,  /  when  I  quietly  entered  her room  /  to  hand  over  the  packet  to  her,  /  she  asked  me  to  sit reluctant. Higher Secondary 30/06/2023 (Shift - 2)",
     "options": {
       "A": "I  would  like  to  spend  a  evening  near  a  pool  with  a  cup  of",
       "B": "After that long afternoon,",
@@ -6610,7 +6705,7 @@
   },
   {
     "id": 421,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CHSL Tier II  (26/06/2023)",
     "question": "The  police  could  not  /  hold  on  the  people  /  for  long  as they / gathered in large numbers. SSC CHSL Tier II  (26/06/2023)",
     "options": {
       "A": "for long as they",
@@ -6626,7 +6721,7 @@
   },
   {
     "id": 422,
-    "exam": "SSC MTS 2022 Tier",
+    "exam": "SSC CHSL Tier II  (26/06/2023)",
     "question": "The  students  were  /  able  to  get  better  from  /  college early so they / went to the movies. SSC CHSL Tier II  (26/06/2023)",
     "options": {
       "A": "to get better from",
@@ -6637,7 +6732,7 @@
     "correct_option": "A",
     "solution": {
       "correct_answer": "A. to get better from",
-      "explanation": "to get better from ‘Better’ must be replaced with ‘back’ as the phrase ‘get back’ means to return. Hence, ‘get back’ is the most appropriate answer. SSC MTS 2022 Tier - 1"
+      "explanation": "to get better from ‘Better’ must be replaced with ‘back’ as the phrase ‘get back’ means to return. Hence, ‘get back’ is the most appropriate answer."
     }
   },
   {
@@ -6675,7 +6770,7 @@
   {
     "id": 425,
     "exam": "SSC MTS 02/05/2023 (Evening",
-    "question": "Factoring  is,  of  course,  different  from  and  superior  than  / bill discounting, from the point of / view of a small company SSC MTS 02/05/2023 (Evening)",
+    "question": "Factoring  is,  of  course,  different  from  and  superior  than  / bill discounting, from the point of / view of a small company. SSC MTS 02/05/2023 (Evening)",
     "options": {
       "A": "bill discounting, from the point of",
       "B": "No error",
@@ -6695,7 +6790,8 @@
     "options": {
       "A": "No error",
       "B": "thanks to David's slingshot.",
-      "C": "big lug who met his fate   (d) Now its referring to the same"
+      "C": "big lug who met his fate",
+      "D": "Now its referring to the same"
     },
     "correct_option": "D",
     "solution": {
@@ -6722,7 +6818,7 @@
   {
     "id": 428,
     "exam": "SSC MTS 03/05/2023 (Evening",
-    "question": "Identify  the  segment  that  contains  a  grammatical  error.  If there is no error, select 'No error’ The  police  released  a  statement  saying,  /  “This  was  one  of  the most vicious/ attack we have ever seen.” SSC MTS 03/05/2023 (Evening)",
+    "question": "Identify  the  segment  that  contains  a  grammatical  error;  If there is no error, select 'No error’ The  police  released  a  statement  saying,  /  “This  was  one  of  the most vicious/ attack we have ever seen”. SSC MTS 03/05/2023 (Evening)",
     "options": {
       "A": "No error",
       "B": "The police released a statement saying,",
@@ -6740,11 +6836,14 @@
     "exam": "SSC MTS 03/05/2023 (Evening",
     "question": "Why is your friend / giving me / weird looks? SSC MTS 03/05/2023 (Evening)",
     "options": {
-      "A": "weird looks? (b) giving me (c) Why is your friend (d) No error"
+      "A": "weird looks?",
+      "B": "giving me",
+      "C": "Why is your friend",
+      "D": "No error"
     },
     "correct_option": "D",
     "solution": {
-      "correct_answer": "D. ",
+      "correct_answer": "D. No error",
       "explanation": "no error The sentence is grammatically correct."
     }
   },
@@ -6833,12 +6932,14 @@
     "exam": "SSC MTS 08/05/2023 (Evening",
     "question": "Never put of / until tomorrow what / you can  do today. SSC MTS 08/05/2023 (Evening)",
     "options": {
-      "A": "you can do today.      (b) until tomorrow what",
-      "C": "No error                       (d) Never put of"
+      "A": "you can do today.",
+      "B": "until tomorrow what",
+      "C": "No error",
+      "D": "Never put of"
     },
     "correct_option": "D",
     "solution": {
-      "correct_answer": "D. ",
+      "correct_answer": "D. Never put of",
       "explanation": "Never put of ‘Of’ must be replaced with ‘off’ as the phrasal verb ‘put off’ means to delay doing something. Hence, ‘never put off’ is the most appropriate answer."
     }
   },
@@ -6927,8 +7028,10 @@
     "exam": "SSC MTS 09/05/2023 (Evening",
     "question": "Professor  Murli’s  eyebrows  /  rose  a  little  higher  and  his  / gaze became distinctly coldest. SSC MTS 09/05/2023 (Evening)",
     "options": {
-      "A": "gaze became distinctly coldest. (b) No error",
-      "C": "Professor murli’s eyebrows         (d) rose a little higher and his"
+      "A": "gaze became distinctly coldest.",
+      "B": "No error",
+      "C": "Professor murli’s eyebrows",
+      "D": "rose a little higher and his"
     },
     "correct_option": "A",
     "solution": {
@@ -6941,7 +7044,8 @@
     "exam": "SSC MTS 10/05/2023 (Morning",
     "question": "Early,  during  December  2021,/  Lal  was  appointed  as  /  the Secretary to the Lokpal. SSC MTS 10/05/2023 (Morning)",
     "options": {
-      "A": "the Secretary to the Lokpal.  (b) Early, during December 2021",
+      "A": "the Secretary to the Lokpal.",
+      "B": "Early, during December 2021",
       "C": "Lal was appointed as",
       "D": "No error"
     },
@@ -6954,7 +7058,7 @@
   {
     "id": 443,
     "exam": "SSC MTS 10/05/2023 (Morning",
-    "question": "In  79  A.D.,  the  Mount  Vesuvius  blew  /  its  top,  burying  the ancient / cities of Pompeii and Herculaneum. SSC MTS 10/05/2023 (Morning)",
+    "question": "In  79  AD,  the  Mount  Vesuvius  blew  /  its  top,  burying  the ancient / cities of Pompeii and Herculaneum. SSC MTS 10/05/2023 (Morning)",
     "options": {
       "A": "In 79 A.D., the Mount Vesuvius blew",
       "B": "its top, burying the ancient",
@@ -7022,7 +7126,8 @@
     "options": {
       "A": "No error",
       "B": "Many female mammals",
-      "C": "only when they mate.    (d) including rabbits and cats, ovulate"
+      "C": "only when they mate",
+      "D": "including rabbits and cats, ovulate"
     },
     "correct_option": "A",
     "solution": {
@@ -7096,13 +7201,14 @@
     "exam": "SSC MTS 12/05/2023 (Evening",
     "question": "He  belted  two  huge  sixers,  but  /  eleven  to  get  of  the  last two / deliveries was a big ask. SSC MTS 12/05/2023 (Evening)",
     "options": {
-      "A": "eleven to get of the last two    (b) deliveries was a big ask.",
+      "A": "eleven to get of the last two",
+      "B": "deliveries was a big ask.",
       "C": "No error",
       "D": "He belted two huge sixers"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. eleven to get of the last two    (b) deliveries was a big ask.",
+      "correct_answer": "A. eleven to get of the last two",
       "explanation": "eleven to get of the last two ‘Get of’ will be replaced with ‘Get off’ as it means to successfully complete or achieve. It conveys the intended meaning that eleven runs were needed to successfully complete the last two deliveries. Hence, ‘Get off’ will be the most appropriate answer."
     }
   },
@@ -7145,7 +7251,8 @@
     "options": {
       "A": "No error",
       "B": "I spend a lot of",
-      "C": "my time at work helping my  (d) customers ﬁnd an best outﬁt."
+      "C": "my time at work helping my",
+      "D": "customers ﬁnd an best outﬁt."
     },
     "correct_option": "D",
     "solution": {
@@ -7158,8 +7265,10 @@
     "exam": "SSC MTS 16/05/2023 (Afternoon",
     "question": "When  he  buckled  down  to  his  /  work  he  became  the  slyer / and cleverest of diplomats. SSC MTS 16/05/2023 (Afternoon)",
     "options": {
-      "A": "When he buckled down to his    (b) work he became the slyer",
-      "C": "and cleverest of diplomats.        (d) No error"
+      "A": "When he buckled down to his",
+      "B": "work he became the slyer",
+      "C": "and cleverest of diplomats",
+      "D": "No error"
     },
     "correct_option": "B",
     "solution": {
@@ -7172,7 +7281,8 @@
     "exam": "SSC MTS 16/05/2023 (Afternoon",
     "question": "Neither  teahers  or  /  the  principal  revolted  against  /  the new education policy SSC MTS 16/05/2023 (Afternoon)",
     "options": {
-      "A": "the new education policy.      (b) the principal revolted against",
+      "A": "the new education policy",
+      "B": "the principal revolted against",
       "C": "No error",
       "D": "Neither teachers or"
     },
@@ -7221,7 +7331,8 @@
     "options": {
       "A": "Largest farmers usually",
       "B": "No error",
-      "C": "have more money, social power  (d) and local inﬂuence."
+      "C": "have more money, social power",
+      "D": "and local inﬂuence"
     },
     "correct_option": "A",
     "solution": {
@@ -7288,7 +7399,7 @@
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. muses is going stronger    (d) And how amorous you become",
+      "correct_answer": "C. muses is going stronger",
       "explanation": "Muses is going stronger"
     }
   },
@@ -7457,12 +7568,14 @@
     "exam": "SSC MTS 13/06/2023 (Morning",
     "question": "Your  body  will  respond  by  /  getting  more  muscular  and  / strong before you know it. SSC MTS 13/06/2023 (Morning)",
     "options": {
-      "A": "strong before you know it.      (b) No error",
-      "C": "Your body will respond by       (d) getting more muscular and"
+      "A": "strong before you know it",
+      "B": "No error",
+      "C": "Your body will respond by",
+      "D": "getting more muscular and"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. strong before you know it.      (b) No error",
+      "correct_answer": "A. strong before you know it",
       "explanation": "strong before you know it Use of the positive degree adjective ‘strong’ is incorrect as we use the same type of adjectives when they are joined by a conjunction(‘and’ in the given sentence). The adjective ‘more muscular’ is in comparative form, so we will use comparative degree ‘stronger’ in place of ‘strong’. Hence, ‘stronger before you know it’ is the most appropriate answer."
     }
   },
@@ -7471,13 +7584,14 @@
     "exam": "SSC MTS 13/06/2023 (Evening",
     "question": "It  would  be  neat  and  /  cleanest,  a  home  worthy  of  / spending our lives together. SSC MTS 13/06/2023 (Evening)",
     "options": {
-      "A": "cleanest, a home worthy of   (b) spending our lives together.",
+      "A": "cleanest, a home worthy of",
+      "B": "spending our lives together.",
       "C": "It would be neat and",
       "D": "No error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. cleanest, a home worthy of   (b) spending our lives together.",
+      "correct_answer": "A. cleanest, a home worthy of",
       "explanation": "Cleanest, a home worthy of ‘Cleanest’ must be replaced with ‘clean’ as \"cleanest\" is a superlative form of the adjective \"clean.\" Superlatives are used to compare three or more items or qualities. However, in this sentence, there is no comparison being made between multiple homes or qualities. So, we can use the adjective \"clean\" alone. Hence, ‘Clean, a home worthy of’ is the most appropriate answer."
     }
   },
@@ -7584,7 +7698,8 @@
     "options": {
       "A": "No error",
       "B": "but learning and understanding",
-      "C": "Leaders are self-direct,  (d) are the keys to self-direction"
+      "C": "Leaders are self-direct",
+      "D": "are the keys to self-direction"
     },
     "correct_option": "C",
     "solution": {
@@ -7629,12 +7744,14 @@
     "exam": "SSC MTS 16/06/2023 (Afternoon",
     "question": "He  best  understand  that  /  because  of  the  ﬁght  it  is  no  / longer his decision to make. SSC MTS 16/06/2023 (Afternoon)",
     "options": {
-      "A": "He best understand that        (b) longer his decision to make.",
-      "C": "because of the ﬁght it is no   (d) No error"
+      "A": "He best understand that",
+      "B": "longer his decision to make.",
+      "C": "because of the ﬁght it is no",
+      "D": "No error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. He best understand that        (b) longer his decision to make.",
+      "correct_answer": "A. He best understand that",
       "explanation": "He best understand that Use of the superlative degree adverb ‘best’ is incorrect here. The adverb ‘better’ is the comparative degree of ‘well’ and is used to give advice or suggestions on what is considered a more"
     }
   },
@@ -7741,7 +7858,8 @@
     "options": {
       "A": "No error",
       "B": "I’m going to get",
-      "C": "homework’, said the professor angrily.  (d) start on some"
+      "C": "homework’, said the professor angrily",
+      "D": "start on some"
     },
     "correct_option": "D",
     "solution": {
@@ -7770,12 +7888,14 @@
     "exam": "SSC MTS 20/06/2023 (Afternoon",
     "question": "Raising  temperatures  in  the  /  springtime  signal  plants and / animals to come alive. SSC MTS 20/06/2023 (Afternoon)",
     "options": {
-      "A": "Raising temperatures in the   (b) springtime signal plants and",
-      "C": "animals to come alive.            (d) No error"
+      "A": "Raising temperatures in the",
+      "B": "springtime signal plants and",
+      "C": "animals to come alive",
+      "D": "No error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. Raising temperatures in the   (b) springtime signal plants and",
+      "correct_answer": "A. Raising temperatures in the",
       "explanation": "Raising temperatures in the ‘Raising’ must be replaced with ‘rising’ as rise means to increase in value and raise means to lift or elevate something. Hence, ‘rising temperature in the’ is the most appropriate answer."
     }
   },
@@ -7784,7 +7904,8 @@
     "exam": "SSC MTS 20/06/2023 (Afternoon",
     "question": "Have  you  ever  gone  into  /  a  high  -  street  shop  wearing  /  a pair of cycling shorts? SSC MTS 20/06/2023 (Afternoon)",
     "options": {
-      "A": "a pair of cycling shorts        (b) a high - street shop wearing",
+      "A": "a pair of cycling shorts",
+      "B": "a high - street shop wearing",
       "C": "No error",
       "D": "Have you ever gone into"
     },
@@ -7797,7 +7918,7 @@
   {
     "id": 497,
     "exam": "SSC MTS 20/06/2023 (Evening",
-    "question": "Most  impressive  /  was  record  breaking  /  75.6  FPS  on Crysis. SSC MTS 20/06/2023 (Evening)",
+    "question": "Most  impressive  /  was  record  breaking  /  75 6  FPS  on Crysis. SSC MTS 20/06/2023 (Evening)",
     "options": {
       "A": "75.6 FPS on Crysis",
       "B": "Most impressive",
@@ -7831,14 +7952,14 @@
     "exam": "SSC CHSL 09/03/2023 (1st Shift",
     "question": "The  recent  discoveries  /  have  risen  hopes  /  about possible applications. SSC CHSL 09/03/2023 (1st Shift)",
     "options": {
-      "A": "a million - dollar contract     (b) And it just recently awarded",
-      "B": "No error",
-      "C": "that reeks of corruption.      (d) No error",
-      "D": "about possible applications."
+      "A": "a million - dollar contract",
+      "B": "And it just recently awarded",
+      "C": "that reeks of corruption",
+      "D": "(d) No error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. a million - dollar contract     (b) And it just recently awarded",
+      "correct_answer": "A. a million - dollar contract",
       "explanation": "have risen hopes ‘Have + V 3 ’ is the correct grammatical structure for the given sentence which is in the present perfect tense. Hence, ‘risen’ will be replaced with ‘raised’ & ‘have raised(V 3 ) hopes’ is the most appropriate answer."
     }
   },
@@ -7849,7 +7970,8 @@
     "options": {
       "A": "killed me, your brother.",
       "B": "No error",
-      "C": "jealousy, you would have  (d) Today, in ﬁt of frenzied rage and"
+      "C": "jealousy, you would have",
+      "D": "Today, in ﬁt of frenzied rage and"
     },
     "correct_option": "D",
     "solution": {
@@ -7862,11 +7984,14 @@
     "exam": "SSC CHSL 10/03/2023 (1st Shift",
     "question": "It turns out / that my father / isn't alone. SSC CHSL 10/03/2023 (1st Shift)",
     "options": {
-      "A": "No error   (b) that my father   (c) It turns out   (d) isn't alone."
+      "A": "No error",
+      "B": "that my father ",
+      "C": "It turns out",
+      "D": "isn't alone."
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. No error   (b) that my father   (c) It turns out   (d) isn't alone.",
+      "correct_answer": "A. No error",
       "explanation": "No error. The given sentence is grammatically correct."
     }
   },
@@ -7969,7 +8094,7 @@
   {
     "id": 509,
     "exam": "SSC CHSL 13/03/2023 (4th Shift",
-    "question": "It's  4  p.m.  local  time  and  quite  a  /  large  crowd  has gathered from yesterday / evening around the giant stage. SSC CHSL 13/03/2023 (4th Shift)",
+    "question": "It's  4  pm  local  time  and  quite  a  /  large  crowd  has gathered from yesterday / evening around the giant stage. SSC CHSL 13/03/2023 (4th Shift)",
     "options": {
       "A": "evening around the giant stage.",
       "B": "large crowd has gathered from yesterday",
@@ -7985,7 +8110,7 @@
   {
     "id": 510,
     "exam": "SSC CHSL 14/03/2023 (2nd Shift",
-    "question": "Scientists  have  a  few  tricks  up  /  their  sleeves  for  dealing with / the universe other objects. www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error SSC CHSL 14/03/2023 (2nd Shift)",
+    "question": "Scientists  have  a  few  tricks  up  /  their  sleeves  for  dealing with / the universe other objects. SSC CHSL 14/03/2023 (2nd Shift)",
     "options": {
       "A": "their sleeves for dealing with",
       "B": "Scientists have a few tricks up",
@@ -8019,13 +8144,14 @@
     "exam": "SSC CHSL 14/03/2023 (4th Shift",
     "question": "Around  30  percent  of  the  /  Indian  population  are estimated / to have  latent TB. SSC CHSL 14/03/2023 (4th Shift)",
     "options": {
-      "A": "Indian population are estimated  (b) No error",
+      "A": "Indian population are estimated",
+      "B": "No error",
       "C": "to have latent TB.",
       "D": "Around 30 percent of the"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. Indian population are estimated  (b) No error",
+      "correct_answer": "A. Indian population are estimated",
       "explanation": "Indian population are estimated ‘Thirty Percent of + Subject + Singular verb’ is the correct grammatical structure for the given sentence. Hence, ‘Indian population is(singular verb) estimated’ is the most appropriate answer."
     }
   },
@@ -8048,9 +8174,10 @@
   {
     "id": 514,
     "exam": "SSC CHSL 15/03/2023 (1st Shift",
-    "question": "The  presidential  election  /  turned  out  to  be  one  of  /  the biggest landslide in history  . SSC CHSL 15/03/2023 (1st Shift)",
+    "question": "The  presidential  election  /  turned  out  to  be  one  of  /  the biggest landslide in history. SSC CHSL 15/03/2023 (1st Shift)",
     "options": {
-      "A": "turned out to be one of    (b) The presidential election",
+      "A": "turned out to be one of",
+      "": "The presidential election",
       "C": "No error",
       "D": "the biggest landslide in history."
     },
@@ -8131,11 +8258,12 @@
     "options": {
       "A": "No error",
       "B": "a fondness for lavish living",
-      "C": "only son, has had developed     (d) Ashwathama, Drona's"
+      "C": "only son, has had developed     ",
+      "D": "Ashwathama, Drona's"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. only son, has had developed     (d) Ashwathama, Drona's",
+      "correct_answer": "C. only son, has had developed",
       "explanation": "only son, has had developed The given sentence is in the present perfect tense so the verb must be used in the present perfect form(has + V 3 ) and not in the past tense(had). Hence, ‘Drona's only son, has developed(V 3 )’ is the most appropriate answer."
     }
   },
@@ -8269,7 +8397,7 @@
   },
   {
     "id": 528,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (02/03/2023)",
     "question": "He lived close to /the  train station, / yet  travelled by bus. SSC CGL Tier II  (02/03/2023)",
     "options": {
       "A": "yet travelled by bus",
@@ -8285,7 +8413,7 @@
   },
   {
     "id": 529,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (03/03/2023)",
     "question": "Dan needed help / to get the / tight coat of  him. SSC CGL Tier II  (03/03/2023)",
     "options": {
       "A": "No error",
@@ -8301,7 +8429,7 @@
   },
   {
     "id": 530,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (06/03/2023)",
     "question": "The  postman  /  delivers  the  letters  /  through  hand,  /  door to door. SSC CGL Tier II  (06/03/2023)",
     "options": {
       "A": "door to door",
@@ -8317,7 +8445,7 @@
   },
   {
     "id": 531,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II  (07/03/2023)",
     "question": "Everybody stared / when me / entered the /  drawing room. SSC CGL Tier II  (07/03/2023)",
     "options": {
       "A": "when me",
@@ -8333,14 +8461,17 @@
   },
   {
     "id": 532,
-    "exam": "SSC CGL 2022 Tier",
+    "exam": "SSC CGL Tier II  (07/03/2023)",
     "question": "Daniel sat on / his new bike / and went afar  / a ride. SSC CGL Tier II  (07/03/2023)",
     "options": {
-      "A": "a ride  (b) his new bike  (c) and went afar  (d) Daniel sat on"
+      "A": "a ride",
+      "B": "his new bike",
+      "C": "and went afar",
+      "d": "Daniel sat on"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. ",
+      "correct_answer": "C. and went afar ",
       "explanation": "and went afar We will replace the adverb ‘afar’ with the preposition ‘for’ to grammatically correct the given sentence. Hence, ‘went for a ride’ is the most appropriate answer. SSC CGL 2022 Tier - 1"
     }
   },
@@ -8413,7 +8544,9 @@
     "exam": "SSC CGL 03/12/2022 (4th Shift",
     "question": "Amla juice / is rich with / Vitamin C. / no  error SSC CGL 03/12/2022 (4th Shift)",
     "options": {
-      "A": "Vitamin C    (b) Amla juice    (c) No error",
+      "A": "Vitamin C",
+      "B": "Amla juice",
+      "C": "No error",
       "D": "is rich with"
     },
     "correct_option": "D",
@@ -8443,7 +8576,8 @@
     "exam": "SSC CGL 05/12/2022 (3rd Shift",
     "question": "After  seeing  that  Shreya  /  was  in  trouble,  /  Rahul  quietly stepped up to help. SSC CGL 05/12/2022 (3rd Shift)",
     "options": {
-      "A": "Rahul quietly stepped up to help  (b) After seeing that Shreya",
+      "A": "Rahul quietly stepped up to help",
+      "B": "After seeing that Shreya",
       "C": "was in trouble",
       "D": "No error"
     },
@@ -8456,7 +8590,7 @@
   {
     "id": 540,
     "exam": "SSC CGL 06/12/2022 (4th Shift",
-    "question": "I  am  having  trouble  /  deciding  in  /  a  gift  for  them.  /  no error SSC CGL 06/12/2022 (4th Shift)",
+    "question": "I  am  having  trouble  /  deciding  in  /  a  gift  for  them  /  no error. SSC CGL 06/12/2022 (4th Shift)",
     "options": {
       "A": "a gift for them.",
       "B": "No error",
@@ -8554,7 +8688,10 @@
     "exam": "SSC CGL 08/12/2022 (3rd Shift",
     "question": "She has / not written / a single novel / by  three years. SSC CGL 08/12/2022 (3rd Shift)",
     "options": {
-      "A": "not written  (b) She has  (c) by three years  (d) a single novel"
+      "A": "not written",
+      "B": "She has",
+      "C": "by three years ",
+      "D": "a single novel"
     },
     "correct_option": "C",
     "solution": {
@@ -8599,7 +8736,8 @@
     "exam": "SSC CGL 12/12/2022 (1st Shift",
     "question": "The  meeting  was  held  upon  /  for  an  hour/  due  to non-availability / of the committee members. SSC CGL 12/12/2022 (1st Shift)",
     "options": {
-      "A": "of the committee members.    (b) due to non-availability",
+      "A": "of the committee members",
+      "B": "due to non-availability",
       "C": "for an hour",
       "D": "The meeting was held upon"
     },
@@ -8760,7 +8898,8 @@
     "options": {
       "A": "No error",
       "B": "hovered exact",
-      "C": "The helicopter of the enemies      (d) over their bunker."
+      "C": "The helicopter of the enemies",
+      "D": "over their bunker"
     },
     "correct_option": "B",
     "solution": {
@@ -8786,7 +8925,7 @@
   },
   {
     "id": 561,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "These  experiments  had  been  going  on  since  several months. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "These experiments",
@@ -8802,7 +8941,7 @@
   },
   {
     "id": 562,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "Every Saturday, your mother prepares a pudding,  isn’t she ? SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "isn’t she",
@@ -8818,7 +8957,7 @@
   },
   {
     "id": 563,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "The  people  living  in  coastal  areas  were  evacuated  by time. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "were evacuated",
@@ -8834,7 +8973,7 @@
   },
   {
     "id": 564,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "The  gentleman  had  a  suitcase  full  with  wigs,  ornaments and dresses. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "a suitcase full with",
@@ -8850,7 +8989,7 @@
   },
   {
     "id": 565,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "You  should  tell  these  children  to  complete  their  projects himself. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "You should tell",
@@ -8866,10 +9005,12 @@
   },
   {
     "id": 566,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "Open your books at page tenth. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
-      "A": "No error    (b) Open your   (c) page tenth",
+      "A": "No error",
+      "B": "Open your",
+      "C": "page tenth",
       "D": "books at"
     },
     "correct_option": "C",
@@ -8880,7 +9021,7 @@
   },
   {
     "id": 567,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "Scarcely  had  he  took  the  medicine  when  his  headache was gone. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "when his headache was gone",
@@ -8896,7 +9037,7 @@
   },
   {
     "id": 568,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "Contented people seldom complaint against their  fate. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "their fate",
@@ -8912,7 +9053,7 @@
   },
   {
     "id": 569,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "If  you  study  hard,  you  surely  got  selected  for  the scholarship. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "for the scholarship.",
@@ -8928,7 +9069,7 @@
   },
   {
     "id": 570,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II ( 08/08/2022 )",
     "question": "It  turned  out  to  be  the  noisy  park  party  anybody  had  ever attended. SSC CGL Tier II ( 08/08/2022 )",
     "options": {
       "A": "The mall has just opened and the visitors have arrived.",
@@ -8944,7 +9085,7 @@
   },
   {
     "id": 572,
-    "exam": "SSC MTS 2021 Tier",
+    "exam": "Graduate Level 04/08/2022 ( Shift - 2)",
     "question": "After  the  thieves  /  had  left,  /  George  crept  slow  /  out  of his room. Graduate Level 04/08/2022 ( Shift - 2)",
     "options": {
       "A": "had left",
@@ -9109,7 +9250,8 @@
     "options": {
       "A": "eye out for strangers",
       "B": "No error",
-      "C": "Residents should keep an  (d) acting suspecting in their areas"
+      "C": "Residents should keep an  ",
+      "D": "acting suspecting in their areas"
     },
     "correct_option": "D",
     "solution": {
@@ -9234,13 +9376,14 @@
     "exam": "SSC MTS 15/07/2022 (Evening",
     "question": "Sometimes  we  interact  to  people  who  are  closed-minded and not willing to listen. SSC MTS 15/07/2022 (Evening)",
     "options": {
-      "A": "to people who are closed-minded  (b) and not willing to listen",
+      "A": "to people who are closed-minded",
+      "B": "and not willing to listen",
       "C": "Sometimes we interact",
       "D": "No error"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. to people who are closed-minded  (b) and not willing to listen",
+      "correct_answer": "A. to people who are closed-minded",
       "explanation": "to people who are closed-minded There is a prepositional error in the given sentence. The preposition ‘to’ must be replaced with ‘with’ because we generally use the preposition ‘with’ with the verb ‘interact’. Hence, ‘interact with people who are closed-minded’ is the most appropriate answer."
     }
   },
@@ -9297,7 +9440,10 @@
     "exam": "SSC MTS 20/07/2022 (Morning",
     "question": "A tiger’s skull / is similar / to / a lion. SSC MTS 20/07/2022 (Morning)",
     "options": {
-      "A": "is similar        (b) A tiger’s skull          (c) a lion         (d) to"
+      "A": "is similar",
+      "B": "A tiger’s skull",
+      "C": "a lion ",
+      "D": "to"
     },
     "correct_option": "C",
     "solution": {
@@ -9310,12 +9456,14 @@
     "exam": "SSC MTS 20/07/2022 (Evening",
     "question": "Mylar  balloons  cause  power  outages  when  they  come  of contact with power lines. SSC MTS 20/07/2022 (Evening)",
     "options": {
-      "A": "Mylar balloons cause power outages   (b) with power lines",
-      "C": "when they come of contact                    (d) No error"
+      "A": "Mylar balloons cause power outages",
+      "B": "with power lines",
+      "C": "when they come of contact",
+      "D": "No error"
     },
     "correct_option": "C",
     "solution": {
-      "correct_answer": "C. when they come of contact                    (d) No error",
+      "correct_answer": "C. when they come of contact",
       "explanation": "when they come of contact There is a prepositional error in the given sentence. The preposition ‘of’ must be replaced with ‘in’. Hence, ‘when they come in contact’ is the most appropriate answer."
     }
   },
@@ -9358,7 +9506,8 @@
     "options": {
       "A": "No error",
       "B": "was especially dear to her",
-      "C": "her second son, Rupert      (d) Her comfort was in her children"
+      "C": "her second son, Rupert",
+      "D": "Her comfort was in her children"
     },
     "correct_option": "A",
     "solution": {
@@ -9483,11 +9632,14 @@
     "exam": "SSC CHSL 24/05/2022 (Evening",
     "question": "Rahul sings / very sweet / when he is / in  a good mood. SSC CHSL 24/05/2022 (Evening)",
     "options": {
-      "A": "very sweet (b) when he is (c) in a good mood (d) Rahul sings"
+      "A": "very sweet",
+      "B": "when he is",
+      "C": "in a good mood",
+      "D": "Rahul sings"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. very sweet (b) when he is (c) in a good mood (d) Rahul sings",
+      "correct_answer": "A. very sweet",
       "explanation": "very sweet The given sentence needs an adverb to modify the verb(sings) and not an adjective(sweet). Hence, ‘Rahul sings very sweetly’ is the most appropriate answer."
     }
   },
@@ -9496,7 +9648,8 @@
     "exam": "SSC CHSL 24/05/2022 (Evening",
     "question": "After  /  a  long  and  fun-ﬁlled  day,  /  the  children  /  slept themselves peacefully. SSC CHSL 24/05/2022 (Evening)",
     "options": {
-      "A": "a long and fun-ﬁlled day           (b) slept themselves peacefully",
+      "A": "a long and fun-ﬁlled day",
+      "B": "slept themselves peacefully",
       "C": "the children",
       "D": "After"
     },
@@ -9511,7 +9664,10 @@
     "exam": "SSC CHSL 25/05/2022 (Morning",
     "question": "The river / ﬂowed besides / the hillock /  in our village. SSC CHSL 25/05/2022 (Morning)",
     "options": {
-      "A": "in our village   (b) the hillock  (c) ﬂowed besides  (d) The river"
+      "A": "in our village",
+      "B": "the hillock ",
+      "C": "ﬂowed besides ",
+      "D": "The river"
     },
     "correct_option": "C",
     "solution": {
@@ -9526,11 +9682,12 @@
     "options": {
       "A": "excused by the teacher",
       "B": "for bullying was made",
-      "C": "by the time a formal complaint  (d) He has been"
+      "C": "by the time a formal complaint",
+      "D": "He has been"
     },
     "correct_option": "D",
     "solution": {
-      "correct_answer": "D. ",
+      "correct_answer": "D. He has been",
       "explanation": "He has been “ By the time + V 2 ( second form of the verb) , Had + V 3 ( third form of the verb) ” is grammatically the correct structure for the given sentence. Hence, ‘He had been excused(V 3 )’ is the most appropriate answer."
     }
   },
@@ -9539,7 +9696,10 @@
     "exam": "SSC CHSL 27/05/2022 (Evening",
     "question": "Ronaldo is / a famous / player of / the football. SSC CHSL 27/05/2022 (Evening)",
     "options": {
-      "A": "a famous   (b) Ronaldo is  (c) the football  (d) player of"
+      "A": "a famous",
+      "B": "Ronaldo is",
+      "C": "the football ",
+      "D": "player of"
     },
     "correct_option": "C",
     "solution": {
@@ -9566,7 +9726,7 @@
   {
     "id": 613,
     "exam": "SSC CHSL 31/05/2022 (Morning",
-    "question": "Spot  the  error  in  the  given  sentence  and  select  the correct sentence from the options given. Is Savita is joining us for lunch today? SSC CHSL 31/05/2022 (Morning)",
+    "question": "Spot  the  error  in  the  given  sentence  and  select  the correct sentence from the options given; Is Savita is joining us for lunch today? SSC CHSL 31/05/2022 (Morning)",
     "options": {
       "A": "Is Savita joining us for lunch today?",
       "B": "Savita is joined us for lunch today?",
@@ -9582,7 +9742,7 @@
   {
     "id": 614,
     "exam": "SSC CHSL 31/05/2022 (Evening",
-    "question": "The  following  sentence  contains  a  grammatical  error. Select the option that correctly rectiﬁes the error. In its August 1992 issue, the highly respected British Journal of Addiction describe three unusual cases of carrot dependence. SSC CHSL 31/05/2022 (Evening)",
+    "question": "The  following  sentence  contains  a  grammatical  error; Select the option that correctly rectiﬁes the error; In its August 1992 issue, the highly respected British Journal of Addiction describe three unusual cases of carrot dependence. SSC CHSL 31/05/2022 (Evening)",
     "options": {
       "A": "In its August 1992 issue, the highly respected British Journal",
       "B": "In its August 1992 issue, the highly respected British Journal",
@@ -9598,7 +9758,7 @@
   {
     "id": 615,
     "exam": "SSC CHSL 01/06/2022 (Morning",
-    "question": "The  following  sentence  contains  a  grammatical  error. Select the option that correctly rectiﬁes the error. He  sees  us  coming,  and  unaware  that  we  had  learned  of  his treachery, greeted us with a smile SSC CHSL 01/06/2022 (Morning)",
+    "question": "The  following  sentence  contains  a  grammatical  error; Select the option that correctly rectiﬁes the error; He  sees  us  coming,  and  unaware  that  we  had  learned  of  his treachery, greeted us with a smile. SSC CHSL 01/06/2022 (Morning)",
     "options": {
       "A": "He saw us coming, and unaware that we learned of his",
       "B": "He saw us coming, and unaware that we had learned of his",
@@ -9630,7 +9790,7 @@
   {
     "id": 617,
     "exam": "SSC CHSL 01/06/2022 (Evening",
-    "question": "When  Sanathan  asked  Mr.  Jignesh  /  for  a  fresh evaluation  of  his  performance  /  in  the  last  ﬁnancial  year,  /  little did  him  know  that  the  results  will  come  out  worse  than expected. SSC CHSL 01/06/2022 (Evening)",
+    "question": "When  Sanathan  asked  Mr  Jignesh  /  for  a  fresh evaluation  of  his  performance  /  in  the  last  ﬁnancial  year,  /  little did  him  know  that  the  results  will  come  out  worse  than expected. SSC CHSL 01/06/2022 (Evening)",
     "options": {
       "A": "When Sanathan asked Mr. Jignesh",
       "B": "for a fresh evaluation of his performance",
@@ -9662,7 +9822,7 @@
   {
     "id": 619,
     "exam": "SSC CHSL 06/06/2022 (Evening",
-    "question": "He wished he has more resources to support  the poor  . SSC CHSL 06/06/2022 (Evening)",
+    "question": "He wished he has more resources to support  the poor. SSC CHSL 06/06/2022 (Evening)",
     "options": {
       "A": "He wished his having more resources to support the poor.",
       "B": "He wished he have more resources to support the poor.",
@@ -9714,7 +9874,8 @@
     "options": {
       "A": "immediately",
       "B": "No error",
-      "C": "that the troops should move       (d) The General have ordered"
+      "C": "that the troops should move",
+      "D": "The General have ordered"
     },
     "correct_option": "D",
     "solution": {
@@ -9791,7 +9952,10 @@
     "exam": "SSC CGL 11/04/2022 (Afternoon",
     "question": "We stayed / in Jim’s ﬂat / during he was /  on holiday. SSC CGL 11/04/2022 (Afternoon)",
     "options": {
-      "A": "on holiday   (b) during he was   (c) in Jim’s ﬂat   (d) We stayed"
+      "A": "on holiday",
+      "B": "during he was",
+      "C": "in Jim’s ﬂat ",
+      "D": "We stayed"
     },
     "correct_option": "B",
     "solution": {
@@ -9820,11 +9984,14 @@
     "exam": "SSC CGL 12/04/2022 (Evening",
     "question": "How many / eggs were put / into the basket  ? SSC CGL 12/04/2022 (Evening)",
     "options": {
-      "A": "How many (b) No error (c) eggs were put (d) into the basket"
+      "A": "How many",
+      "B": "No error",
+      "C": "eggs were put",
+      "D": "into the basket"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. ",
+      "correct_answer": "B. No error",
       "explanation": "No error."
     }
   },
@@ -9975,7 +10142,7 @@
   {
     "id": 639,
     "exam": "SSC CGL 20/04/2022 (Evening",
-    "question": "We bought / two dozens / mangoes from / the  market SSC CGL 20/04/2022 (Evening)",
+    "question": "We bought / two dozens / mangoes from / the  market. SSC CGL 20/04/2022 (Evening)",
     "options": {
       "A": "the market",
       "B": "We bought",
@@ -9991,9 +10158,12 @@
   {
     "id": 640,
     "exam": "SSC CGL 21/04/2022 (Morning",
-    "question": "You and I / have submitted / your work / on  time. SSC CGL 21/04/2022 (Morning) www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error",
+    "question": "You and I / have submitted / your work / on  time. SSC CGL 21/04/2022 (Morning)",
     "options": {
-      "A": "on time  (b) your work  (c) have submitted  (d) You and I"
+      "A": "on time",
+      "B": "your work",
+      "C": "have submitted",
+      "D": "You and I"
     },
     "correct_option": "B",
     "solution": {
@@ -10006,11 +10176,14 @@
     "exam": "SSC CGL 21/04/2022 (Afternoon",
     "question": "Shall / we go / for walking / in the park? SSC CGL 21/04/2022 (Afternoon)",
     "options": {
-      "A": "Shall     (b) in the park     (c) we go     (d) for walking"
+      "A": "Shall",
+      "B": "in the park",
+      "C": "we go",
+      "D": "for walking"
     },
     "correct_option": "D",
     "solution": {
-      "correct_answer": "D. ",
+      "correct_answer": "D. for walking",
       "explanation": "for walking When we use verbs like walk, talk, ride, drink, etc. as nouns, we put the indeﬁnite article ‘a’ before them as per their sound. For example, we had a talk, let's go for a drive, etc. Hence, ‘for a walk’ is the most appropriate answer."
     }
   },
@@ -10048,7 +10221,7 @@
   },
   {
     "id": 644,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "If  you  have  /  remained  calm  /  you  could  have  /  saved  the situation. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "saved the situation",
@@ -10064,7 +10237,7 @@
   },
   {
     "id": 645,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "I  will  spend  /  my  rest  of  remaining  /  life  in  my  /  native village. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "my rest of remaining",
@@ -10080,8 +10253,8 @@
   },
   {
     "id": 646,
-    "exam": "SSC Spot the Error",
-    "question": "This  dog  seems  /  to  be  very  ferocious,  /  otherwise,  /  it  is harmless. SSC CGL Tier II (29/01/2022) www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
+    "question": "This  dog  seems  /  to  be  very  ferocious,  /  otherwise,  /  it  is harmless. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "otherwise",
       "B": "to be very ferocious",
@@ -10096,7 +10269,7 @@
   },
   {
     "id": 647,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "The girl lay down / on the bed / besides her  mother / and went to sleep. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "on the bed",
@@ -10112,10 +10285,13 @@
   },
   {
     "id": 648,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "He went / to the bed / with a / slight fever. SSC CGL Tier II (29/01/2022)",
     "options": {
-      "A": "slight fever         (b) to the bed         (c) with a       (d) He went"
+      "A": "slight fever",
+      "B": "to the bed",
+      "C": "with a",
+      "D": "He went"
     },
     "correct_option": "B",
     "solution": {
@@ -10125,7 +10301,7 @@
   },
   {
     "id": 649,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "The  city  turned  out  /  to  be  very  /  different  to  what  /  he had expected. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "to be very",
@@ -10141,10 +10317,13 @@
   },
   {
     "id": 650,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "Your name / precedes before / mine / in the  list. SSC CGL Tier II (29/01/2022)",
     "options": {
-      "A": "mine  (b) Your name  (c) precedes before  (d) in the list"
+      "A": "mine",
+      "B": "Your name",
+      "C": "precedes before",
+      "D": "in the list"
     },
     "correct_option": "C",
     "solution": {
@@ -10154,7 +10333,7 @@
   },
   {
     "id": 651,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "You  should  /  avail  this  opportunity  /  to  demonstrate  / your skills. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "You should",
@@ -10170,7 +10349,7 @@
   },
   {
     "id": 652,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "He was unable / to help me because / he had  been failed / to arrange the money. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "to help me because",
@@ -10186,7 +10365,7 @@
   },
   {
     "id": 653,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "He  often  /  persists  to  ask  /  awkward  questions  /  at  the board meetings. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "He often",
@@ -10202,7 +10381,7 @@
   },
   {
     "id": 654,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (29/01/2022)",
     "question": "His  son-in-laws  /  have  enhanced  /  his  business  /  within  a short period. SSC CGL Tier II (29/01/2022)",
     "options": {
       "A": "have enhanced",
@@ -10218,10 +10397,13 @@
   },
   {
     "id": 655,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (03/02/2022)",
     "question": "Either of these / two roads / lead to / the  post oﬃce. SSC CGL Tier II (03/02/2022)",
     "options": {
-      "A": "Either of these   (b) the post oﬃce   (c) lead to  (d) two roads"
+      "A": "Either of these",
+      "B": "the post oﬃce ",
+      "C": "lead to",
+      "D": "two roads"
     },
     "correct_option": "C",
     "solution": {
@@ -10231,7 +10413,7 @@
   },
   {
     "id": 656,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (03/02/2022)",
     "question": "His  father  /  prevented  him  /  to  go  abroad  /  for  higher studies. SSC CGL Tier II (03/02/2022)",
     "options": {
       "A": "for higher studies",
@@ -10247,7 +10429,7 @@
   },
   {
     "id": 657,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CGL Tier II (03/02/2022)",
     "question": "What  is  the  name  /  of  the  Swami  /  whom  autobiography  / impressed you so much? SSC CGL Tier II (03/02/2022)",
     "options": {
       "A": "What is the name",
@@ -10263,7 +10445,7 @@
   },
   {
     "id": 658,
-    "exam": "SSC MTS 2020 Tier",
+    "exam": "SSC CGL Tier II (03/02/2022)",
     "question": "The  crowd  of  the  migrant  worker  at  the  station  for  the Shramik Special is unforgettable. SSC CGL Tier II (03/02/2022)",
     "options": {
       "A": "at the station",
@@ -10282,7 +10464,10 @@
     "exam": "SSC MTS 05/10/2021 (Afternoon",
     "question": "Will you / listen me / when I tell you / the  details? SSC MTS 05/10/2021 (Afternoon)",
     "options": {
-      "A": "Will you   (b) the details   (c) listen me   (d) when I tell you"
+      "A": "Will you",
+      "B": "the details",
+      "C": "listen me",
+      "D": "when I tell you"
     },
     "correct_option": "C",
     "solution": {
@@ -10373,7 +10558,7 @@
   {
     "id": 665,
     "exam": "SSC MTS 14/10/2021 (Morning",
-    "question": "Mr.  Choudhri  goes  to  ﬂy  to  Germany  and  France  next weekend. SSC MTS 14/10/2021 (Morning)",
+    "question": "Mr  Choudhri  goes  to  ﬂy  to  Germany  and  France  next weekend. SSC MTS 14/10/2021 (Morning)",
     "options": {
       "A": "next weekend",
       "B": "to ﬂy",
@@ -10455,7 +10640,10 @@
     "exam": "SSC MTS 22/10/2021 (Morning",
     "question": "You look very tired; you would go to bed now. SSC MTS 22/10/2021 (Morning)",
     "options": {
-      "A": "You look   (b) to bed now   (c) you would go   (d) very tired"
+      "A": "You look",
+      "B": "to bed now ",
+      "C": "you would go",
+      "D": "very tired"
     },
     "correct_option": "C",
     "solution": {
@@ -10469,11 +10657,13 @@
     "question": "The little baby cried loudly to a new toy. SSC MTS 22/10/2021 (Evening)",
     "options": {
       "A": "cried loudly",
-      "B": "to a   (c) new toy   (d) The little baby"
+      "B": "to a",
+      "C": "new toy ",
+      "D": "The little baby"
     },
     "correct_option": "B",
     "solution": {
-      "correct_answer": "B. to a   (c) new toy   (d) The little baby",
+      "correct_answer": "B. to a",
       "explanation": "to a ‘Cry for something’ is a phrase that means to express a want or need through crying. Similarly in the given sentence, the child is expressing his need for the toy through crying. Hence, ‘for a toy’ is the most appropriate answer."
     }
   },
@@ -10546,7 +10736,10 @@
     "exam": "SSC MTS 02/11/2021 (Morning",
     "question": "Every country tries to do its good at the Olympic  games as they are held in great prestige. SSC MTS 02/11/2021 (Morning)",
     "options": {
-      "A": "they are held  (b) Every country  (c) its good  (d) tries to do"
+      "A": "they are held",
+      "B": "Every country",
+      "C": "its good",
+      "D": "tries to do"
     },
     "correct_option": "C",
     "solution": {
@@ -10605,7 +10798,7 @@
   {
     "id": 680,
     "exam": "SSC CGL 17/08/2021 (Afternoon",
-    "question": "The  construction  of  the  new  business  school  is  led  to  a sudden rise of population in our area. SSC CGL 17/08/2021 (Afternoon) www.ssccglpinnacle.com                                                 Download Pinnacle Exam Preparation App Search on TG: @apna_pdf Pinnacle Spot the Error",
+    "question": "The  construction  of  the  new  business  school  is  led  to  a sudden rise of population in our area. SSC CGL 17/08/2021 (Afternoon)",
     "options": {
       "A": "a sudden rise of population in our area",
       "B": "The construction of",
@@ -10785,7 +10978,8 @@
     "options": {
       "A": "reboot of air travel",
       "B": "due to lockdown",
-      "C": "The government has announced      (d) who was halted"
+      "C": "The government has announced",
+      "D": "who was halted"
     },
     "correct_option": "D",
     "solution": {
@@ -10798,7 +10992,8 @@
     "exam": "SSC CHSL 16/04/2021 (Afternoon",
     "question": "Keep  looking,  and  /  you  are  sure  to  ﬁnd  the  meaning  /  of the word on that page. SSC CHSL 16/04/2021 (Afternoon)",
     "options": {
-      "A": "of the word on that page  (b) you are sure to ﬁnd the meaning",
+      "A": "of the word on that page",
+      "B": "you are sure to ﬁnd the meaning",
       "C": "No error",
       "D": "Keep looking and"
     },
@@ -10954,7 +11149,7 @@
   },
   {
     "id": 702,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "You need to sign / these important documents  / by ink. SSC CPO Tier II (26/07/2021)",
     "options": {
       "A": "these important documents",
@@ -10970,7 +11165,7 @@
   },
   {
     "id": 703,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "She speaks / very highly / of both her / daughter-in-laws. SSC CPO Tier II (26/07/2021)",
     "options": {
       "A": "She speaks",
@@ -10986,36 +11181,45 @@
   },
   {
     "id": 704,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "His loyalty / and honesty / are above / suspect. SSC CPO Tier II (26/07/2021)",
     "options": {
-      "A": "suspect     (b) and honesty     (c) His loyalty     (d) are above"
+      "A": "suspect",
+      "B": "and honesty",
+      "C": "His loyalty",
+      "D": "are above"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. suspect     (b) and honesty     (c) His loyalty     (d) are above",
+      "correct_answer": "A. suspect",
       "explanation": "suspect The phrase ‘ above suspicion ’ is used to describe someone who would never be suspected of doing anything wrong. Similarly, the given sentence states that his honesty and loyalty are above suspicion. Hence, ‘suspicion’ is the most appropriate structure."
     }
   },
   {
     "id": 705,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "Parul is / ten years / elder than / her sibling. SSC CPO Tier II (26/07/2021)",
     "options": {
-      "A": "elder than    (b) Parul is    (c) her sibling    (d) ten years"
+      "A": "elder than",
+      "B": "Parul is ",
+      "C": "her sibling ",
+      "D": "ten years"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. elder than    (b) Parul is    (c) her sibling    (d) ten years",
+      "correct_answer": "A. elder than",
       "explanation": "elder than The comparative degree ‘elder’ will not be used with ‘than’ because it will become a case of superﬂuousness(not necessary). Hence, ‘than’ will be replaced with ‘to’ and ‘elder to’ is the most appropriate structure."
     }
   },
   {
     "id": 706,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "He is / afraid from / all insects / that crawl. SSC CPO Tier II (26/07/2021)",
     "options": {
-      "A": "He is  (b) that crawl    (c) all insects    (d) afraid from"
+      "A": "He is  (b) that crawl",
+      "B": "that crawl",
+      "C": "all insects",
+      "D": "afraid from"
     },
     "correct_option": "D",
     "solution": {
@@ -11025,7 +11229,7 @@
   },
   {
     "id": 707,
-    "exam": "SSC Spot the Error",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "He wanted to know / the reason / why his low  score / in Mathematics. SSC CPO Tier II (26/07/2021)",
     "options": {
       "A": "why his low score",
@@ -11041,14 +11245,17 @@
   },
   {
     "id": 708,
-    "exam": "SSC CPO 2020 Tier",
+    "exam": "SSC CPO Tier II (26/07/2021)",
     "question": "This is / only mistake / he has made / in the  dictation. SSC CPO Tier II (26/07/2021)",
     "options": {
-      "A": "only mistake (b) in the dictation (c) he has made (d) This is"
+      "A": "only mistake",
+      "B": "in the dictation",
+      "C": "he has made",
+      "D": "This is"
     },
     "correct_option": "A",
     "solution": {
-      "correct_answer": "A. only mistake (b) in the dictation (c) he has made (d) This is",
+      "correct_answer": "A. only mistake",
       "explanation": "only mistake The article ‘the’ is used to refer to speciﬁc or particular nouns & articles ‘a/an’ are used to modify non-speciﬁc or non-particular nouns. For example, if someone says, \"Let's buy the book,\" it means a speciﬁc book but if someone says, \"Let's buy a book,\" it means any book rather than a speciﬁc book. Similarly, the given sentence talks about a speciﬁc mistake. Hence, ‘the only mistake’ is the most appropriate structure. SSC CPO 2020 Tier - 1"
     }
   },
@@ -11057,7 +11264,10 @@
     "exam": "SSC CPO 23/11/2020 (Morning",
     "question": "I am hearing a strange noise now. SSC CPO 23/11/2020 (Morning)",
     "options": {
-      "A": "noise now     (b) a strange     (c) No error    (d) I am hearing"
+      "A": "noise now",
+      "B": "a strange",
+      "C": "No error ",
+      "D": "(d) I am hearing"
     },
     "correct_option": "D",
     "solution": {
@@ -11072,7 +11282,8 @@
     "options": {
       "A": "a little nervous when",
       "B": "No error",
-      "C": "when we came into this room today  (d) All of us were"
+      "C": "when we came into this room today",
+      "D": "All of us were"
     },
     "correct_option": "B",
     "solution": {
@@ -11085,7 +11296,10 @@
     "exam": "SSC CPO 23/11/2020 (Evening",
     "question": "Do you earn so much to make both ends meet? SSC CPO 23/11/2020 (Evening)",
     "options": {
-      "A": "make both  (b) so much to  (c) ends meet  (d) Do you earn"
+      "A": "make both",
+      "B": "so much to",
+      "C": "ends meet",
+      "D": "Do you earn"
     },
     "correct_option": "B",
     "solution": {
@@ -11130,7 +11344,10 @@
     "exam": "SSC CPO 24/11/2020 (Evening",
     "question": "The jury are from different parts of the country. SSC CPO 24/11/2020 (Evening)",
     "options": {
-      "A": "different parts   (b) are from   (c) of the country    (d) The jury"
+      "A": "different parts",
+      "B": "are from",
+      "C": "of the country ",
+      "D": "The jury"
     },
     "correct_option": "B",
     "solution": {
