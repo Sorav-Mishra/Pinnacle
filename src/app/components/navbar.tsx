@@ -76,7 +76,6 @@ export default function NavBar() {
                 className="object-cover"
                 priority
                 onError={() => {
-                  console.log("Profile image failed to load, using fallback");
                   setProfileImageError(true);
                 }}
               />
@@ -125,7 +124,6 @@ export default function NavBar() {
               className="object-cover"
               priority
               onError={() => {
-                console.log("Profile image failed to load, using fallback");
                 setProfileImageError(true);
               }}
             />
