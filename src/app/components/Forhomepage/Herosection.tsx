@@ -27,13 +27,13 @@
 //             <SwiperSlide>
 //               <div className="flex items-center bg-gradient-to-r from-green-400 to-emerald-600 rounded-2xl p-6 mx-4 shadow-xl">
 //                 <div className="flex items-center justify-center w-20 h-20 rounded-full bg-white mr-6 shadow-md overflow-hidden">
-//                   <Image
+//                   {/* <Image
 //                     src="https://upload.wikimedia.org/wikipedia/en/2/2d/Staff_Selection_Commission_logo.png"
 //                     alt="SSC Logo"
 //                     width={56}
 //                     height={56}
 //                     className="w-14 h-14 object-contain"
-//                   />
+//                   /> */}
 //                 </div>
 //                 <div className="text-white space-y-2">
 //                   <h2 className="text-3xl font-bold">About Pinnacle Online</h2>
@@ -50,13 +50,13 @@
 //             <SwiperSlide>
 //               <div className="flex items-center bg-gradient-to-r from-purple-500 to-fuchsia-600 rounded-2xl p-6 mx-4 shadow-xl">
 //                 <div className="flex items-center justify-center w-20 h-20 rounded-full bg-white mr-6 shadow-md overflow-hidden">
-//                   <Image
+//                   {/* <Image
 //                     src="https://upload.wikimedia.org/wikipedia/en/2/2d/Staff_Selection_Commission_logo.png"
 //                     alt="SSC Logo"
 //                     width={56}
 //                     height={56}
 //                     className="w-14 h-14 object-contain"
-//                   />
+//                   /> */}
 //                 </div>
 //                 <div className="text-white space-y-2">
 //                   <h2 className="text-3xl font-bold">
@@ -74,13 +74,13 @@
 //             <SwiperSlide>
 //               <div className="flex items-center bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl p-6 mx-4 shadow-xl">
 //                 <div className="flex items-center justify-center w-20 h-20 rounded-full bg-white mr-6 shadow-md overflow-hidden">
-//                   <Image
+//                   {/* <Image
 //                     src="https://upload.wikimedia.org/wikipedia/en/2/2d/Staff_Selection_Commission_logo.png"
 //                     alt="SSC Logo"
 //                     width={56}
 //                     height={56}
 //                     className="w-14 h-14 object-contain"
-//                   />
+//                   /> */}
 //                 </div>
 //                 <div className="text-white space-y-2">
 //                   <h2 className="text-3xl font-bold">Smart Analytics</h2>

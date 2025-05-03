@@ -572,6 +572,7 @@ import StatsBar from "./components/Forhomepage/StatsBar";
 import TopicsSection from "./components/Forhomepage/TopicsSection";
 import FeaturesSection from "./components/Forhomepage/FeaturesSection";
 import MainHero from "./components/Forhomepage/MainHero";
+//import HeroSection from "./components/Forhomepage/Herosection";
 
 const HomePage: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
