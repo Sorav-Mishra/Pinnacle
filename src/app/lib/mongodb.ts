@@ -8,7 +8,6 @@ if (!MONGODB_URI) {
 
 // Extend globalThis to include _mongoClientPromise
 declare global {
-  // eslint-disable-next-line no-var
   var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
