@@ -38,7 +38,7 @@ declare module "next-auth/jwt" {
 }
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import clientPromise from "../../../lib/mongodb";
 import { NextAuthOptions } from "next-auth";
 
@@ -61,7 +61,6 @@ export const authOptions: NextAuthOptions = {
 
         const email = user?.email || session?.user?.email || token.email;
 
-        // When update() is triggered on client
         if (trigger === "update" && session?.user) {
           token.phone = session.user.phone || "";
           token.age = session.user.age ?? null;
@@ -81,21 +80,11 @@ export const authOptions: NextAuthOptions = {
             token.dob = dbUser.dob || "";
             token.name = dbUser.name || token.name;
             token.picture = dbUser.image || token.picture;
-
-            // console.log("🔄 JWT UPDATED TOKEN FROM DB:", {
-            //   id: token.id,
-            //   email: token.email,
-            //   phone: token.phone,
-            //   age: token.age,
-            //   gender: token.gender,
-            //   dob: token.dob,
-            // });
           }
         }
 
         return token;
       } catch {
-        // console.error("❌ JWT callback error:", error);
         return token;
       }
     },
