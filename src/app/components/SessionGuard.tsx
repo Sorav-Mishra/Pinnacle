@@ -12,22 +12,45 @@ export default function SessionGuard({
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      // 1. Store entry time if not already
       const entryTime = localStorage.getItem("entryTime");
-
       if (!entryTime) {
         localStorage.setItem("entryTime", Date.now().toString());
       }
 
+      // 2. Check for session expiration and re-login
       const interval = setInterval(() => {
         const storedTime = localStorage.getItem("entryTime");
         const now = Date.now();
 
+        // Auto signIn after 2 minutes (120000 ms)
         if (storedTime && !session && now - parseInt(storedTime) > 120000) {
-          signIn(); // Will open Google login   12000000000
+          signIn(); // triggers Google login
         }
       }, 1000);
 
-      return () => clearInterval(interval);
+      // 3. Track total time spent on unload (close/refresh)
+      const handleUnload = () => {
+        const storedTime = localStorage.getItem("entryTime");
+        if (storedTime) {
+          const timeSpent = Math.floor(
+            (Date.now() - parseInt(storedTime)) / 1000
+          ); // in seconds
+          navigator.sendBeacon(
+            "/api/track-time",
+            new Blob([JSON.stringify({ timeSpent })], {
+              type: "application/json",
+            })
+          );
+        }
+      };
+
+      window.addEventListener("beforeunload", handleUnload);
+
+      return () => {
+        clearInterval(interval);
+        window.removeEventListener("beforeunload", handleUnload);
+      };
     }
   }, [session]);
 

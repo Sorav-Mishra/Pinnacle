@@ -1,5 +1,5 @@
-// // In a types/next-auth.d.ts file in your project
-// import NextAuth from "next-auth";
+// types/next-auth.d.ts
+//import NextAuth from "next-auth";
 
 declare module "next-auth" {
   interface Session {
@@ -8,6 +8,10 @@ declare module "next-auth" {
       name?: string | null;
       email?: string | null;
       image?: string | null;
+      phone?: string;
+      age?: number | null;
+      gender?: string;
+      dob?: string;
     };
   }
 
@@ -16,83 +20,98 @@ declare module "next-auth" {
     name?: string | null;
     email?: string | null;
     image?: string | null;
+    phone?: string;
+    age?: number | null;
+    gender?: string;
+    dob?: string;
   }
 }
 
-// // Then in your route.js file
-// //import NextAuth from "next-auth";
-// import GoogleProvider from "next-auth/providers/google";
-// import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
-// import clientPromise from "../../../lib/mongodb";
-
-// const authHandler = NextAuth({
-//   providers: [
-//     GoogleProvider({
-//       clientId: process.env.GOOGLE_CLIENT_ID as string,
-//       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-//       //redirectUri: process.env.NEXTAUTH_URL as string,
-//     }),
-//   ],
-//   adapter: MongoDBAdapter(clientPromise),
-//   secret: process.env.NEXTAUTH_URL,
-//   session: {
-//     strategy: "database",
-//   },
-//   callbacks: {
-//     async session({ session, user }) {
-//       if (session.user && user) {
-//         session.user.image = user.image;
-//         session.user.id = user.id; // Now TypeScript knows about this property
-//       }
-//       return session;
-//     },
-//   },
-// });
-
-// export { authHandler as GET, authHandler as POST };
-
-// route.js file
+declare module "next-auth/jwt" {
+  interface JWT {
+    id?: string;
+    phone?: string;
+    age?: number | null;
+    gender?: string;
+    dob?: string;
+  }
+}
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "../../../lib/mongodb";
+import { NextAuthOptions } from "next-auth";
 
-const authHandler = NextAuth({
+export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),
-  secret: process.env.NEXTAUTH_SECRET, // This should be NEXTAUTH_SECRET, not NEXTAUTH_URL
   session: {
-    strategy: "database",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-    updateAge: 24 * 60 * 60, // 24 hours
+    strategy: "jwt",
   },
   callbacks: {
-    async session({ session, user }) {
-      if (session.user && user) {
-        session.user.image = user.image;
-        session.user.id = user.id;
+    async jwt({ token, user, trigger, session }) {
+      try {
+        const client = await clientPromise;
+        const db = client.db("test");
+
+        const email = user?.email || session?.user?.email || token.email;
+
+        // When update() is triggered on client
+        if (trigger === "update" && session?.user) {
+          token.phone = session.user.phone || "";
+          token.age = session.user.age ?? null;
+          token.gender = session.user.gender || "";
+          token.dob = session.user.dob || "";
+          return token;
+        }
+
+        if (email) {
+          const dbUser = await db.collection("users").findOne({ email });
+          if (dbUser) {
+            token.id = dbUser._id?.toString();
+            token.email = dbUser.email;
+            token.phone = dbUser.phone || "";
+            token.age = dbUser.age ?? null;
+            token.gender = dbUser.gender || "";
+            token.dob = dbUser.dob || "";
+            token.name = dbUser.name || token.name;
+            token.picture = dbUser.image || token.picture;
+
+            // console.log("🔄 JWT UPDATED TOKEN FROM DB:", {
+            //   id: token.id,
+            //   email: token.email,
+            //   phone: token.phone,
+            //   age: token.age,
+            //   gender: token.gender,
+            //   dob: token.dob,
+            // });
+          }
+        }
+
+        return token;
+      } catch {
+        // console.error("❌ JWT callback error:", error);
+        return token;
+      }
+    },
+
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.id = token.id;
+        session.user.phone = token.phone;
+        session.user.age = token.age;
+        session.user.gender = token.gender;
+        session.user.dob = token.dob;
       }
       return session;
     },
   },
-  // Add these cookie options to persist sessions
-  cookies: {
-    sessionToken: {
-      name: `next-auth.session-token`,
-      options: {
-        httpOnly: true,
-        sameSite: "lax",
-        path: "/",
-        secure: process.env.NODE_ENV === "production",
-        maxAge: 30 * 24 * 60 * 60, // 30 days in seconds
-      },
-    },
-  },
-});
+};
 
-export { authHandler as GET, authHandler as POST };
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
