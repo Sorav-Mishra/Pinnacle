@@ -24,6 +24,7 @@ export default function CompleteProfilePage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Submitting form...");
 
     const res = await fetch("/api/user/update-profile", {
       method: "POST",
