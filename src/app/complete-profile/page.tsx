@@ -56,7 +56,6 @@ export default function CompleteProfilePage() {
         </h2>
 
         <div className="space-y-5">
-          {/* Phone */}
           <div>
             <label
               htmlFor="phone"
@@ -76,7 +75,6 @@ export default function CompleteProfilePage() {
             />
           </div>
 
-          {/* Age */}
           <div>
             <label
               htmlFor="age"
@@ -96,7 +94,6 @@ export default function CompleteProfilePage() {
             />
           </div>
 
-          {/* Gender */}
           <div>
             <label
               htmlFor="gender"
@@ -119,7 +116,6 @@ export default function CompleteProfilePage() {
             </select>
           </div>
 
-          {/* DOB */}
           <div>
             <label
               htmlFor="dob"
@@ -138,7 +134,6 @@ export default function CompleteProfilePage() {
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="button"
             onClick={handleSubmit}
