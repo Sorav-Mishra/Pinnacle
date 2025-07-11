@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function CompleteProfilePage() {
+  console.log("✅ CompleteProfilePage hydrated!");
+
   const { update: updateSession } = useSession();
   const router = useRouter();
 
@@ -26,10 +28,7 @@ export default function CompleteProfilePage() {
     e.preventDefault();
     console.log("Submitting form...");
 
-    const baseUrl =
-      typeof window === "undefined" ? process.env.NEXT_PUBLIC_SITE_URL : "";
-
-    const res = await fetch(`${baseUrl}/api/user/update-profile`, {
+    const res = await fetch(`/api/user/update-profile`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
