@@ -56,7 +56,7 @@ export default function CompleteProfilePage() {
           Complete Your Profile
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form action="#" onSubmit={handleSubmit} className="space-y-5">
           {/* Phone */}
           <div>
             <label
