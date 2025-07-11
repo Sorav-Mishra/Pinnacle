@@ -52,25 +52,18 @@ export async function POST(req: NextRequest) {
       { email: token.email },
       {
         $set: {
+          email: token.email,
           phone: phone.trim(),
           age: ageNumber,
           gender: gender.toLowerCase(),
           dob: dob,
           profileCompletedAt: new Date(),
         },
-      }
+      },
+      { upsert: true }
     );
 
-    if (updateResult.matchedCount === 0) {
-      return NextResponse.json({ error: "User not found" }, { status: 404 });
-    }
-
-    if (updateResult.modifiedCount === 0) {
-      return NextResponse.json(
-        { error: "Profile not updated" },
-        { status: 500 }
-      );
-    }
+    console.log("✅ Mongo Update Result:", updateResult);
 
     return NextResponse.json({
       message: "Profile updated successfully",

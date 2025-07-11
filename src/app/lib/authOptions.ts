@@ -1,4 +1,3 @@
-// src/app/lib/authOptions.ts
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
@@ -46,7 +45,8 @@ export const authOptions: NextAuthOptions = {
         }
 
         return token;
-      } catch {
+      } catch (e) {
+        console.error("JWT callback error", e);
         return token;
       }
     },
@@ -64,7 +64,7 @@ export const authOptions: NextAuthOptions = {
   },
 };
 
-// Module augmentation (✅ place here too if you want type safety globally)
+// types/next-auth.d.ts
 declare module "next-auth" {
   interface Session {
     user: {
