@@ -1,39 +1,4 @@
-declare module "next-auth" {
-  interface Session {
-    user: {
-      id?: string;
-      name?: string | null;
-      email?: string | null;
-      image?: string | null;
-      phone?: string;
-      age?: number | null;
-      gender?: string;
-      dob?: string;
-    };
-  }
-
-  interface User {
-    id: string;
-    name?: string | null;
-    email?: string | null;
-    image?: string | null;
-    phone?: string;
-    age?: number | null;
-    gender?: string;
-    dob?: string;
-  }
-}
-
-declare module "next-auth/jwt" {
-  interface JWT {
-    id?: string;
-    phone?: string;
-    age?: number | null;
-    gender?: string;
-    dob?: string;
-  }
-}
-
+// src/app/lib/authOptions.ts
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
@@ -98,3 +63,40 @@ export const authOptions: NextAuthOptions = {
     },
   },
 };
+
+// Module augmentation (✅ place here too if you want type safety globally)
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id?: string;
+      name?: string | null;
+      email?: string | null;
+      image?: string | null;
+      phone?: string;
+      age?: number | null;
+      gender?: string;
+      dob?: string;
+    };
+  }
+
+  interface User {
+    id: string;
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
+    phone?: string;
+    age?: number | null;
+    gender?: string;
+    dob?: string;
+  }
+}
+
+declare module "next-auth/jwt" {
+  interface JWT {
+    id?: string;
+    phone?: string;
+    age?: number | null;
+    gender?: string;
+    dob?: string;
+  }
+}
