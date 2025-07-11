@@ -24,8 +24,7 @@ export default function CompleteProfilePage() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     console.log("Submitting form...");
 
     const res = await fetch(`/api/user/update-profile`, {
@@ -56,7 +55,7 @@ export default function CompleteProfilePage() {
           Complete Your Profile
         </h2>
 
-        <form action="#" onSubmit={handleSubmit} className="space-y-5">
+        <div className="space-y-5">
           {/* Phone */}
           <div>
             <label
@@ -141,12 +140,13 @@ export default function CompleteProfilePage() {
 
           {/* Submit Button */}
           <button
-            type="submit"
+            type="button"
+            onClick={handleSubmit}
             className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition duration-200"
           >
             Save
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );
