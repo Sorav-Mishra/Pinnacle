@@ -27,9 +27,11 @@ export default function CompleteProfilePage() {
   const handleSubmit = async () => {
     console.log("Submitting form...");
 
-    const res = await fetch(`/api/user/update-profile`, {
+    const res = await fetch("/api/user/update-profile", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(form),
     });
 
@@ -44,7 +46,8 @@ export default function CompleteProfilePage() {
       });
       router.push("/");
     } else {
-      console.error("❌ Profile update failed");
+      const err = await res.json();
+      console.error("❌ Profile update failed:", err);
     }
   };
 
