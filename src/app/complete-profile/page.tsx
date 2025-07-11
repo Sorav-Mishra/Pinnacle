@@ -26,7 +26,10 @@ export default function CompleteProfilePage() {
     e.preventDefault();
     console.log("Submitting form...");
 
-    const res = await fetch("/api/user/update-profile", {
+    const baseUrl =
+      typeof window === "undefined" ? process.env.NEXT_PUBLIC_SITE_URL : "";
+
+    const res = await fetch(`${baseUrl}/api/user/update-profile`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
