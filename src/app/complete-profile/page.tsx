@@ -137,7 +137,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function CompleteProfilePage() {
-  const { update: updateSession } = useSession(); // ✅ valid useSession update
+  const { update: updateSession } = useSession();
   const router = useRouter();
 
   const [form, setForm] = useState({
@@ -186,7 +186,11 @@ export default function CompleteProfilePage() {
           Complete Your Profile
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form
+          onSubmit={handleSubmit}
+          action="javascript:void(0) "
+          className="space-y-5"
+        >
           {/* Phone */}
           <div>
             <label
