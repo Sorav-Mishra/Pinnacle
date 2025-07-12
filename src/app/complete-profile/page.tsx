@@ -27,7 +27,7 @@ export default function CompleteProfilePage() {
   const handleSubmit = async () => {
     console.log("Submitting form...");
 
-    const res = await fetch("/api/user/update-profile", {
+    const res = await fetch("/api/user/updateprofile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
