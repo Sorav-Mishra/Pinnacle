@@ -1,4 +1,3 @@
-// middleware.ts
 import { NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
 import type { NextRequest } from "next/server";
@@ -9,6 +8,7 @@ export async function middleware(req: NextRequest) {
   // Skip middleware for these paths
   if (
     pathname.startsWith("/api/auth") ||
+    pathname.startsWith("/api/user/update-profile") || // ✅ Added this
     pathname.startsWith("/_next") ||
     pathname === "/favicon.ico" ||
     pathname === "/complete-profile" ||
@@ -34,48 +34,26 @@ export async function middleware(req: NextRequest) {
       dob: token?.dob,
     });
 
-    // If no token, redirect to sign in
     if (!token) {
       console.log("🔒 No token found, redirecting to sign in");
       return NextResponse.redirect(new URL("/api/auth/signin", req.url));
     }
 
-    // Check if profile is complete
     const isProfileComplete =
-      token.phone &&
-      token.phone.trim() !== "" &&
-      token.gender &&
-      token.gender.trim() !== "" &&
-      token.dob &&
-      token.dob.trim() !== "" &&
+      token.phone?.trim() &&
+      token.gender?.trim() &&
+      token.dob?.trim() &&
       typeof token.age === "number" &&
       !isNaN(token.age) &&
       token.age > 0;
 
-    // console.log("📋 Profile completion check:", {
-    //   isProfileComplete,
-    //   phone: token.phone,
-    //   gender: token.gender,
-    //   dob: token.dob,
-    //   age: token.age,
-    //   phoneValid: token.phone && token.phone.trim() !== "",
-    //   genderValid: token.gender && token.gender.trim() !== "",
-    //   dobValid: token.dob && token.dob.trim() !== "",
-    //   ageValid:
-    //     typeof token.age === "number" && !isNaN(token.age) && token.age > 0,
-    // });
-
-    // If profile is not complete and not already on complete-profile page
     if (!isProfileComplete && pathname !== "/complete-profile") {
-      // console.log("⚠️ Profile incomplete, redirecting to complete profile");
       const url = req.nextUrl.clone();
       url.pathname = "/complete-profile";
       return NextResponse.redirect(url);
     }
 
-    // If profile is complete but trying to access complete-profile page
     if (isProfileComplete && pathname === "/complete-profile") {
-      console.log("✅ Profile complete, redirecting to home");
       const url = req.nextUrl.clone();
       url.pathname = "/";
       return NextResponse.redirect(url);
@@ -83,22 +61,13 @@ export async function middleware(req: NextRequest) {
 
     return NextResponse.next();
   } catch {
-    // console.error("❌ Middleware error:", error);
     return NextResponse.redirect(new URL("/api/auth/signin", req.url));
   }
 }
 
+// ✅ Updated matcher to also exclude your update-profile API route
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api/auth (authentication routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - admin (admin routes)
-     * - static (static files)
-     */
-    "/((?!api/auth|_next/static|_next/image|favicon.ico|admin|static).*)",
+    "/((?!api/auth|api/user/update-profile|_next/static|_next/image|favicon.ico|admin|static).*)",
   ],
 };
