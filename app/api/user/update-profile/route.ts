@@ -3,7 +3,7 @@ import { getToken } from "next-auth/jwt";
 import clientPromise from "../../../lib/mongodb";
 
 export async function POST(req: NextRequest) {
-  console.log("✅ API Route Hit: /api/user/updateprofile");
+  console.log("✅ API Route Hit: /api/user/update-profile");
 
   try {
     const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
