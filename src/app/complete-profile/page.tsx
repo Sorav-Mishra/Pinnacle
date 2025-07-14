@@ -30,7 +30,7 @@ export default function CompleteProfilePage() {
     console.log("Posting to /api/user/updateprofile with data:", form);
 
     try {
-      const res = await fetch("/api/user/updateprofile", {
+      const res = await fetch("/api/user/update-profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
