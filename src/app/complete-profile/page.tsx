@@ -25,35 +25,40 @@ export default function CompleteProfilePage() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // ✅ Stop default form POST
-    console.log("Submitting form...");
+    e.preventDefault(); // ✅ Prevent default form submission
+    console.log("🔥 handleSubmit called");
+    console.log("Posting to /api/user/updateprofile with data:", form);
 
-    const res = await fetch("/api/user/updateprofile", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-
-    if (res.ok) {
-      await updateSession?.({
-        user: {
-          phone: form.phone,
-          age: parseInt(form.age),
-          gender: form.gender,
-          dob: form.dob,
+    try {
+      const res = await fetch("/api/user/updateprofile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
+        body: JSON.stringify(form),
       });
-      router.push("/");
-    } else {
-      let err = {};
-      try {
-        err = await res.json();
-      } catch (e) {
-        err = { error: "Invalid response from server", e };
+
+      if (res.ok) {
+        await updateSession?.({
+          user: {
+            phone: form.phone,
+            age: parseInt(form.age),
+            gender: form.gender,
+            dob: form.dob,
+          },
+        });
+        router.push("/");
+      } else {
+        let err = {};
+        try {
+          err = await res.json();
+        } catch (e) {
+          err = { error: "Invalid response from server", e };
+        }
+        console.error("❌ Profile update failed:", err);
       }
-      console.error("❌ Profile update failed:", err);
+    } catch (err) {
+      console.error("❌ Network error:", err);
     }
   };
 
@@ -64,7 +69,6 @@ export default function CompleteProfilePage() {
           Complete Your Profile
         </h2>
 
-        {/* ✅ Wrap in form and use onSubmit */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label
@@ -144,7 +148,6 @@ export default function CompleteProfilePage() {
             />
           </div>
 
-          {/* ✅ type="submit" — no onClick needed */}
           <button
             type="submit"
             className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition duration-200"
