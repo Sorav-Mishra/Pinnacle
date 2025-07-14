@@ -24,8 +24,8 @@ export default function CompleteProfilePage() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e?: React.FormEvent) => {
-    e?.preventDefault(); // Prevent default form POST
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(); // ✅ Stop default form POST
     console.log("Submitting form...");
 
     const res = await fetch("/api/user/updateprofile", {
@@ -47,7 +47,12 @@ export default function CompleteProfilePage() {
       });
       router.push("/");
     } else {
-      const err = await res.json();
+      let err = {};
+      try {
+        err = await res.json();
+      } catch (e) {
+        err = { error: "Invalid response from server", e };
+      }
       console.error("❌ Profile update failed:", err);
     }
   };
@@ -59,7 +64,8 @@ export default function CompleteProfilePage() {
           Complete Your Profile
         </h2>
 
-        <div className="space-y-5">
+        {/* ✅ Wrap in form and use onSubmit */}
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label
               htmlFor="phone"
@@ -138,14 +144,14 @@ export default function CompleteProfilePage() {
             />
           </div>
 
+          {/* ✅ type="submit" — no onClick needed */}
           <button
-            type="button"
-            onClick={handleSubmit}
+            type="submit"
             className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition duration-200"
           >
             Save
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
