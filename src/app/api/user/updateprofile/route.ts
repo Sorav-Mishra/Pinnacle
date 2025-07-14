@@ -1,9 +1,10 @@
+// src/app/api/user/updateprofile/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
-import clientPromise from "../../../lib/mongodb";
+import clientPromise from "@/app/lib/mongodb";
 
 export async function POST(req: NextRequest) {
-  console.log("✅ API Route Hit: /api/user/update-profile");
+  console.log("✅ API Route Hit: /api/user/updateprofile");
 
   try {
     const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
@@ -15,6 +16,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { phone, age, gender, dob } = body;
 
+    // Validate all fields
     if (!phone || !age || !gender || !dob) {
       return NextResponse.json(
         { error: "All fields are required" },
@@ -22,7 +24,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const ageNumber = typeof age === "number" ? age : parseInt(age);
+    const ageNumber = parseInt(age);
     if (isNaN(ageNumber) || ageNumber < 1 || ageNumber > 120) {
       return NextResponse.json(
         { error: "Invalid age provided" },
@@ -46,7 +48,7 @@ export async function POST(req: NextRequest) {
     }
 
     const client = await clientPromise;
-    const db = client.db("test");
+    const db = client.db("pinnacle"); // ✅ Use your actual DB name
 
     const updateResult = await db.collection("users").updateOne(
       { email: token.email },
