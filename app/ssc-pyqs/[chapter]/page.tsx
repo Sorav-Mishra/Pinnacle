@@ -1,5 +1,5 @@
 "use client";
-import McqPracticee from "@/app/components/McqPracticee";
+import McqPracticee from "../../components/McqPracticee";
 
 function McqPractice() {
   return <McqPracticee />;

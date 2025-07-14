@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
-import clientPromise from "@/app/lib/mongodb";
+import clientPromise from "../../../lib/mongodb";
 
 export async function POST(req: NextRequest) {
   console.log("✅ API Route Hit: /api/user/updateprofile");
