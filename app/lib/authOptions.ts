@@ -1,7 +1,7 @@
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
-import clientPromise from "./mongodb";
+import clientPromise from "./clientPromise";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -14,39 +14,42 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+  pages: {
+    error: "/auth/error", // Redirect OAuth errors like "OAuthAccountNotLinked"
+  },
   callbacks: {
     async jwt({ token, user, trigger, session }) {
       try {
         const client = await clientPromise;
-        const db = client.db("test");
+        const db = client.db("pinnacle");
+        const email = user?.email || session?.user?.email || token?.email;
 
-        const email = user?.email || session?.user?.email || token.email;
-
+        // If user info updated via session update
         if (trigger === "update" && session?.user) {
           token.phone = session.user.phone || "";
           token.age = session.user.age ?? null;
           token.gender = session.user.gender || "";
           token.dob = session.user.dob || "";
-          return token;
         }
 
+        // Lookup DB for additional info
         if (email) {
           const dbUser = await db.collection("users").findOne({ email });
           if (dbUser) {
             token.id = dbUser._id?.toString();
+            token.name = dbUser.name || token.name;
             token.email = dbUser.email;
+            token.picture = dbUser.image || token.picture;
             token.phone = dbUser.phone || "";
             token.age = dbUser.age ?? null;
             token.gender = dbUser.gender || "";
             token.dob = dbUser.dob || "";
-            token.name = dbUser.name || token.name;
-            token.picture = dbUser.image || token.picture;
           }
         }
 
         return token;
-      } catch (e) {
-        console.error("JWT callback error", e);
+      } catch (error) {
+        console.error("JWT callback error:", error);
         return token;
       }
     },
@@ -65,6 +68,8 @@ export const authOptions: NextAuthOptions = {
 };
 
 // types/next-auth.d.ts
+//import NextAuth, { DefaultSession } from "next-auth";
+
 declare module "next-auth" {
   interface Session {
     user: {

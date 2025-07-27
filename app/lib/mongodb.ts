@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
@@ -6,20 +6,22 @@ if (!MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI environment variable.");
 }
 
-// Extend globalThis to include _mongoClientPromise
-declare global {
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
+let isConnected = false;
 
-let client: MongoClient;
-let clientPromise: Promise<MongoClient>;
+export const connectDB = async () => {
+  if (isConnected) {
+    console.log("✅ MongoDB already connected.");
+    return;
+  }
 
-if (global._mongoClientPromise) {
-  clientPromise = global._mongoClientPromise;
-} else {
-  client = new MongoClient(MONGODB_URI);
-  global._mongoClientPromise = client.connect();
-  clientPromise = global._mongoClientPromise;
-}
-
-export default clientPromise;
+  try {
+    await mongoose.connect(MONGODB_URI, {
+      dbName: "pinnacle",
+    });
+    isConnected = true;
+    console.log("✅ MongoDB connected.");
+  } catch (error) {
+    console.error("❌ MongoDB connection error:", error);
+    throw error;
+  }
+};
