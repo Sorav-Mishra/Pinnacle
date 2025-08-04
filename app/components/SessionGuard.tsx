@@ -309,8 +309,8 @@ function UserDetailForm({ onSubmit }: UserDetailFormProps) {
           throw new Error(errorData.error || `Server error: ${res.status}`);
         }
 
-        const result = await res.json();
-        console.log("✅ User details saved successfully:", result);
+        // const result = await res.json();
+        // console.log("✅ User details saved successfully:", result);
 
         // Show success message before calling onSubmit
         alert(
