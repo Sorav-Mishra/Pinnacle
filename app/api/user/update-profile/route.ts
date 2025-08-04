@@ -1,13 +1,11 @@
-// /app/api/user/update-profile/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { connectDB } from "../../../lib/mongodb";
-import User from "../../../models/user";
+import clientPromise from "../../../lib/clientPromise";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../../lib/authOptions";
-import { z } from "zod";
-import { Types } from "mongoose";
+import { z, ZodError } from "zod";
+import { Document, WithId } from "mongodb";
 
-// -------------------- Validation Schema --------------------
+// -------------------- Schema --------------------
 const UpdateProfileSchema = z.object({
   email: z.string().email("Invalid email format"),
   fullName: z
@@ -40,25 +38,14 @@ const UpdateProfileSchema = z.object({
 });
 
 // -------------------- Types --------------------
-interface UserDocument {
-  _id: Types.ObjectId;
+interface UpdateData {
   fullName?: string;
-  email: string;
-  number?: string;
-  age?: number;
-  gender?: string;
   city?: string;
   state?: string;
-  image?: string;
-  createdAt: Date;
   updatedAt: Date;
-  emailVerified?: boolean;
-  phoneVerified?: boolean;
-  isActive?: boolean;
-  lastLoginAt?: Date;
 }
 
-interface UserProfileResponse {
+interface ProfileData {
   id: string;
   fullName: string;
   email: string;
@@ -67,298 +54,139 @@ interface UserProfileResponse {
   gender: string;
   city: string;
   state: string;
-  image?: string;
+  image: string;
   createdAt: Date;
   updatedAt: Date;
   emailVerified: boolean;
   phoneVerified: boolean;
   isActive: boolean;
-  lastLoginAt?: Date;
+  lastLoginAt: Date;
 }
 
-interface ApiResponse<T> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-  timestamp?: string;
-  details?: string[];
-}
-
-interface UpdateProfileData {
-  email: string;
-  fullName?: string;
-  city?: string;
-  state?: string;
-}
-
-interface UserUpdateData {
-  updatedAt: Date;
-  fullName?: string;
-  city?: string;
-  state?: string;
-}
-
-interface SanitizedRequestBody {
-  email?: string;
-  fullName?: string;
-  city?: string;
-  state?: string;
-  [key: string]: unknown;
-}
-
-interface MongooseValidationError {
-  name: "ValidationError";
-  errors: Record<string, { path: string; message: string }>;
-}
-
-interface MongoDuplicateKeyError {
-  code: 11000;
-  keyValue?: Record<string, unknown>;
-}
-
-// -------------------- Helper Functions --------------------
-function createErrorResponse(
-  error: string,
-  status: number = 400,
-  details?: string[]
-): NextResponse<ApiResponse<never>> {
-  return NextResponse.json(
-    {
-      success: false,
-      error,
-      details,
-      timestamp: new Date().toISOString(),
-    },
-    { status }
-  );
-}
-
-function createSuccessResponse<T>(
-  data: T,
-  message?: string
-): NextResponse<ApiResponse<T>> {
-  return NextResponse.json({
-    success: true,
-    data,
-    message,
-    timestamp: new Date().toISOString(),
-  });
-}
-
+// -------------------- Helpers --------------------
 function sanitizeInput(input: string): string {
   return input.trim().replace(/\s+/g, " ");
 }
 
-// Type guard functions
-function isMongooseValidationError(
-  error: unknown
-): error is MongooseValidationError {
-  return (
-    error !== null &&
-    typeof error === "object" &&
-    "name" in error &&
-    error.name === "ValidationError" &&
-    "errors" in error &&
-    typeof error.errors === "object" &&
-    error.errors !== null
+function createErrorResponse(
+  message: string,
+  statusCode = 400,
+  errors?: string[]
+): NextResponse {
+  return NextResponse.json(
+    { success: false, message, errors },
+    { status: statusCode }
   );
 }
 
-function isDuplicateKeyError(error: unknown): error is MongoDuplicateKeyError {
-  return (
-    error !== null &&
-    typeof error === "object" &&
-    "code" in error &&
-    error.code === 11000
-  );
+function createSuccessResponse<T>(data: T, message = "Success"): NextResponse {
+  return NextResponse.json({ success: true, message, data });
 }
 
-// -------------------- POST Handler --------------------
+// -------------------- Handler --------------------
 export async function POST(request: NextRequest): Promise<NextResponse> {
   const requestId = crypto.randomUUID();
-  // console.log(`[${requestId}] POST /api/user/update-profile`);
+  console.log(`[${requestId}] POST /api/user/update-profile`);
 
   try {
-    // Get session for authentication
     const session = await getServerSession(authOptions);
-    if (!session?.user?.email) {
-      // console.warn(`[${requestId}] Unauthorized access attempt`);
+    const userEmail = session?.user?.email;
+
+    if (!userEmail) {
       return createErrorResponse("Unauthorized", 401);
     }
 
-    // Parse and validate request body
-    let body: unknown;
+    let rawBody: unknown;
     try {
-      body = await request.json();
+      rawBody = await request.json();
     } catch {
-      //console.error(`[${requestId}] Invalid JSON:`, error);
       return createErrorResponse("Invalid JSON format", 400);
     }
 
-    // Validate input data
-    let validatedData: UpdateProfileData;
-    try {
-      // Pre-process strings to sanitize input
-      if (typeof body === "object" && body !== null) {
-        const sanitizedBody: SanitizedRequestBody = {
-          ...body,
-        } as SanitizedRequestBody;
-
-        // Sanitize string fields
-        (["fullName", "city", "state"] as const).forEach((field) => {
-          if (typeof sanitizedBody[field] === "string") {
-            sanitizedBody[field] = sanitizeInput(sanitizedBody[field]);
-          }
-        });
-
-        body = sanitizedBody;
-      }
-
-      validatedData = UpdateProfileSchema.parse(body);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        console.warn(`[${requestId}] Validation error:`, error.errors);
-        return createErrorResponse(
-          "Validation failed",
-          400,
-          error.errors.map((err) => `${err.path.join(".")}: ${err.message}`)
-        );
-      }
-      throw error;
+    if (typeof rawBody !== "object" || rawBody === null) {
+      return createErrorResponse("Invalid request body", 400);
     }
 
-    // Security: Users can only update their own profile
-    if (validatedData.email !== session.user.email) {
-      console.warn(
-        `[${requestId}] User ${session.user.email} attempted to update ${validatedData.email}'s profile`
+    const sanitizedBody = { ...rawBody } as Record<string, string>;
+    ["fullName", "city", "state"].forEach((field) => {
+      if (typeof sanitizedBody[field] === "string") {
+        sanitizedBody[field] = sanitizeInput(sanitizedBody[field]);
+      }
+    });
+
+    let validatedData;
+    try {
+      validatedData = UpdateProfileSchema.parse(sanitizedBody);
+    } catch (err) {
+      const error = err as ZodError;
+      return createErrorResponse(
+        "Validation failed",
+        400,
+        error.errors.map((e) => `${e.path.join(".")}: ${e.message}`)
       );
+    }
+
+    if (validatedData.email !== userEmail) {
       return createErrorResponse("Access denied", 403);
     }
 
-    // Connect to database
-    try {
-      await connectDB();
-    } catch {
-      // console.error(`[${requestId}] Database connection failed:`, error);
-      return createErrorResponse("Service temporarily unavailable", 503);
+    const client = await clientPromise;
+    const db = client.db();
+
+    const updateData: UpdateData = {
+      updatedAt: new Date(),
+    };
+
+    if (validatedData.fullName) updateData.fullName = validatedData.fullName;
+    if (validatedData.city) updateData.city = validatedData.city;
+    if (validatedData.state) updateData.state = validatedData.state;
+
+    const result = await db
+      .collection("users")
+      .findOneAndUpdate(
+        { email: userEmail.toLowerCase() },
+        { $set: updateData },
+        { returnDocument: "after" }
+      );
+
+    if (!result || !result.value) {
+      return createErrorResponse("User not found", 404);
     }
 
-    // Update user profile
-    try {
-      const updateData: UserUpdateData = {
-        updatedAt: new Date(),
-      };
+    const updatedUser = result.value as WithId<Document>;
 
-      // Only update fields that are provided
-      if (validatedData.fullName !== undefined) {
-        updateData.fullName = validatedData.fullName;
-      }
-      if (validatedData.city !== undefined) {
-        updateData.city = validatedData.city;
-      }
-      if (validatedData.state !== undefined) {
-        updateData.state = validatedData.state;
-      }
+    const profileData: ProfileData = {
+      id: updatedUser._id.toString(),
+      fullName:
+        (updatedUser.fullName as string) || (updatedUser.name as string) || "",
+      email: (updatedUser.email as string) || "",
+      number: (updatedUser.number as string) || "",
+      age: (updatedUser.age as number) || 0,
+      gender: (updatedUser.gender as string) || "",
+      city: (updatedUser.city as string) || "",
+      state: (updatedUser.state as string) || "",
+      image: (updatedUser.image as string) || session.user.image || "",
+      createdAt:
+        (updatedUser.createdAt as Date) ||
+        (updatedUser._id && typeof updatedUser._id.getTimestamp === "function"
+          ? updatedUser._id.getTimestamp()
+          : new Date()),
+      updatedAt: (updatedUser.updatedAt as Date) || new Date(),
+      emailVerified: (updatedUser.emailVerified as boolean) || false,
+      phoneVerified: (updatedUser.phoneVerified as boolean) || false,
+      isActive:
+        updatedUser.isActive !== undefined
+          ? (updatedUser.isActive as boolean)
+          : true,
+      lastLoginAt: (updatedUser.lastLoginAt as Date) || new Date(),
+    };
 
-      const updatedUser = (await User.findOneAndUpdate(
-        { email: session.user.email.toLowerCase() },
-        updateData,
-        {
-          new: true,
-          runValidators: true,
-          select: "-__v",
-        }
-      ).lean()) as UserDocument | null;
-
-      if (!updatedUser) {
-        console.warn(`[${requestId}] User not found: ${session.user.email}`);
-        return createErrorResponse("User not found", 404);
-      }
-
-      // Format response data
-      const profileData: UserProfileResponse = {
-        id: updatedUser._id.toString(),
-        fullName: updatedUser.fullName || "",
-        email: updatedUser.email || "",
-        number: updatedUser.number || "",
-        age: updatedUser.age || 0,
-        gender: updatedUser.gender || "",
-        city: updatedUser.city || "",
-        state: updatedUser.state || "",
-        image: updatedUser.image || session.user.image || "",
-        createdAt: updatedUser.createdAt || new Date(),
-        updatedAt: updatedUser.updatedAt || new Date(),
-        emailVerified: updatedUser.emailVerified || false,
-        phoneVerified: updatedUser.phoneVerified || false,
-        isActive:
-          updatedUser.isActive !== undefined ? updatedUser.isActive : true,
-        lastLoginAt: updatedUser.lastLoginAt || new Date(),
-      };
-
-      //   console.log(
-      //     `[${requestId}] Profile updated successfully for: ${session.user.email}`
-      //   );
-      return createSuccessResponse(profileData, "Profile updated successfully");
-    } catch (error: unknown) {
-      //console.error(`[${requestId}] Database update error:`, error);
-
-      // Handle validation errors
-      if (isMongooseValidationError(error)) {
-        const validationErrors = Object.values(error.errors).map(
-          (err) => `${err.path}: ${err.message}`
-        );
-        return createErrorResponse(
-          "Database validation failed",
-          400,
-          validationErrors
-        );
-      }
-
-      // Handle duplicate key error
-      if (isDuplicateKeyError(error)) {
-        const duplicateField = Object.keys(error.keyValue || {})[0];
-        return createErrorResponse(
-          `A user with this ${duplicateField} already exists`,
-          409
-        );
-      }
-
-      return createErrorResponse("Failed to update profile", 500);
-    }
-  } catch {
-    // console.error(`[${requestId}] Unexpected error:`, error);
+    return createSuccessResponse<ProfileData>(
+      profileData,
+      "Profile updated successfully"
+    );
+  } catch (err) {
+    console.error(`[${crypto.randomUUID()}] Internal server error:`, err);
     return createErrorResponse("Internal server error", 500);
   }
-}
-
-// -------------------- Other HTTP Methods --------------------
-export async function GET(): Promise<NextResponse> {
-  return NextResponse.json(
-    { error: "Method not allowed. Use POST to update profile." },
-    {
-      status: 405,
-      headers: { Allow: "POST" },
-    }
-  );
-}
-
-export async function PUT(): Promise<NextResponse> {
-  return NextResponse.json(
-    { error: "Method not allowed. Use POST to update profile." },
-    {
-      status: 405,
-      headers: { Allow: "POST" },
-    }
-  );
-}
-
-export async function DELETE(): Promise<NextResponse> {
-  return NextResponse.json(
-    { error: "Method not allowed. Use POST to update profile." },
-    {
-      status: 405,
-      headers: { Allow: "POST" },
-    }
-  );
 }

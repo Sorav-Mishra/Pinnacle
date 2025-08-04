@@ -1,60 +1,71 @@
 import { NextRequest, NextResponse } from "next/server";
-import User from "../../models/user";
-import { connectDB } from "../../lib/mongodb";
+import clientPromise from "../../lib/clientPromise";
 
 export async function POST(req: NextRequest) {
   try {
-    await connectDB();
-
     const body = await req.json();
-    const {
-      fullName,
-      email,
-      number,
-      age,
-      gender,
-      city,
-      state,
-      ipAddress,
-      userAgent,
-    }: {
-      fullName: string;
-      email: string;
-      number: string;
-      age: number;
-      gender: "male" | "female" | "other" | "prefer-not-to-say";
-      city: string;
-      state: string;
-      ipAddress?: string;
-      userAgent?: string;
-    } = body;
+    const { fullName, email, number, age, gender, city, state } = body;
 
-    const newUser = new User({
-      fullName,
-      email,
-      number,
+    // 🛡️ Input validation
+    if (
+      !fullName?.trim() ||
+      !email?.trim() ||
+      !number?.trim() ||
+      !city?.trim() ||
+      !state?.trim() ||
+      !gender?.trim() ||
+      !Number.isInteger(age) ||
+      age < 13 ||
+      age > 120
+    ) {
+      return NextResponse.json(
+        { success: false, error: "All fields are required and must be valid." },
+        { status: 400 }
+      );
+    }
+
+    const client = await clientPromise;
+    const db = client.db();
+
+    const existingUser = await db.collection("users").findOne({ email });
+
+    const userData = {
+      fullName: fullName.trim(),
+      email: email.trim().toLowerCase(),
+      number: number.trim(),
       age,
-      gender,
-      city,
-      state,
-      ipAddress,
-      userAgent,
-      createdAt: new Date(),
+      gender: gender.trim(),
+      city: city.trim(),
+      state: state.trim(),
+      formSubmitted: true,
+      formSubmittedAt: new Date(),
       updatedAt: new Date(),
-      isActive: true,
-      emailVerified: false,
-      phoneVerified: false,
+    };
+
+    if (existingUser) {
+      await db.collection("users").updateOne(
+        { email },
+        {
+          $set: userData,
+        }
+      );
+    } else {
+      await db.collection("users").insertOne({
+        ...userData,
+        createdAt: new Date(),
+        isActive: true,
+      });
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "User saved successfully",
     });
-
-    await newUser.save();
-
+  } catch {
+    //  console.error("❌ Failed to save user:", error); (error)
     return NextResponse.json(
-      { message: "User saved successfully" },
-      { status: 201 }
+      { success: false, error: "Internal server error" },
+      { status: 500 }
     );
-  } catch (err: unknown) {
-    const errorMessage =
-      err instanceof Error ? err.message : "Unknown error occurred";
-    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
