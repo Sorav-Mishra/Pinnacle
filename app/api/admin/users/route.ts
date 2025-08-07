@@ -7,7 +7,7 @@ export async function GET() {
   const session = await getServerSession(authOptions);
 
   // 🛡️ Restrict access to admin
-  if (!session || session.user.email !== "soravmishra753@gmail.com") {
+  if (session?.user?.email !== "soravmishra753@gmail.com") {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
