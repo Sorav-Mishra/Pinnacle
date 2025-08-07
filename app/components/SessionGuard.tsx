@@ -599,6 +599,7 @@ export default function SessionGuard({ children }: SessionGuardProps) {
       await signIn("google", {
         callbackUrl: window.location.href,
         redirect: true,
+        prompt: "select_account",
       });
     } catch {
       setForceLogin(false);
