@@ -600,6 +600,8 @@ export default function SessionGuard({ children }: SessionGuardProps) {
         callbackUrl: window.location.href,
         redirect: true,
         prompt: "select_account",
+        login_hint: "", // Clears hint
+        hd: "", // Prevents domain-restricted login
       });
     } catch {
       setForceLogin(false);
